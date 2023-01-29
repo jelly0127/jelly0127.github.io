@@ -157,7 +157,7 @@
     
     
     <article
-  id="post-useContext"
+  id="post-JavaScript"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -168,8 +168,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/useContext/"
-    >useContext</a> 
+  <a class="article-title" href="/2023/01/29/JavaScript/"
+    >JavaScript</a> 
 </h2>
  
 
@@ -177,83 +177,19 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/29/useContext/" class="article-date">
-  <time datetime="2023-01-29T15:23:28.000Z" itemprop="datePublished">2023-01-29</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>提供给函数组件访问Context的能力。PS：全局跨组件通信，在顶级组件中声明传递，包裹需通信的子组件。</p>
-<p>Demo</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MyContext</span> = <span class="title class_">React</span>.<span class="title function_">createContext</span>(&#123;&#125;)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">APP</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [ data, setData ] = <span class="title function_">useState</span>(<span class="string">&#x27;jelly&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">MyContext.Provider</span> <span class="attr">value</span>=<span class="string">&#123;&#123;</span> <span class="attr">data</span>, <span class="attr">setData</span> &#125;&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">Children</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">MyContext.Provider</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Children</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; data, setData &#125; = <span class="title function_">useContext</span>(<span class="title class_">MyContext</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    我接收到的context是&#123;data&#125;</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">value</span>=<span class="string">&#123;data&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;(e)</span>=&gt;</span>setData(e.target.value)&#125;&gt;<span class="tag">&lt;/<span class="name">input</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>useContext接收Context对象，返回Context的内容。</li>
-<li>可以直接引入其他文件创建的Context对象，而不用担心Context对象不同，因为模块变量具有<strong>单例</strong>特性。</li>
-</ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
+      <a href="/2023/01/29/JavaScript/" class="article-date">
+  <time datetime="2023-01-29T13:23:15.000Z" itemprop="datePublished">2023-01-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
   </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-useState"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/useState/"
-    >useState</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/01/29/useState/" class="article-date">
-  <time datetime="2023-01-29T15:22:25.000Z" itemprop="datePublished">2023-01-29</time>
-</a>    
+   
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h2><p>用于给函数组件添加状态，状态一旦发生改变，会触发组件的重渲染（销毁-&gt;获取最新的props-&gt;渲染）。</p>
-<p><strong>注意，这里的props是重新获取的。</strong></p>
-<p>useState返回数组，数组第一项为<code>state</code>， 第二项为<code>useState</code></p>
-<p>useState告诉React，什么数据需要React帮助我们去记录，只有这些被记录的数据发生改变的时候， 才帮助我们需重新渲染组件，组件的重渲染会引发<strong>所有</strong>子组件的重渲染。</p>
-<p><strong>状态以及变量</strong></p>
-<ul>
-<li><p>只有影响程序的最终输出结果的，才属于状态。</p>
-</li>
-<li><p>普通变量不会影响程序最终输出结果，称为普通变量。</p>
-</li>
-<li><p>状态应该最小化。</p>
-</li>
-</ul>
-<p><strong>大量数据</strong></p> 
-      <a class="article-more-link" href="/2023/01/29/useState/"
+  <h2 id="一、JavaScript的组成"><a href="#一、JavaScript的组成" class="headerlink" title="一、JavaScript的组成"></a>一、JavaScript的组成</h2><p><img src="https://pic.imgdb.cn/item/63d67236face21e9ef119c8b.png"></p> 
+      <a class="article-more-link" href="/2023/01/29/JavaScript/"
         >阅读更多...</a
       >
        
@@ -266,6 +202,8 @@
     
     <footer class="article-footer">
        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
     </footer>
   </div>
 
@@ -276,7 +214,7 @@
 
     
     <article
-  id="post-useEffect"
+  id="post-css"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -287,8 +225,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/useEffect/"
-    >useEffect</a> 
+  <a class="article-title" href="/2023/01/29/css/"
+    >基础常用的CSS</a> 
 </h2>
  
 
@@ -296,22 +234,21 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/29/useEffect/" class="article-date">
-  <time datetime="2023-01-29T15:20:34.000Z" itemprop="datePublished">2023-01-29</time>
-</a>    
+      <a href="/2023/01/29/css/" class="article-date">
+  <time datetime="2023-01-29T13:06:28.000Z" itemprop="datePublished">2023-01-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">前端基础</a>
+  </div>
+   
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h2><p>表面当前组件<strong>渲染完成包括DOM挂载</strong>，需要执行的<strong>副作用操作</strong>。</p>
-<p><strong>不要尝试用生命周期的方式去理解useEffect，这会使得事情变得十分复杂</strong></p>
-<p>接收两个参数，一个是回调函数，一个是依赖数据。</p>
-<ul>
-<li>回调函数effect，表明需要执行的函数操作</li>
-<li>依赖数据，数组，表明所依赖的数据变化，只有当数组中的数据发生了改变，才会执行effect函数</li>
-</ul>
-<p>React 将按照 effect 声明的顺序依次调用组件中的每一个 effect</p> 
-      <a class="article-more-link" href="/2023/01/29/useEffect/"
+  <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>基础css样式，此部分就我感觉后期比js还难掌握，毕竟写出炫酷的样式还是需要对css的深度了解去学习，可以说是学无止境了这一门。</p>
+<h2 id="一、CSS：层叠样式表（Cascading-style-sheets）"><a href="#一、CSS：层叠样式表（Cascading-style-sheets）" class="headerlink" title="一、CSS：层叠样式表（Cascading style sheets）"></a>一、CSS：层叠样式表（Cascading style sheets）</h2><h3 id="CSS作用是什么？？"><a href="#CSS作用是什么？？" class="headerlink" title="CSS作用是什么？？"></a>CSS作用是什么？？</h3><p>给页面中的HTML标签设置样式，配合HTML使用。</p>
+<p><img src="https://pic.imgdb.cn/item/63d66feaface21e9ef0ceee7.png"></p> 
+      <a class="article-more-link" href="/2023/01/29/css/"
         >阅读更多...</a
       >
        
@@ -324,6 +261,8 @@
     
     <footer class="article-footer">
        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
     </footer>
   </div>
 
@@ -334,7 +273,7 @@
 
     
     <article
-  id="post-ReactHook全家桶"
+  id="post-html"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -345,8 +284,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/"
-    >ReactHook全家桶</a> 
+  <a class="article-title" href="/2023/01/29/html/"
+    >基础常见的HTML结构标签</a> 
 </h2>
  
 
@@ -354,31 +293,19 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/" class="article-date">
-  <time datetime="2023-01-29T15:16:16.000Z" itemprop="datePublished">2023-01-29</time>
-</a>    
+      <a href="/2023/01/29/html/" class="article-date">
+  <time datetime="2023-01-29T11:39:56.000Z" itemprop="datePublished">2023-01-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">前端基础</a>
+  </div>
+   
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>坐标：深圳    职位：前端开发</p>
-<p>只要有时间就持续更新叭，记录前端成长路线…</p>
-<p>经过大概三个月的ReactHooks学习与实践，发现其实Hooks在项目中的开发过程并不是那么流畅，项目质量不佳，很多认为是细小的事实在Hooks上不断打脸，留步总结其实是主要问题在于</p>
-<ul>
-<li>Vue思想带到了React上，试图模拟 watch, filter，emit 等一系列React不存在的概念。</li>
-<li>想通过Hooks完整还原类组件实例的效果，但其实函数组件的思想与类组件思想是不同的。</li>
-<li>想通过Hooks还原类实例生命周期的概念。</li>
-<li>小白起步边学边开发，忽略过多细节导致回头补救太多，代码质量差。</li>
-<li>单个Hooks组件设计过于单一束缚，兼容性差。</li>
-<li>单个Hooks组件过于复杂化，导致复用性差。</li>
-<li>没有很好的发挥自定义Hooks带来的逻辑抽离的便利性。</li>
-<li>没有深入理解纯函数开发概念。</li>
-<li>并没有很深入的去理解ReactAPP的设计哲学，未磨刀先砍柴。</li>
-</ul>
-<p>这次深入Hooks细节，从头学习一次ReactHooks。</p>
-<p>要学的东西没有很多，花费我们大量学习时间的是在用一件事上反反复复的学习回归。</p>
-<p>在此之前，仔细阅读并消化：<a target="_blank" rel="noopener" href="https://react-1251415695.cos-website.ap-chengdu.myqcloud.com/docs/thinking-in-react.html">React哲学</a></p> 
-      <a class="article-more-link" href="/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/"
+  <h2 id="一、Web标准的构成"><a href="#一、Web标准的构成" class="headerlink" title="一、Web标准的构成"></a>一、Web标准的构成</h2><h3 id="结构：HTML-→-页面元素"><a href="#结构：HTML-→-页面元素" class="headerlink" title="结构：HTML → 页面元素"></a>结构：HTML → 页面元素</h3><h3 id="表现：CSS-→-页面样式"><a href="#表现：CSS-→-页面样式" class="headerlink" title="表现：CSS → 页面样式"></a>表现：CSS → 页面样式</h3><h3 id="行为：JavaScript-→-页面交互的动态效果"><a href="#行为：JavaScript-→-页面交互的动态效果" class="headerlink" title="行为：JavaScript → 页面交互的动态效果"></a>行为：JavaScript → 页面交互的动态效果</h3> 
+      <a class="article-more-link" href="/2023/01/29/html/"
         >阅读更多...</a
       >
        
@@ -391,56 +318,8 @@
     
     <footer class="article-footer">
        
-    </footer>
-  </div>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
 
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-uniapp"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/uniapp/"
-    >uniapp</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/01/29/uniapp/" class="article-date">
-  <time datetime="2023-01-29T15:11:49.000Z" itemprop="datePublished">2023-01-29</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>uniapp的开发目的是一套代码多端使用，但是个人兼容性差，实用性不是很强，生态对其它框架来说较弱。但毕竟是国内开发的产品还是希望它可以发展更好更完善。</p>
-<p>特点：</p>
-<p>与vue框架的使用基本一致，但又有微信小程序的一些影子。个人觉得是两个东西的结合加工品。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
     </footer>
   </div>
 
@@ -456,7 +335,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev noopener" target="_blank" href="https://jelly0127.github.io/2023/01/29/Jelly/page/3/">上一页</a><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/">1</a><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/page/2/">2</a><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/page/3/">3</a><span class="page-number current">4</span><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/page/5/">5</a><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/page/6/">6</a><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/page/7/">7</a><a class="extend next" rel="next noopener" target="_blank" href="https://jelly0127.github.io/2023/01/29/Jelly/page/5/">下一页</a>
+    <a class="extend prev" rel="prev noopener" target="_blank" href="https://jelly0127.github.io/2023/01/29/Jelly/page/3/">上一页</a><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/">1</a><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/page/2/">2</a><a class="page-number" target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/Jelly/page/3/">3</a><span class="page-number current">4</span>
   </nav>
   
 </section>
