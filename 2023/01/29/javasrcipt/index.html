@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="音乐、运动、游戏、代码、旅行" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>JavaScript |  Jelly</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/log.jpg" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Jelly" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-javasrcipt"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JavaScript
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/29/javasrcipt/" class="article-date">
+  <time datetime="2023-01-29T13:23:15.000Z" itemprop="datePublished">2023-01-29</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">7.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">30 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、JavaScript的组成"><a href="#一、JavaScript的组成" class="headerlink" title="一、JavaScript的组成"></a>一、JavaScript的组成</h2><p><img src="https://pic.imgdb.cn/item/63d67236face21e9ef119c8b.png"></p>
+<h2 id="二、变量"><a href="#二、变量" class="headerlink" title="二、变量"></a>二、变量</h2><p>声明变量&#x3D;&gt;赋值变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name=<span class="string">&#x27;jelly&#x27;</span></span><br><span class="line"><span class="comment">/*var 是一个 JS关键字，用来声明变量( variable 变量的意思 )。</span></span><br><span class="line"><span class="comment">使用该关键字声明变量后，计算机会自动为变量分配内存空间，不需要程序员管</span></span><br><span class="line"><span class="comment">name是程序员定义的变量名，我们要通过变量名来访问内存中分配的空间*/</span></span><br><span class="line">name = <span class="string">&#x27;gd&#x27;</span>;   <span class="comment">// 最后的结果就是gd因为jelly被覆盖掉了     </span></span><br><span class="line"><span class="keyword">var</span> age = <span class="number">10</span>,  name = <span class="string">&#x27;zs&#x27;</span>, sex = <span class="number">2</span>;<span class="comment">//连续声明变量</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="三、数据类型"><a href="#三、数据类型" class="headerlink" title="三、数据类型"></a>三、数据类型</h2><p>js常用的基本数据类型包括undefined、null、number、boolean、string；</p>
+<p>js的引用数据类型也就是对象类型Object，比如：Object、array、function、data等；</p>
+<h2 id="四、运算符"><a href="#四、运算符" class="headerlink" title="四、运算符"></a>四、运算符</h2><p>JavaScript中常用的运算符有： 算数运算符 递增和递减运算符 比较运算符 逻辑运算符 赋值运算符</p>
+<p><img src="https://pic.imgdb.cn/item/63d6725cface21e9ef11e3f9.png"></p>
+<h3 id="（1）浮点数精度问题（0-1-0-2-x3D-0-3）"><a href="#（1）浮点数精度问题（0-1-0-2-x3D-0-3）" class="headerlink" title="（1）浮点数精度问题（0.1+0.2!&#x3D;0.3）"></a>（1）浮点数精度问题（0.1+0.2!&#x3D;0.3）<img src="https://pic.imgdb.cn/item/63d6726aface21e9ef11fee0.png"></h3><h3 id="（2）递增与递减"><a href="#（2）递增与递减" class="headerlink" title="（2）递增与递减"></a>（2）递增与递减</h3><p>如果需要反复给数字变量添加或减去1，可以使用递增（++）和递减（ – ）运算符来完成。在 JavaScript 中，递增（++）和递减（ – ）既可以放在变量前面，也可以放在变量后面。放在变量前面时，我们可以称为前置递增（递减）运算符，放在变量后面时，我们可以称为后置递增（递减）运算符。注意：递增和递减运算符必须和变量配合使用。 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> count=<span class="number">1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="property">log</span>（count++）;<span class="comment">//2</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="property">log</span>（count--）;</span><br><span class="line"><span class="comment">//前置递增</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="property">log</span>（++count+<span class="number">10</span>）<span class="comment">//12;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="（3）比较运算符"><a href="#（3）比较运算符" class="headerlink" title="（3）比较运算符"></a>（3）比较运算符</h3><p><img src="https://pic.imgdb.cn/item/63d6727dface21e9ef1228ae.png"></p>
+<h3 id="（4）逻辑运算符"><a href="#（4）逻辑运算符" class="headerlink" title="（4）逻辑运算符"></a>（4）逻辑运算符</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">10</span> ,b=<span class="number">1</span>,c=<span class="number">5</span></span><br><span class="line">a&gt;b&amp;&amp;c=<span class="literal">true</span> <span class="comment">//两者都才成立</span></span><br><span class="line">c&gt;a&amp;&amp;b=<span class="literal">false</span> </span><br><span class="line">c&gt;a||b=<span class="literal">true</span> <span class="comment">// 两者中有一者符合就成立</span></span><br><span class="line">a&lt;<span class="number">10</span>=!<span class="literal">true</span> <span class="comment">// false=!true 取反</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="（5）运算符优先级"><a href="#（5）运算符优先级" class="headerlink" title="（5）运算符优先级"></a>（5）运算符优先级</h3><p><img src="https://pic.imgdb.cn/item/63d6728fface21e9ef124e91.png"></p>
+<h2 id="五、流程控制"><a href="#五、流程控制" class="headerlink" title="五、流程控制"></a>五、流程控制</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">10</span> , b=<span class="number">5</span> ,c=<span class="number">1</span></span><br><span class="line"><span class="comment">//if语句</span></span><br><span class="line"><span class="keyword">if</span>(a&gt;b+c)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="property">log</span>（<span class="string">&#x27;yes&#x27;</span>）;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="property">log</span>（<span class="string">&#x27;no&#x27;</span>）;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//yes,10&gt;5+1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//switch语句</span></span><br><span class="line"><span class="keyword">var</span> score = <span class="title function_">prompt</span>(<span class="string">&#x27;请您输入分数:&#x27;</span>);</span><br><span class="line"><span class="keyword">if</span> (score &gt;= <span class="number">90</span>) &#123;</span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;宝贝，你是我的骄傲&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (score &gt;= <span class="number">80</span>) &#123;</span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;宝贝，你已经很出色了&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (score &gt;= <span class="number">70</span>) &#123;</span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;你要继续加油喽&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (score &gt;= <span class="number">60</span>) &#123;</span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;孩子，你很危险&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&#x27;熊孩子，我不想和你说话，我只想用鞭子和你说话&#x27;</span>)</span><br><span class="line">  <span class="comment">//input:85;宝贝，你已经很出色了</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//三元表达式</span></span><br><span class="line"><span class="keyword">var</span> res=a&gt;<span class="number">11</span>?:<span class="string">&#x27;yes&#x27;</span>:<span class="string">&#x27;no&#x27;</span></span><br><span class="line">  <span class="comment">//a&lt;11,no</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="六、数组"><a href="#六、数组" class="headerlink" title="六、数组"></a>六、数组</h2><p>数组是指一组数据的集合，其中的每个数据被称作元素，在数组中可以存放任意类型的元素。数组是一种将一组数据存储在单个变量名下的优雅方式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通变量一次只能存储一个值</span></span><br><span class="line"><span class="keyword">var</span>  num = <span class="number">10</span>; </span><br><span class="line"><span class="comment">// 数组一次可以存储多个值</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> 数组名 = <span class="keyword">new</span> <span class="title class_">Array</span>() ; <span class="comment">// 字面量创建数组</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>();   <span class="comment">// 创建一个新的空数组</span></span><br><span class="line"><span class="comment">//数组中可以存放任意类型的数据，例如字符串，数字，布尔值等。</span></span><br><span class="line"><span class="keyword">var</span> arrStus = [<span class="string">&#x27;小白&#x27;</span>,<span class="number">12</span>,<span class="literal">true</span>,<span class="number">28.9</span>];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组的索引</span></span><br><span class="line"><span class="comment">// 定义数组</span></span><br><span class="line"><span class="keyword">var</span> arrStus = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="comment">// 获取数组中的第2个元素</span></span><br><span class="line"><span class="title function_">alert</span>(arrStus[<span class="number">1</span>]);  </span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;red&#x27;</span>,<span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]) <span class="comment">// red</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">1</span>]) <span class="comment">// green</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">2</span>]) <span class="comment">// blue</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//for遍历数组</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;red&#x27;</span>,<span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++)&#123;  <span class="comment">//使用“数组名.length”可以访问数组元素的数量（数组长度）</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arrStus[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历计算</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">7</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> average = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    sum += arr[i];</span><br><span class="line">&#125;</span><br><span class="line">average = sum / arr.<span class="property">length</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;这组数的和是：&#x27;</span> + sum);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;这组数的平均值是：&#x27;</span> + average);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//数组的属性</span></span><br><span class="line"><span class="comment">/*数组是对象的一种，每次的位置都是从0开始。也就是索引号</span></span><br><span class="line"><span class="comment">数组属性，length会显示数组的长度</span></span><br><span class="line"><span class="comment">（1）：增删数组：pop，unshift，shift，push</span></span><br><span class="line"><span class="comment">unshift：在数组的最前面增加一个或多个值，返回的值是新的数组长度</span></span><br><span class="line"><span class="comment">shift：删除数组最前面的，返回的值是被删除的哪一个</span></span><br><span class="line"><span class="comment">pop：删除最后一个，返回的值是被删除的哪一个</span></span><br><span class="line"><span class="comment">push：在数组的最后面增加一个或多个值，返回的值是新的数组长度</span></span><br><span class="line"><span class="comment">（2）indexOf：查找值在数组的某一位置，返回的值是length（长度），如果没有此值则返回-1.</span></span><br><span class="line"><span class="comment">lastindexOf：如果此数组里有重复值，就可以用这个属性。查到元素在数组里面最后一次出现的位置</span></span><br><span class="line"><span class="comment">（3）slice（start，end）start开始位置，end结束位置，start含有此位置的元素，end不含此位置的元素。返回的值是最新数组</span></span><br><span class="line"><span class="comment">（4）splice（start，end，需要在此中间删除的元素），返回的值是最新数组</span></span><br><span class="line"><span class="comment">（5）reverse：将数组内容反转输出，如：var a=[1,2,3,4]; var b=a.reverse(); //结果4321 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">64</span>, <span class="number">9</span>, <span class="number">6</span>];</span><br><span class="line">arr.<span class="title function_">sort</span>(<span class="keyword">function</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> b - a;      <span class="comment">// 降a序</span></span><br><span class="line">    <span class="comment">// return a - b;   // 升序</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"></span><br><span class="line"><span class="comment">//数组转字符串</span></span><br><span class="line">toString（）</span><br><span class="line">join（）</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组的遍历方法：（12种）"><a href="#数组的遍历方法：（12种）" class="headerlink" title="数组的遍历方法：（12种）"></a>数组的遍历方法：（12种）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span><span class="keyword">for</span>循环</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>;i++  )&#123;</span><br><span class="line">  <span class="comment">//代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>forEach循环</span><br><span class="line"> arr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item,index,arr</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//代码</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="comment">/*forEach接收一个回调函数作为参数,而这个回调函数有接受三个参数,作为参数。</span></span><br><span class="line"><span class="comment">item是每个元素,index元素在数组中的下标,arr数组本身。没有返回值！*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>map循环 (<span class="title class_">React</span>循环渲染用map)</span><br><span class="line"><span class="keyword">var</span> brr= arr.<span class="title function_">map</span>(<span class="function">(<span class="params">item,index,arr</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//代码</span></span><br><span class="line">        <span class="keyword">return</span> item * <span class="number">2</span>;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="comment">/*map的用法和forEach差不多。但是map是有返回值的。他的返回值是一个新数组</span></span><br><span class="line"><span class="comment">    arr----&gt;[1,2,3]</span></span><br><span class="line"><span class="comment">    brr----&gt;[2,4,6]*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span><span class="keyword">for</span>–<span class="keyword">of</span></span><br><span class="line"><span class="comment">//对象不能遍历</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> item <span class="keyword">of</span> arr)&#123;</span><br><span class="line">        <span class="comment">//代码</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">5.</span>filter</span><br><span class="line"><span class="keyword">const</span> arr = [</span><br><span class="line">        &#123;<span class="attr">name</span>:<span class="string">&#x27;张三&#x27;</span>,<span class="attr">age</span>:<span class="string">&#x27;20&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">name</span>:<span class="string">&#x27;李四&#x27;</span>,<span class="attr">age</span>:<span class="string">&quot;50&quot;</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">    arr.<span class="title function_">filter</span>(<span class="function"><span class="params">item</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> item.<span class="property">name</span>;</span><br><span class="line">        <span class="comment">//返回值是 arr本身，所以元素的name都为true</span></span><br><span class="line">    &#125;)</span><br><span class="line">    arr.<span class="title function_">filter</span>(<span class="function"><span class="params">item</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> item.<span class="property">age</span>&gt;<span class="number">30</span>;</span><br><span class="line">        <span class="comment">//[&#123;name:&quot;李四&quot;,age:&quot;50&quot;&#125;]</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//接受一个回调函数作为参数,返回值是一个新数组</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">6.</span>every遍历</span><br><span class="line"><span class="comment">//every()是对数组中的每一项运行给定函数，如果该函数对每一项返回true,则返回true。(全部符合条件)</span></span><br><span class="line">    <span class="keyword">var</span> arr=[<span class="number">50</span>,<span class="number">6</span>,<span class="number">70</span>,<span class="number">80</span>];</span><br><span class="line">    arr.<span class="title function_">every</span>(<span class="function">(<span class="params">item,index,arr</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> item &gt; <span class="number">50</span>; <span class="comment">//每一项数据都要大于50</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//false   </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">7.</span>some遍历</span><br><span class="line"><span class="comment">//some()是对数组中每一项运行指定函数，如果该函数对任一项返回true，则返回true。(只要有一个符合)</span></span><br><span class="line">    <span class="keyword">var</span> arr=[<span class="number">50</span>,<span class="number">6</span>,<span class="number">70</span>,<span class="number">80</span>];</span><br><span class="line">    arr.<span class="title function_">some</span>(<span class="function">(<span class="params">item,index,arr</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> item &gt; <span class="number">50</span>; <span class="comment">//只要有一项数据都要大于50</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">8.</span>reduce （累加器）</span><br><span class="line"><span class="comment">///reduce()方法接收一个函数作为累加器,数组中每个值(从左往右)开始缩减,最重为一个值</span></span><br><span class="line">    [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].<span class="title function_">reduce</span>(<span class="function">(<span class="params">a,b</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;<span class="comment">//6   </span></span><br><span class="line">    &#125;)</span><br><span class="line">    [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].<span class="title function_">reduce</span>(<span class="function">(<span class="params">previousValue,currentValue,index,arr</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> previousValue + currentValue;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//reduce还有第二个参数，我们可以把这个参数作为第一次调用callback时的第一个参数，上面这个例子因为没有第二个参数，所以直接从数组的第二项开始，如果我们给了第二个参数为5</span></span><br><span class="line">     [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].<span class="title function_">reduce</span>(<span class="function">(<span class="params">previousValue,currentValue,index,arr</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> previousValue + currentValue;</span><br><span class="line">    &#125;,<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 6, 8 ,11</span></span><br><span class="line">    <span class="comment">//第一次调用的previousValue的值就用传入的第二个参数代替，</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">9.</span>reduceRight</span><br><span class="line"><span class="comment">/*reduceRight()方法的功能和reduce()功能是一样的，不同的是reduceRight()从数组的末尾向前将数组中的数组项做累加。</span></span><br><span class="line"><span class="comment">    reduceRight()首次调用回调函数callbackfn时，prevValue 和 curValue 可以是两个值之一。</span></span><br><span class="line"><span class="comment">    如果调用 reduceRight() 时提供了 initialValue 参数，则 prevValue 等于 initialValue，curValue 等于数组中的最后一个值。</span></span><br><span class="line"><span class="comment">    如果没有提供 initialValue 参数，则 prevValue 等于数组最后一个值， curValue 等于数组中倒数第二个值。*/</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">    arr.<span class="title function_">reduceRight</span>(<span class="keyword">function</span> (<span class="params">preValue,curValue,index,array</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> preValue + curValue;</span><br><span class="line">    &#125;); <span class="comment">// 10</span></span><br><span class="line">    <span class="number">7</span> = <span class="number">4</span> + <span class="number">3</span>   第一次</span><br><span class="line">    <span class="number">9</span> = <span class="number">2</span> + <span class="number">7</span>   第二次</span><br><span class="line">   <span class="number">10</span> = <span class="number">9</span> + <span class="number">1</span>   第三次</span><br><span class="line">   <span class="number">10</span> = <span class="number">10</span> + <span class="number">0</span>  第四次</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">10.</span>find</span><br><span class="line"> <span class="comment">//find()方法返回数组中符合测试函数条件的第一个元素。否则返回undefined </span></span><br><span class="line">    <span class="keyword">const</span> stu = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>,</span><br><span class="line">        <span class="attr">gender</span>: <span class="string">&#x27;男&#x27;</span>,</span><br><span class="line">        <span class="attr">age</span>: <span class="number">20</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;王五&#x27;</span>,</span><br><span class="line">        <span class="attr">gender</span>: <span class="string">&#x27;男&#x27;</span>,</span><br><span class="line">        <span class="attr">age</span>: <span class="number">21</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;李四&#x27;</span>,</span><br><span class="line">        <span class="attr">gender</span>: <span class="string">&#x27;女&#x27;</span>,</span><br><span class="line">        <span class="attr">age</span>: <span class="number">22</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">getStu</span>(<span class="params">element</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> element.<span class="property">name</span> == <span class="string">&#x27;李四&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    stu.<span class="title function_">find</span>(getStu)</span><br><span class="line">    <span class="comment">//返回结果为</span></span><br><span class="line">    <span class="comment">//&#123;name: &quot;李四&quot;, gender: &quot;女&quot;, age: 22&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">11.</span>findIndex</span><br><span class="line"><span class="comment">/*对于数组中的每个元素，findIndex 方法都会调用一次回调函数（采用升序索引顺序），直到有元素返回 true。</span></span><br><span class="line"><span class="comment">只要有一个元素返回 true，findIndex 立即返回该返回 true 的元素的索引值。</span></span><br><span class="line"><span class="comment">如果数组中没有任何元素返回 true，则 findIndex 返回 -1。findIndex 不会改变数组对象!!!!!*/</span></span><br><span class="line">    [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].<span class="title function_">findIndex</span>(<span class="keyword">function</span>(<span class="params">x</span>) &#123; x == <span class="number">2</span>; &#125;);</span><br><span class="line">    <span class="comment">//1</span></span><br><span class="line">    [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].<span class="title function_">findIndex</span>(<span class="function"><span class="params">x</span> =&gt;</span> x == <span class="number">4</span>);</span><br><span class="line">    <span class="comment">//-1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">12.</span>keys,values,entries</span><br><span class="line"><span class="comment">/*ES6 提供三个新的方法 —— entries()，keys()和values() —— 用于遍历数组。它们都返回一个遍历器对象，</span></span><br><span class="line"><span class="comment">可以用for...of循环进行遍历，唯一的区别是keys()是对键名的遍历、values()是对键值的遍历，</span></span><br><span class="line"><span class="comment">entries()是对键值对的遍历*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> index <span class="keyword">of</span> [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>].<span class="title function_">keys</span>()) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 0</span></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> elem <span class="keyword">of</span> [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>].<span class="title function_">values</span>()) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(elem);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// &#x27;a&#x27;</span></span><br><span class="line"><span class="comment">// &#x27;b&#x27;</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [index, elem] <span class="keyword">of</span> [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>].<span class="title function_">entries</span>()) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index, elem);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 0 &quot;a&quot;</span></span><br><span class="line"><span class="comment">// 1 &quot;b&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="七、字符串"><a href="#七、字符串" class="headerlink" title="七、字符串"></a>七、字符串</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.charAt(index) 返回指定索引位置的字符，（index）表示字符串中某个位置的数字，字符在该字符串中的下标，</span></span><br><span class="line"><span class="comment">//若index超出字符串的length，.charAt（）返回空。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">charAt</span>(<span class="number">1</span>));    <span class="comment">//输出字符串中第二个位置的字符，结果为 b</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">charAt</span>(<span class="number">9</span>));    <span class="comment">//选定位置超出字符串的长度，结果为 空</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.charCodeAt(index)返回指定索引位置字符的Unicode编码。</span></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">charCodeAt</span>(<span class="number">0</span>)); <span class="comment">// 97</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.fromCharCode(num) 返回的是ASCII码对应的值，num可以是一个或多个ASCII码值，多个用逗号分割。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(<span class="number">97</span>,<span class="number">98</span>,<span class="number">99</span>));    <span class="comment">//结果为 abc</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//.concat(str) 连接两个或多个字符串，返回连接后的字符串。</span></span><br><span class="line"><span class="keyword">var</span> str1=<span class="string">&#x27;hello&#x27;</span>;<span class="keyword">var</span> str2=<span class="string">&#x27; world&#x27;</span>;</span><br><span class="line"><span class="title function_">alert</span>(str1.<span class="title function_">concat</span>(str2)); <span class="comment">// 返回拼接后的hello world</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.indexOf(str) 返回指定字符串第一次出现的位置，若没有则返回-1。</span></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">&#x27;hello world,hello moee&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">indexOf</span>(<span class="string">&#x27;hello&#x27;</span>)); <span class="comment">// 0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">indexOf</span>(<span class="string">&#x27;o&#x27;</span>)); <span class="comment">//返回第一次出现的o对应的位置 4</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">indexOf</span>(<span class="string">&#x27;s&#x27;</span>)); <span class="comment">//若未出现返回 -1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.lastIndexOf(str) 返回指定字符串最后一次出现的位置，没有返回-1</span></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">&#x27;hello world,hello moee&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;hello&#x27;</span>)); <span class="comment">// 12</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;o&#x27;</span>)); <span class="comment">//19</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;s&#x27;</span>)); <span class="comment">//若未出现返回 -1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//.match() 找到一个或多个正则表达式的匹配，没有返回null。正则是全局匹配则返回匹配到的所有字符串组成的数组；</span></span><br><span class="line"><span class="comment">//诺正则并非是全局匹配，因此返回的数组里只匹配到一个，它位于数组的第1项，数组的第2项是匹配到的内容位于字符串起始位置，</span></span><br><span class="line"><span class="comment">//第3项是原始字符串内容，第4项groups一个捕获组数组 或 undefined（如果没有定义命名捕获组）。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;1 week 1 2 abcd 3 1 2&quot;</span>; <span class="comment">//match方法返回值为数组</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">match</span>(<span class="string">&#x27;1&#x27;</span>)); <span class="comment">//[&quot;1&quot;, index: 0, input: &quot;1 week 1 2 abcd 3 1 2&quot;, groups: undefined]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">match</span>(<span class="regexp">/[0-9]/g</span>)); <span class="comment">//[&quot;1&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;1&quot;, &quot;2&quot;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//.replace() 替换与正则表达式匹配的子串（默认只替换第一个匹配的子串，加g可以替换所有匹配的子串）。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;1 week 1 2 abcd 3 1 2 week&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">replace</span>(<span class="regexp">/week/</span>,<span class="string">&#x27;month&#x27;</span>)) <span class="comment">//返回 &quot;1 month 1 2 abcd 3 1 2 week&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">replace</span>(<span class="regexp">/week\g/</span>,<span class="string">&#x27;month&#x27;</span>)) <span class="comment">//返回 &quot;1 week 1 2 abcd 3 1 2 week&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.search() 返回与正则表达式匹配的子串的起始位置，没有返回-1。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;1 week 1 2 abcd 3 1 2 week&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">search</span>(<span class="regexp">/week/</span>)) <span class="comment">//返回 2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//.slice(num1,num2) 返回指定开始位置（包括开始位置，若为负数则从末尾处开始计算起始位置，即-1表示倒数第一个）到指定结束位置（不包括结束位置，若未指定此参数，则包括从指定的开始位置开始到字符串结尾的所有字符）的字符串。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">slice</span>(<span class="number">4</span>,<span class="number">9</span>)) <span class="comment">//返回 &quot;o wor&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str) <span class="comment">//返回 &quot;hello world&quot; 不改变原字符串</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//.split()将字符串分割为子字符串数组（第二个参数可指定返回的数组的最大长度，可选）</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">split</span>(<span class="string">&#x27; &#x27;</span>)) <span class="comment">//返回  [&quot;hello&quot;, &quot;world&quot;]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str) <span class="comment">//返回 &quot;hello world&quot; 不改变原字符串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.substr(index,length) 提取从指定index（索引，必需，若为负数则从末尾处开始计算起始位置，即-1表示倒数第一个）开始的length（长度，可选，若未指定此参数，则包括从指定的index开始到字符串结尾的所有字符）个字符。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">substr</span>(<span class="number">2</span>,<span class="number">4</span>)) <span class="comment">//返回 &quot;llo &quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str) <span class="comment">//返回 &quot;hello world&quot; 不改变原字符串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.substring(num1,num2) 提取指定开始位置（包括开始位置）到结束位置（不包括结束位置，可选，若未指定此参数，则包括从指定的开始位置开始到字符串结尾的所有字符）的字符。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">substring</span>(<span class="number">2</span>,<span class="number">4</span>)) <span class="comment">//返回 &quot;ll&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">substring</span>(<span class="number">2</span>)) <span class="comment">//返回 &quot;llo world&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str) <span class="comment">//返回 &quot;hello world&quot; 不改变原字符串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.toLowerCase() 将字符串转换为小写。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">toLowerCase</span>()) <span class="comment">//返回 &quot;hello world&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.toUpperCase() 将字符串转换为大写。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">toUpperCase</span>()) <span class="comment">//返回 &quot;HELLO WORLD&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//.trim() 可以去除字符串头尾空格。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;        Hello World    &quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">trim</span>()) <span class="comment">// 返回 &quot;Hello World&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="八、函数"><a href="#八、函数" class="headerlink" title="八、函数"></a>八、函数</h2><p>在 JS 里面，可能会定义非常多的相同代码或者功能相似的代码，这些代码可能需要大量重复使用。虽然 for循环语句也能实现一些简单的重复操作，但是比较具有局限性，此时我们就可以使用 JS 中的函数。函数：就是封装了一段可被重复调用执行的代码块。通过此代码块可以实现大量代码的重复使用。  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明函数</span></span><br><span class="line"><span class="keyword">function</span> 函数名() &#123;</span><br><span class="line">    <span class="comment">//函数体代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*function 是声明函数的关键字,必须小写</span></span><br><span class="line"><span class="comment">由于函数一般是为了实现某个功能才定义的， 所以通常我们将函数名命名为动词，比如 getSum  </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">   计算1-100之间值的函数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">// 声明函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getSum</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> sumNum = <span class="number">0</span>;<span class="comment">// 准备一个变量，保存数字和</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    sumNum += i;<span class="comment">// 把每个数值 都累加 到变量中</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">alert</span>(sumNum);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line"><span class="title function_">getSum</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 带参数的函数声明</span></span><br><span class="line"><span class="keyword">function</span> 函数名(形参<span class="number">1</span>, 形参<span class="number">2</span> , 形参<span class="number">3.</span>..) &#123; <span class="comment">// 可以定义任意多的参数，用逗号分隔</span></span><br><span class="line">  <span class="comment">// 函数体</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 带参数的函数调用</span></span><br><span class="line">函数名(实参<span class="number">1</span>, 实参<span class="number">2</span>, 实参<span class="number">3.</span>..); </span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getSum</span>(<span class="params">num1, num2</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(num1 + num2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getSum</span>(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// 4</span></span><br><span class="line"><span class="title function_">getSum</span>(<span class="number">6</span>, <span class="number">5</span>); <span class="comment">// 11</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明函数</span></span><br><span class="line"><span class="keyword">function</span> 函数名（）&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span>  需要返回的值；</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line">函数名();    <span class="comment">// 此时调用函数就可以得到函数体内return 后面的值</span></span><br><span class="line"> <span class="comment">/*在使用 return 语句时，函数会停止执行，并返回指定的值</span></span><br><span class="line"><span class="comment"> 如果函数没有 return ，返回的值是 undefined*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明函数</span></span><br><span class="line"><span class="keyword">function</span> sum（）&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span>  <span class="number">666</span>；</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line"><span class="title function_">sum</span>();      <span class="comment">// 此时 sum 的值就等于666，因为 return 语句会把自身后面的值返回给调用者 </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//return 终止函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">num1，num2</span>)&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">    <span class="keyword">return</span> num1 + num2; <span class="comment">// 注意：return 后的代码不执行</span></span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;我不会被执行，因为前面有 return&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> resNum = <span class="title function_">add</span>(<span class="number">21</span>,<span class="number">6</span>); <span class="comment">// 调用函数，传入两个实参，并通过 resNum 接收函数返回值</span></span><br><span class="line"><span class="title function_">alert</span>(resNum);          <span class="comment">// 27</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*函数都是有返回值的，返回最后一个值</span></span><br><span class="line"><span class="comment">如果有return 则返回 return 后面的值</span></span><br><span class="line"><span class="comment">如果没有return 则返回 undefined */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*break ：结束当前的循环体（如 for、while）</span></span><br><span class="line"><span class="comment">continue ：跳出本次循环，继续执行下次循环（如 for、while）</span></span><br><span class="line"><span class="comment">return ：不仅可以退出循环，还能够返回 return 语句中的值，同时还可以结束当前的函数体内的代码</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数调用另一个函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn1</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">111</span>);</span><br><span class="line">  <span class="title function_">fn2</span>();</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fn1&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn2</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">222</span>);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fn2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn1</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="九、作用域"><a href="#九、作用域" class="headerlink" title="九、作用域"></a>九、作用域</h2><p>通常来说，一段程序代码中所用到的名字并不总是有效和可用的，而限定这个名字的可用性的代码范围就是这个名字的作用域。作用域的使用提高了程序逻辑的局部性，增强了程序的可靠性，减少了名字冲突。</p>
+<p>JavaScript（es6前）中的作用域有两种：全局作用域局部作用域（函数作用域）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//块级作用域有&#123;&#125;包裹</span></span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">  int num = <span class="number">123</span>;</span><br><span class="line">  system.<span class="property">out</span>.<span class="title function_">print</span>(num);  <span class="comment">// 123</span></span><br><span class="line">&#125;</span><br><span class="line">system.<span class="property">out</span>.<span class="title function_">print</span>(num);    <span class="comment">// 报错</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">123</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>( num );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">f2</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">456</span>;</span><br><span class="line"><span class="title function_">f1</span>();<span class="comment">//123</span></span><br><span class="line"><span class="comment">//作用域链：采取就近原则的方式来查找变量最终的值。</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/63d672acface21e9ef128a81.png"></p>
+<h2 id="十、预解析"><a href="#十、预解析" class="headerlink" title="十、预解析"></a>十、预解析</h2><p>预解析：在当前作用域下, JS 代码执行之前，浏览器会默认把带有 var 和 function 声明的变量在内存中进行提前声明或者定义。代码执行： 从上到下执行JS语句。预解析只会发生在通过 var 定义的变量和 function 上。学习预解析能够让我们知道为什么在变量声明之前访问变量的值是 undefined，为什么在函数声明之前就可以调用函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//变量提升</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);  <span class="comment">// 结果是多少？</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;      <span class="comment">// 10</span></span><br><span class="line">预解析也叫做变量、函数提升。</span><br><span class="line">变量提升： 变量的声明会被提升到当前作用域的最上面，变量的赋值不会提升。</span><br><span class="line"></span><br><span class="line"><span class="comment">//函数提升</span></span><br><span class="line"><span class="title function_">fn</span>();</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;打印&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">函数提升： 函数的声明会被提升到当前作用域的最上面，但是不会调用函数。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="十一、对象"><a href="#十一、对象" class="headerlink" title="十一、对象"></a>十一、对象</h2><p>在 JavaScript 中，对象是一组无序的相关属性和方法的集合，所有的事物都是对象，例如字符串、数值、数组、函数等。对象是由属性和方法组成的。属性：事物的特征，在对象中用属性来表示（常用名词）方法：事物的行为，在对象中用方法来表示（常用动词）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字面量创建对象</span></span><br><span class="line"><span class="keyword">var</span> star = &#123;</span><br><span class="line">    name : <span class="string">&#x27;pink&#x27;</span>,</span><br><span class="line">    age : <span class="number">18</span>,</span><br><span class="line">    sex : <span class="string">&#x27;男&#x27;</span>,</span><br><span class="line">    sayHi : <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;大家好啊~&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用对象</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(star.<span class="property">name</span>)     <span class="comment">// 调用名字属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(star[<span class="string">&#x27;name&#x27;</span>])  <span class="comment">// 调用名字属性</span></span><br><span class="line">star.<span class="title function_">sayHi</span>();              <span class="comment">// 调用 sayHi 方法,注意，一定不要忘记带后面的括号</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//利用newObject创建对象</span></span><br><span class="line"><span class="keyword">var</span> andy = <span class="keyword">new</span> <span class="title class_">Obect</span>();</span><br><span class="line">andy.<span class="property">name</span> = <span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line">andy.<span class="property">age</span> = <span class="number">18</span>;</span><br><span class="line">andy.<span class="property">sex</span> = <span class="string">&#x27;男&#x27;</span>;</span><br><span class="line">andy.<span class="property">sayHi</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;大家好啊~&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//利用构造函数创建对象</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name, age, sex</span>) &#123;</span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">sex</span> = sex;</span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">sayHi</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="title function_">alert</span>(<span class="string">&#x27;我的名字叫：&#x27;</span> + <span class="variable language_">this</span>.<span class="property">name</span> + <span class="string">&#x27;，年龄：&#x27;</span> + <span class="variable language_">this</span>.<span class="property">age</span> + <span class="string">&#x27;，性别：&#x27;</span> + <span class="variable language_">this</span>.<span class="property">sex</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> bigbai = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;大白&#x27;</span>, <span class="number">100</span>, <span class="string">&#x27;男&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> smallbai = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;小白&#x27;</span>, <span class="number">21</span>, <span class="string">&#x27;男&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(bigbai.<span class="property">name</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(smallbai.<span class="property">name</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历对象属性</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(k);      <span class="comment">// 这里的 k 是属性名</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(obj[k]); <span class="comment">// 这里的 obj[k] 是属性值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="十二、内置对象"><a href="#十二、内置对象" class="headerlink" title="十二、内置对象"></a>十二、内置对象</h2><p>学习一个内置对象的使用，只要学会其常用成员的使用即可，我们可以通过查文档学习，可以通过MDN&#x2F;W3C来查询。Mozilla 开发者网络（MDN）提供了有关开放网络技术（Open Web）的信息，包括 HTML、CSS 和万维网及 HTML5 应用的 API。MDN:   <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">https://developer.mozilla.org/zh-CN/</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Math</span>.<span class="property">PI</span>		 <span class="comment">// 圆周率</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">floor</span>() 	 <span class="comment">// 向下取整</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">ceil</span>()            <span class="comment">// 向上取整</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">round</span>()           <span class="comment">// 四舍五入版 就近取整   注意 -3.5   结果是  -3 </span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">abs</span>()		 <span class="comment">// 绝对值</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">max</span>()/<span class="title class_">Math</span>.<span class="title function_">min</span>()	 <span class="comment">// 求最大和最小值 </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//随机数方法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getRandom</span>(<span class="params">min, max</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * (max - min + <span class="number">1</span>)) + min; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//Date时间 （建议使用第三方包 moment.js/day.js）</span></span><br><span class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(now);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//数组对象</span></span><br><span class="line"> <span class="keyword">instanceof</span> 运算符，可以判断一个对象是否属于某种类型</span><br><span class="line"> <span class="title class_">Array</span>.<span class="title function_">isArray</span>()用于判断一个对象是否为数组，<span class="title function_">isArray</span>() 是 <span class="title class_">HTML5</span> 中提供的方法	 </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">23</span>];</span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr <span class="keyword">instanceof</span> <span class="title class_">Array</span>); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj <span class="keyword">instanceof</span> <span class="title class_">Array</span>); <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Array</span>.<span class="title function_">isArray</span>(arr));   <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Array</span>.<span class="title function_">isArray</span>(obj));   <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/63d672beface21e9ef12ad10.png"></p>
+<h2 id="十三、简单型与复杂性数据"><a href="#十三、简单型与复杂性数据" class="headerlink" title="十三、简单型与复杂性数据"></a>十三、简单型与复杂性数据</h2><p>简单类型又叫做基本数据类型或者值类型，复杂类型又叫做引用类型。 值类型：简单数据类型&#x2F;基本数据类型，在存储时变量中存储的是值本身，因此叫做值类型string ，number，boolean，undefined，null 引用类型：复杂数据类型，在存储时变量中存储的仅仅是地址（引用），因此叫做引用数据类型 通过 new 关键字创建的对象（系统对象、自定义对象），如 Object、Array、Date等</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//简单型</span></span><br><span class="line"><span class="comment">//函数的形参也可以看做是一个变量，当我们把一个值类型变量作为参数传给函数的形参时，</span></span><br><span class="line"><span class="comment">//其实是把变量在栈空间里的值复制了一份给形参，那么在方法内部对形参做任何修改，</span></span><br><span class="line"><span class="comment">//都不会影响到的外部变量。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">a</span>) &#123;</span><br><span class="line">    a++;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a); </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="title function_">fn</span>(x);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x)；</span><br><span class="line"></span><br><span class="line"><span class="comment">//复杂型</span></span><br><span class="line"><span class="comment">//函数的形参也可以看做是一个变量，当我们把引用类型变量传给形参时，</span></span><br><span class="line"><span class="comment">//其实是把变量在栈空间里保存的堆地址复制给了形参，形参和实参其实保存的是同一个堆地址，</span></span><br><span class="line"><span class="comment">//所以操作的是同一个对象。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params">x</span>) &#123; <span class="comment">// x = p</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(x.<span class="property">name</span>); <span class="comment">// 2. 这个输出什么 ?    </span></span><br><span class="line">    x.<span class="property">name</span> = <span class="string">&quot;张学友&quot;</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(x.<span class="property">name</span>); <span class="comment">// 3. 这个输出什么 ?    </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&quot;刘德华&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p.<span class="property">name</span>);    <span class="comment">// 1. 这个输出什么 ?   </span></span><br><span class="line"><span class="title function_">f1</span>(p);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p.<span class="property">name</span>);    <span class="comment">// 4. 这个输出什么 ?  </span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="十四、Dom"><a href="#十四、Dom" class="headerlink" title="十四、Dom"></a>十四、Dom</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用 getElementById() 方法可以获取带有 ID 的元素对象。</span></span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;id&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用 getElementsByTagName() 方法可以返回带有指定标签名的对象的集合。</span></span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;标签名&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//还可以获取某个元素(父元素)内部所有指定标签名的子元素.</span></span><br><span class="line">element.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;标签名&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过 HTML5 新增的方法获取</span></span><br><span class="line"><span class="number">1.</span> <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(‘类名’)；<span class="comment">// 根据类名返回元素对象集合</span></span><br><span class="line"><span class="number">2.</span> <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;选择器&#x27;</span>);        <span class="comment">// 根据指定选择器返回第一个元素对象</span></span><br><span class="line"><span class="number">3.</span> <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;选择器&#x27;</span>);     <span class="comment">// 根据指定选择器返回</span></span><br><span class="line"></span><br><span class="line"> doucumnet.<span class="property">body</span>  <span class="comment">// 返回body元素对象</span></span><br><span class="line"> <span class="variable language_">document</span>.<span class="property">documentElement</span>  <span class="comment">// 返回html元素对象</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//按钮点击事件</span></span><br><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;btn&#x27;</span>);</span><br><span class="line">btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">alert</span>(<span class="string">&#x27;你好吗&#x27;</span>);  </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//改变元素内容</span></span><br><span class="line">element.<span class="property">innerText</span></span><br><span class="line">element.<span class="property">innerHTML</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//利用 DOM 可以操作如下表单元素的属性：</span></span><br><span class="line">type、value、checked、selected、disabled</span><br><span class="line"></span><br><span class="line"><span class="comment">//可以通过 JS 修改元素的大小、颜色、位置等样式。</span></span><br><span class="line"><span class="number">1.</span> element.<span class="property">style</span>     行内样式操作</span><br><span class="line"><span class="number">2.</span> element.<span class="property">className</span> 类名样式操作</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/63d672cdface21e9ef12d231.png"></p>
+<p>Dom核心</p>
+<p>关于dom操作，主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">write</span></span><br><span class="line">innerHTML</span><br><span class="line">createElement</span><br><span class="line"></span><br><span class="line"><span class="comment">//增</span></span><br><span class="line"><span class="number">1.</span> appendChild</span><br><span class="line"><span class="number">2.</span> insertBefore</span><br><span class="line"></span><br><span class="line"><span class="comment">//删</span></span><br><span class="line"><span class="number">1.</span> removeChild</span><br><span class="line"></span><br><span class="line"><span class="comment">//改  主要修改dom的元素属性，dom元素的内容、属性, 表单的值等</span></span><br><span class="line">修改元素属性： src、href、title等</span><br><span class="line">修改普通元素内容： innerHTML 、innerText</span><br><span class="line">修改表单元素： value、type、disabled等</span><br><span class="line">修改元素样式： style、className</span><br><span class="line"></span><br><span class="line"><span class="comment">//查</span></span><br><span class="line"><span class="variable constant_">DOM</span>提供的<span class="variable constant_">API</span> 方法：  getElementById、getElementsByTagName  古老用法 不太推荐 </span><br><span class="line"><span class="variable constant_">H5</span>提供的新方法： querySelector、querySelectorAll   提倡</span><br><span class="line">利用节点操作获取元素： 父(parentNode)、子(children)、兄(previousElementSibling、nextElementSibling)  提倡</span><br><span class="line"></span><br><span class="line"><span class="comment">//属性操作</span></span><br><span class="line"><span class="number">1.</span> setAttribute：设置dom的属性值</span><br><span class="line"><span class="number">2.</span> getAttribute：得到dom的属性值</span><br><span class="line"><span class="number">3.</span> removeAttribute移除属性</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="十五、Bom"><a href="#十五、Bom" class="headerlink" title="十五、Bom"></a>十五、Bom</h2><p>window 对象是浏览器的顶级对象，它具有双重角色。它是 JS 访问浏览器窗口的一个接口。它是一个全局对象。定义在全局作用域中的变量、函数都会变成 window 对象的属性和方法。在调用的时候可以省略 window，前面学习的对话框都属于 window 对象方法，如 alert()、prompt() 等。注意：window下的一个特殊属性 window.name</p>
+<p><img src="https://pic.imgdb.cn/item/63d672e1face21e9ef12fab2.png"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//浏览器页面加载</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line">或者 </span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;load&quot;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//通知窗口大小</span></span><br><span class="line"> <span class="variable language_">window</span>.<span class="property">onresize</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line"></span><br><span class="line"> <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;resize&quot;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//定时器</span></span><br><span class="line"><span class="variable language_">window</span> 对象给我们提供了 <span class="number">2</span> 个非常好用的方法-定时器。</span><br><span class="line"> <span class="built_in">setTimeout</span>() </span><br><span class="line"> <span class="built_in">setInterval</span>()  </span><br><span class="line"></span><br><span class="line"><span class="comment">//this</span></span><br><span class="line"><span class="variable language_">this</span>的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定<span class="variable language_">this</span>到底指向谁，</span><br><span class="line">一般情况下<span class="variable language_">this</span>的最终指向的是那个调用它的对象</span><br><span class="line">现阶段，我们先了解一下几个<span class="variable language_">this</span>指向</span><br><span class="line"><span class="number">1.</span> 全局作用域或者普通函数中<span class="variable language_">this</span>指向全局对象<span class="variable language_">window</span>（注意定时器里面的<span class="variable language_">this</span>指向<span class="variable language_">window</span>）</span><br><span class="line"><span class="number">2.</span> 方法调用中谁调用<span class="variable language_">this</span>指向谁</span><br><span class="line"><span class="number">3.</span>构造函数中<span class="variable language_">this</span>指向构造函数的实例</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//执行机制（单线程）</span></span><br><span class="line"><span class="comment">//同步</span></span><br><span class="line">前一个任务结束后再执行后一个任务，程序的执行顺序与任务的排列顺序是一致的、同步的。</span><br><span class="line">比如做饭的同步做法：我们要烧水煮饭，等水开了（<span class="number">10</span>分钟之后），再去切菜，炒菜。</span><br><span class="line"></span><br><span class="line"><span class="comment">//异步</span></span><br><span class="line">你在做一件事情时，因为这件事情会花费很长时间，在做这件事的同时，你还可以去处理其他事情。</span><br><span class="line">比如做饭的异步做法，我们在烧水的同时，利用这<span class="number">10</span>分钟，去切菜，炒菜。</span><br><span class="line"></span><br><span class="line"><span class="comment">//执行机制步骤</span></span><br><span class="line"><span class="number">1.</span> 先执行执行栈中的同步任务。</span><br><span class="line"><span class="number">2.</span> 异步任务（回调函数）放入任务队列中。</span><br><span class="line"><span class="number">3.</span> 一旦执行栈中的所有同步任务执行完毕，系统就会按次序读取任务队列中的异步任务，</span><br><span class="line">  于是被读取的异步任务结束等待状态，进入执行栈，开始执行。</span><br><span class="line"></span><br><span class="line"><span class="comment">//location对象</span></span><br><span class="line"><span class="variable language_">window</span> 对象给我们提供了一个 location 属性用于获取或设置窗体的 <span class="variable constant_">URL</span>，并且可以用于解析 <span class="variable constant_">URL</span> 。</span><br><span class="line">因为这个属性返回的是一个对象，所以我们将这个属性也称为 location 对象。</span><br><span class="line"></span><br><span class="line"><span class="comment">//URL</span></span><br><span class="line">统一资源定位符 (<span class="title class_">Uniform</span> <span class="title class_">Resource</span> <span class="title class_">Locator</span>, <span class="variable constant_">URL</span>) 是互联网上标准资源的地址。</span><br><span class="line">互联网上的每个文件都有一个唯一的 <span class="variable constant_">URL</span>，它包含的信息指出文件的位置以及浏览器应该怎么处理它。</span><br><span class="line"><span class="variable constant_">URL</span> 的一般语法格式为：</span><br><span class="line"> <span class="attr">protocol</span>:<span class="comment">//host[:port]/path/[?query]#fragment</span></span><br><span class="line"></span><br><span class="line"> <span class="attr">http</span>:<span class="comment">//www.itcast.cn/index.html?name=andy&amp;age=18#link</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="comment">//navigator对象</span></span><br><span class="line">navigator 对象包含有关浏览器的信息，它有很多属性，我们最常用的是 userAgent，</span><br><span class="line">该属性可以返回由客户机发送服务器的 user-agent 头部的值。</span><br><span class="line">下面前端代码可以判断用户那个终端打开页面，实现跳转</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>((navigator.<span class="property">userAgent</span>.<span class="title function_">match</span>(<span class="regexp">/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i</span>))) &#123;</span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;&quot;</span>;     <span class="comment">//手机</span></span><br><span class="line"> &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;&quot;</span>;     <span class="comment">//电脑</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//history对象</span></span><br><span class="line"><span class="variable language_">window</span> 对象给我们提供了一个 history 对象，与浏览器历史记录进行交互。</span><br><span class="line">该对象包含用户（在浏览器窗口中）访问过的 <span class="variable constant_">URL</span>。</span><br><span class="line"></span><br><span class="line"><span class="comment">//本地存储</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">sessionStorage</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">localStorage</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span>、数据存储在用户浏览器中</span><br><span class="line"><span class="number">2</span>、设置、读取方便、甚至页面刷新不丢失数据</span><br><span class="line"><span class="number">3</span>、容量较大，sessionStorage约5M、<span class="variable language_">localStorage</span>约20M</span><br><span class="line"><span class="number">4</span>、只能存储字符串，可以将对象<span class="title class_">JSON</span>.<span class="title function_">stringify</span>() 编码后存储</span><br><span class="line"></span><br><span class="line"><span class="comment">//存</span></span><br><span class="line">sessionStorage.<span class="title function_">setItem</span>(key, value)</span><br><span class="line"><span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(key, value)</span><br><span class="line"></span><br><span class="line"><span class="comment">//取</span></span><br><span class="line">sessionStorage.<span class="title function_">getItem</span>(key)</span><br><span class="line"><span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(key)</span><br><span class="line"></span><br><span class="line"><span class="comment">//删</span></span><br><span class="line">sessionStorage.<span class="title function_">removeItem</span>(key)</span><br><span class="line"><span class="variable language_">localStorage</span>.<span class="title function_">removeItem</span>(key)</span><br><span class="line"></span><br><span class="line"><span class="comment">//清除全部</span></span><br><span class="line">sessionStorage.<span class="title function_">clear</span>()</span><br><span class="line"><span class="variable language_">localStorage</span>.<span class="title function_">clear</span>()</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/63d672efface21e9ef13160a.png"></p>
+<p><img src="https://pic.imgdb.cn/item/63d672fbface21e9ef133071.png"></p>
+<p><img src="https://pic.imgdb.cn/item/63d67306face21e9ef134a12.png"></p>
+<p><img src="https://pic.imgdb.cn/item/63d67311face21e9ef13649a.png"></p>
+<h2 id="十六、事件"><a href="#十六、事件" class="headerlink" title="十六、事件"></a>十六、事件</h2><h3 id="（1）事件绑定"><a href="#（1）事件绑定" class="headerlink" title="（1）事件绑定"></a>（1）事件绑定</h3><p>element.addEventListener</p>
+<p>element.onclick</p>
+<p>行内元素绑定 <p onclick="alert('click')"></p>
+<h3 id="（2）事件冒泡"><a href="#（2）事件冒泡" class="headerlink" title="（2）事件冒泡"></a>（2）事件冒泡</h3><p>事件的触发默认会冒泡</p>
+<p>阻止事件冒泡e.stopPropagation()</p>
+<h3 id="（3）事件代理"><a href="#（3）事件代理" class="headerlink" title="（3）事件代理"></a>（3）事件代理</h3><p>利用事件冒泡机制，将相似回调绑定在上级DOM，同一处理事件。</p>
+<p>可通过target.matches(selector)去区分触发的具体DOM。</p>
+<p>优势：减少DOM操作，减少监听器的创建，节约内存。</p>
+<h2 id="十七、深拷贝"><a href="#十七、深拷贝" class="headerlink" title="十七、深拷贝"></a>十七、深拷贝</h2><p>简单例子：没有对正则等一些复杂对象进行特殊处理</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">deepClone</span> = (<span class="params">obj = &#123;&#125;</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> obj !== <span class="string">&#x27;object&#x27;</span> || obj == <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> obj</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> result</span><br><span class="line">  <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> <span class="title class_">Array</span>)&#123;</span><br><span class="line">    result = []</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    result = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    <span class="keyword">if</span>(obj.<span class="title function_">hasOwnProperty</span>(key))&#123;</span><br><span class="line">      result[key] = <span class="title function_">deepClone</span>(obj[key])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/01/29/javasrcipt/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/01/29/ES6%E5%90%8E%E7%BB%AD%E8%AF%AD%E6%B3%95/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            ES6后续语法
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/01/29/css/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">基础常用的CSS</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "WjlkeijDwyD3bdgyYCZIqAC7-gzGzoHsz",
+    app_key: "VyiD3uDttHzzZUvy9xSLLw9h",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2023
+        <i class="ri-heart-fill heart_icon"></i> Jelly Chen
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/mypay_alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/mypay_wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=2017680379&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>

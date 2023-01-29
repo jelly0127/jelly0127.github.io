@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="音乐、运动、游戏、代码、旅行" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>HTTP |  Jelly</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/log.jpg" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Jelly" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-HTTP"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  HTTP
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/29/HTTP/" class="article-date">
+  <time datetime="2023-01-29T13:30:16.000Z" itemprop="datePublished">2023-01-29</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">2.6k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">9 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="一、HyperText-Transfer-Protocol"><a href="#一、HyperText-Transfer-Protocol" class="headerlink" title="一、HyperText Transfer Protocol"></a>一、HyperText Transfer Protocol</h1><p>超文本传输协议</p>
+<h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><p>为了实现相同的目标，约束多方参与人的行为。</p>
+<p>即你想参与进某一件事，那么就得遵守这件事所定下的标准，才能流畅和第三方合作。</p>
+<p>http本身就是一份协议，是交流通信的规范，以及各种控制和错误的处理方式。</p>
+<h2 id="传输"><a href="#传输" class="headerlink" title="传输"></a>传输</h2><p>传输是个动词，表示把某些数据从A搬运到B，A为请求方，B为应答方，一应一答，就实现了数据了搬运。<br>所以 <strong>传输</strong> 表示http是用于描述两点之间传输数据的协议</p>
+<h2 id="超文本"><a href="#超文本" class="headerlink" title="超文本"></a>超文本</h2><p>表示http传输的不是普通的文本，而是文字、图片、音频和视频等的混合体</p>
+<p>总结下来就是：</p>
+<p><strong>HTTP 是一个在计算机世界里专门在两点之间传输文字、图片、音频、视频等超文本数据的约定和规范。</strong></p>
+<h1 id="二、TCP-x2F-IP网络分层模型"><a href="#二、TCP-x2F-IP网络分层模型" class="headerlink" title="二、TCP&#x2F;IP网络分层模型"></a>二、TCP&#x2F;IP网络分层模型</h1><p><strong>分层图例</strong></p>
+<p><img src="https://pic.imgdb.cn/item/63d674fdface21e9ef17b2d1.png"></p>
+<p>TCP&#x2F;IP网络分层就是我们常说的四层协议，模型是一个自下而上的模型，每层协议都依托下层协议的支持。</p>
+<h2 id="link-链接层"><a href="#link-链接层" class="headerlink" title="link 链接层"></a>link 链接层</h2><p>底层网络协议，工作在网卡层级，传输原始数据包，使用MAC地址来标记。</p>
+<h2 id="internet-网际层"><a href="#internet-网际层" class="headerlink" title="internet 网际层"></a>internet 网际层</h2><p>又叫“网络互连层”，IP协议所在的分层，描述了如何将各个小型的本地网络，串联起来。用IP地址取代MAC地址，在需要寻找某一个具体设备时，在通过IP地址转换成MAC地址。</p>
+<h2 id="transport-传输层"><a href="#transport-传输层" class="headerlink" title="transport 传输层"></a>transport 传输层</h2><p>描述两个IP地址之间如何进行传输，TCP&#x2F;UDP工作在这层。</p>
+<p>TCP 是一个有状态的协议，需要先与对方建立连接然后才能发送数据，而且保证数据不丢失不重复。</p>
+<p>而 UDP 则比较简单，它无状态，不用事先建立连接就可以任意发送数据，但不保证数据一定会发到对方。两个协议的另一个重要区别在于数据的形式。</p>
+<p>TCP 的数据是连续的“字节流”，有先后顺序，而 UDP 则是分散的小数据包，是顺序发，乱序收。</p>
+<h2 id="application-应用层"><a href="#application-应用层" class="headerlink" title="application 应用层"></a>application 应用层</h2><p>SSH、FTP、SMTP 、HTTP等</p>
+<p>MAC 层的传输单位是帧（frame），IP 层的传输单位是包（packet），TCP 层的传输单位是段（segment），HTTP 的传输单位则是消息或报文（message）。但这些名词并没有什么本质的区分，可以统称为数据包。</p>
+<h1 id="三、OSI网络分层模型"><a href="#三、OSI网络分层模型" class="headerlink" title="三、OSI网络分层模型"></a>三、OSI网络分层模型</h1><p>即为七层协议<strong>，OSI，全称是“开放式系统互联通信参考模型”</strong></p>
+<p><img src="https://pic.imgdb.cn/item/63d6750bface21e9ef17d180.png"></p>
+<p>OSI也是一个自底向上的协议栈</p>
+<ol>
+<li>第一层：物理层，网络的物理形式，例如电缆、光纤、网卡、集线器等等；</li>
+<li>第二层：数据链路层，它基本相当于 TCP&#x2F;IP 的链接层；</li>
+<li>第三层：网络层，相当于 TCP&#x2F;IP 里的网际层；</li>
+<li>第四层：传输层，相当于 TCP&#x2F;IP 里的传输层；</li>
+<li>第五层：会话层，维护网络中的连接状态，即保持会话和同步；</li>
+<li>第六层：表示层，把数据转换为合适、可理解的语法和语义；</li>
+<li>第七层：应用层，面向具体的应用传输数据。</li>
+</ol>
+<p>OSI更多是一个理论层面的模型，实际现实中跑的更多还是TCP&#x2F;IP模型。</p>
+<h1 id="四、TCP-x2F-IP协议栈工作方式"><a href="#四、TCP-x2F-IP协议栈工作方式" class="headerlink" title="四、TCP&#x2F;IP协议栈工作方式"></a>四、TCP&#x2F;IP协议栈工作方式</h1><p><img src="https://pic.imgdb.cn/item/63d6751cface21e9ef17f0f4.png"></p>
+<p>一些数据的发送，需要自顶向下层层封包，加上TCP头，IP头、MAC头，再经过链接层传输到远端，远端收到数据包以后，再自底向上层层解包，最终到达应用层。</p>
+<p>层的传输过程对于上层是完全“透明”的，上层也不需要关心下层的具体实现细节，所以就 HTTP 层次来看，它不管下层是不是 TCP&#x2F;IP 协议，看到的只是一个可靠的传输链路，只要把数据加上自己的头，对方就能原样收到。</p>
+<h1 id="五、域名"><a href="#五、域名" class="headerlink" title="五、域名"></a>五、域名</h1><p>我们都知道，访问一个服务，我们可以通过公网ip地址找到，但是ip地址是纯数字组成，难以记忆。所以就诞生了域名，域名是一串用“.”分隔的多个单词，最右边的被称为“顶级域名”，然后是“二级域名”，层级关系向左依次降低。</p>
+<h2 id="DNS解析"><a href="#DNS解析" class="headerlink" title="DNS解析"></a>DNS解析</h2><p>就像 IP 地址必须转换成 MAC 地址才能访问主机一样，域名也必须要转换成 IP 地址，这个过程就是“<strong>域名解析”</strong>。</p>
+<p>由左到右，挨个查询。</p>
+<p>DNS 的核心系统是一个三层的树状、分布式服务，基本对应域名的结构：</p>
+<ol>
+<li>根域名服务器（Root DNS Server）：管理顶级域名服务器，返回“com”“net”“cn”等顶级域名服务器的 IP 地址；</li>
+<li>顶级域名服务器（Top-level DNS Server）：管理各自域名下的权威域名服务器，比如 com 顶级域名服务器可以返回 apple.com 域名服务器的 IP 地址；</li>
+<li>权威域名服务器（Authoritative DNS Server）：管理自己域名下主机的 IP 地址，比如 apple.com 权威域名服务器可以返回 IP 地址。</li>
+</ol>
+<p><img src="https://pic.imgdb.cn/item/63d6752aface21e9ef180bfa.png"></p>
+<h2 id="DNS缓存"><a href="#DNS缓存" class="headerlink" title="DNS缓存"></a>DNS缓存</h2><p>各大运营商，或者公司内网会自己搭建DNS服务器，作为用户DNS查询的代理，代替访问DNS核心系统。<br>一般来说，如果之前查询过的域名，则会缓存查询结果的IP地址，从而加快DNS解析的速度。</p>
+<p>并且操作系统也会自己记录DNS解析的记录，并写入host文件，以后再访问这个域名，就可以直接拿到本地记录的IP地址了。</p>
+<h1 id="六、报文结构"><a href="#六、报文结构" class="headerlink" title="六、报文结构"></a>六、报文结构</h1><p>HTTP报文是一个<strong>纯文本</strong>协议，所有头数据都是ASCII码文本。</p>
+<p>HTTP报文分为<strong>请求报文</strong>和<strong>响应报文</strong>，首先两种报文的结构一致，只有在头上有所区别。</p>
+<p>结构：</p>
+<p><img src="https://pic.imgdb.cn/item/63d67535face21e9ef18241a.png"></p>
+<ol>
+<li>起始行：描述请求或响应的基本信息</li>
+<li>头字段（头部）：使用key：value描述报文</li>
+<li>消息正文（实体）：实际传输的数据，不一定是文本，也可以是二进制数据</li>
+</ol>
+<p><strong>请求行</strong></p>
+<p>请求的起始行也叫请求行，由三部分构成：</p>
+<p><img src="https://pic.imgdb.cn/item/63d67542face21e9ef18559c.png"></p>
+<ol>
+<li>请求方法：是一个动词，如 GET&#x2F;POST，表示对资源的操作；</li>
+<li>请求目标：通常是一个 URI，标记了请求方法要操作的资源；</li>
+<li>版本号：表示报文使用的 HTTP 协议版本。</li>
+</ol>
+<p><strong>状态行</strong></p>
+<p>响应的起始行也叫状态行，由三部分构成：</p>
+<p><img src="https://pic.imgdb.cn/item/63d6754dface21e9ef187117.png"></p>
+<ol>
+<li>版本号：表示报文使用的 HTTP 协议版本；</li>
+<li>状态码：一个三位数，用代码的形式表示处理的结果，比如 200 是成功，500 是服务器错误；</li>
+<li>原因：作为数字状态码补充，是更详细的解释文字，帮助人理解原因。</li>
+</ol>
+<p><strong>头字段</strong></p>
+<p><img src="https://pic.imgdb.cn/item/63d6755dface21e9ef18992a.png"></p>
+<p>头部字段是 key-value 的形式，key 和 value 之间用“:”分隔，最后用 CRLF 换行表示字段结束。</p>
+<p>HTTP 协议规定了非常多的头部字段，实现各种各样的功能，但基本上可以分为四大类：</p>
+<ol>
+<li>通用字段：在请求头和响应头里都可以出现；</li>
+<li>请求字段：仅能出现在请求头里，进一步说明请求信息或者额外的附加条件；</li>
+<li>响应字段：仅能出现在响应头里，补充说明响应报文的信息；</li>
+<li>实体字段：它实际上属于通用字段，但专门描述 body 的额外信息。</li>
+</ol>
+<h1 id="七、Method"><a href="#七、Method" class="headerlink" title="七、Method"></a>七、Method</h1><p>Method表示一次请求执行的具体动作，比如是获取，更改，还是删除等。</p>
+<p>目前 HTTP&#x2F;1.1 规定了八种方法。</p>
+<ol>
+<li>GET：获取资源，可以理解为读取或者下载数据；</li>
+<li>HEAD：获取资源的元信息；</li>
+<li>POST：向资源提交数据，相当于写入或上传数据；</li>
+<li>PUT：类似 POST；</li>
+<li>DELETE：删除资源；</li>
+<li>CONNECT：建立特殊的连接隧道；</li>
+<li>OPTIONS：列出可对资源实行的方法；</li>
+<li>TRACE：追踪请求 - 响应的传输路径。</li>
+</ol>
+<p><strong>GET&#x2F;HEAD</strong></p>
+<p>HEAD 方法与 GET 方法类似，也是请求从服务器获取资源，服务器的处理机制也是一样的，但服务器不会返回请求的实体数据，只会传回响应头，也就是资源的 <strong>元信息</strong>。</p>
+<p>HEAD 方法可以看做是 GET 方法的一个“简化版”或者“轻量版”。因为它的响应头与 GET 完全相同，所以可以用在很多并不真正需要资源的场合，避免传输 body 数据的浪费。</p>
+<p><strong>PUT&#x2F;POST</strong></p>
+<p>PUT 的作用与 POST 类似，也可以向服务器提交数据，但与 POST 存在微妙的不同，通常 POST 表示的是<strong>“新建”“create”</strong>的含义，而 PUT 则是<strong>“修改”“update”</strong>的含义。</p>
+<p>在实际应用中，PUT 用到的比较少。而且，因为它与 POST 的语义、功能太过近似，有的服务器甚至就直接禁止使用 PUT 方法，只用 POST 方法上传数据。</p>
+<h2 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h2><p>在 HTTP 协议里，<strong>“安全”</strong> 是指请求方法不会“破坏”服务器上的资源，即不会对服务器上的资源造成实质的修改。</p>
+<p>按照这个定义，只有 GET 和 HEAD 方法是“安全”的，因为它们是“只读”操作，只要服务器不故意曲解请求方法的处理方式，无论 GET 和 HEAD 操作多少次，服务器上的数据都是“安全的”。</p>
+<p>而 POST&#x2F;PUT&#x2F;DELETE 操作会修改服务器上的资源，增加或删除数据，所以是“不安全”的。</p>
+<h2 id="幂等"><a href="#幂等" class="headerlink" title="幂等"></a>幂等</h2><p><strong>“幂等”</strong> 实际上是一个数学用语，被借用到了 HTTP 协议里，意思是多次执行相同的操作，结果也都是相同的，即多次“幂”后结果“相等”。</p>
+<p>很显然，GET 和 HEAD 既是安全的也是幂等的，DELETE 可以多次删除同一个资源，效果都是“资源不存在”，所以也是幂等的。</p>
+<p>按照 RFC 里的语义，POST 是“新增或提交数据”，多次提交数据会创建多个资源，所以不是幂等的；而 PUT 是“替换或更新数据”，多次更新一个资源，资源还是会第一次更新的状态，所以是幂等的。</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/01/29/HTTP/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/01/29/Cookie%E4%B8%8ESession/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Cookie与Session
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/01/29/ES6%E5%90%8E%E7%BB%AD%E8%AF%AD%E6%B3%95/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">ES6后续语法</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "WjlkeijDwyD3bdgyYCZIqAC7-gzGzoHsz",
+    app_key: "VyiD3uDttHzzZUvy9xSLLw9h",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2023
+        <i class="ri-heart-fill heart_icon"></i> Jelly Chen
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/mypay_alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/mypay_wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=2017680379&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>

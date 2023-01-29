@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="音乐、运动、游戏、代码、旅行" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Git |  Jelly</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/log.jpg" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Jelly" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Git"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Git
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/29/Git/" class="article-date">
+  <time datetime="2023-01-29T14:37:45.000Z" itemprop="datePublished">2023-01-29</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">2.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">7 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="git常用指令面板"><a href="#git常用指令面板" class="headerlink" title="git常用指令面板"></a>git常用指令面板</h2><p><img src="https://pic.imgdb.cn/item/63d683edface21e9ef3b5ada.png"></p>
+<h2 id="版本控制："><a href="#版本控制：" class="headerlink" title="版本控制："></a>版本控制：</h2><p>简单来说，版本控制在软件开发中，可以帮助程序员进行代码的追踪、维护、控制等等一系列的操作。</p>
+<h3 id="版本控制的功能："><a href="#版本控制的功能：" class="headerlink" title="版本控制的功能："></a>版本控制的功能：</h3><h4 id="不同版本的存储管理："><a href="#不同版本的存储管理：" class="headerlink" title="不同版本的存储管理："></a>不同版本的存储管理：</h4><p>一个项目会不断进行版本的迭代，来修复之前的一些问题、增加新的功能、需求，甚至包括项目的重构； </p>
+<p>如果我们通过手动来维护一系列的项目备份，简直是一场噩梦； </p>
+<h4 id="重大版本的备份维护："><a href="#重大版本的备份维护：" class="headerlink" title="重大版本的备份维护："></a>重大版本的备份维护：</h4><p>对于很多重大的版本，我们会进行备份管理； </p>
+<h4 id="恢复之前的项目版本："><a href="#恢复之前的项目版本：" class="headerlink" title="恢复之前的项目版本："></a>恢复之前的项目版本：</h4><p>当我们开发过程中发生一些严重的问题时，想要恢复之前的操作或者回到之前某个版本； </p>
+<h4 id="记录项目的点点滴滴："><a href="#记录项目的点点滴滴：" class="headerlink" title="记录项目的点点滴滴："></a>记录项目的点点滴滴：</h4><p>如果我们每一个功能的修改、bug的修复、新的需求更改都需要记录下来，版本控制可以很好的解决； </p>
+<h4 id="多人开发的代码合并："><a href="#多人开发的代码合并：" class="headerlink" title="多人开发的代码合并："></a>多人开发的代码合并：</h4><p>项目中通常都是多人开发，将多人代码进行合并，并且在出现冲突时更好的进行处理；</p>
+<h3 id="检测当前的配置信息：git-config-–list"><a href="#检测当前的配置信息：git-config-–list" class="headerlink" title="检测当前的配置信息：git config –list"></a>检测当前的配置信息：git config –list</h3><p><img src="https://pic.imgdb.cn/item/63d6840aface21e9ef3bb691.png"></p>
+<h2 id="获取Git仓库-–-git-init-x2F-git-clone"><a href="#获取Git仓库-–-git-init-x2F-git-clone" class="headerlink" title="获取Git仓库 – git init&#x2F;git clone"></a>获取Git仓库 – git init&#x2F;git clone</h2><p><strong>我们需要一个Git来管理源代码，那么我们本地也需要有一个Git仓库。</strong> </p>
+<h3 id="通常有两种获取-Git-项目仓库的方式："><a href="#通常有两种获取-Git-项目仓库的方式：" class="headerlink" title="通常有两种获取 Git 项目仓库的方式："></a>通常有两种获取 Git 项目仓库的方式：</h3><p>方式一：初始化一个Git仓库，并且可以将当前项目的文件都添加到Git仓库中（目前很多的脚手架在创建项目时都会默认创建一个Git仓库）； </p>
+<p>方式二：从其它服务器 克隆（clone） 一个已存在的 Git 仓库（第一天到公司通常我们需要做这个操作）； </p>
+<h3 id="方式一：初始化Git仓库"><a href="#方式一：初始化Git仓库" class="headerlink" title="方式一：初始化Git仓库"></a>方式一：初始化Git仓库</h3><p>该命令将创建一个名为 .git 的子目录，这个子目录含有你初始化的 Git 仓库中所有的必须文件，这些文件是 Git 仓库的核心； </p>
+<p>但是，在这个时候，我们仅仅是做了一个初始化的操作，你的项目里的文件还没有被跟踪； </p>
+<p>git init</p>
+<h3 id="方式二：从Git远程仓库"><a href="#方式二：从Git远程仓库" class="headerlink" title="方式二：从Git远程仓库"></a>方式二：从Git远程仓库</h3><p>git clone <a target="_blank" rel="noopener" href="https://github.com/coderwhy/hy-react-web-music.git">https://github.com/coderwhy/hy-react-web-music.git</a></p>
+<h2 id="文件的状态划分"><a href="#文件的状态划分" class="headerlink" title="文件的状态划分"></a>文件的状态划分</h2><p><strong>现在我们的电脑上已经有一个Git仓库：</strong> </p>
+<p>在实际开发中，你需要将某些文件交由这个Git仓库来管理； </p>
+<p>并且我们之后会修改文件的内容，当达成某一个目标时，想要记录下来这次操作，就会将它提交到仓库中； </p>
+<p><strong>那么我们需要对文件来划分不同的状态，以确定这个文件是否已经归于Git仓库的管理：</strong> </p>
+<p>未跟踪：默认情况下，Git仓库下的文件也没有添加到Git仓库管理中，我们需要通过add命令来操作； </p>
+<p>已跟踪：添加到Git仓库管理的文件处于已跟踪状态，Git可以对其进行各种跟踪管理； </p>
+<p><strong>已跟踪的文件又可以进行细分状态划分：</strong> </p>
+<p>staged：暂缓区中的文件状态； </p>
+<p>Unmodified：commit命令，可以将staged中文件提交到Git仓库 </p>
+<p>Modified：修改了某个文件后，会处于Modified状态； </p>
+<p><strong>在工作时，你可以选择性地将这些修改过的文件放入暂存区；</strong> </p>
+<p><strong>然后提交所有已暂存的修改，如此反复</strong></p>
+<p><strong>检测文件的状态 - git status</strong></p>
+<p><strong>我们在有Git仓库的目录下新建一个文件，查看文件的状态：</strong> </p>
+<h3 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h3><p><img src="https://pic.imgdb.cn/item/63d6845bface21e9ef3c636b.png"></p>
+<p><strong>Untracked files：未跟踪的文件</strong> </p>
+<p>未跟踪的文件意味着 Git 在之前的提交中没有这些文件； </p>
+<p>Git 不会自动将之纳入跟踪范围，除非你明明白白地告诉它“我需要跟踪该文件”； </p>
+<p><strong>我们也可以查看更加简洁的状态信息：</strong> </p>
+<p>git status –s              </p>
+<p>git status –short               <img src="https://pic.imgdb.cn/item/63d68466face21e9ef3c7c74.png"></p>
+<p>左栏指明了暂存区的状态，右栏指明了工作区的状态； </p>
+<h2 id="文件添加到暂存区-–-git-add"><a href="#文件添加到暂存区-–-git-add" class="headerlink" title="文件添加到暂存区 – git add"></a>文件添加到暂存区 – git add</h2><h2 id="文件更新提交-–-git-commit"><a href="#文件更新提交-–-git-commit" class="headerlink" title="文件更新提交 – git commit"></a>文件更新提交 – git commit</h2><p><strong>现在的暂存区已经准备就绪，可以提交了。</strong> </p>
+<p>每次准备提交前，先用 git status 看下，你所需要的文件是不是都已暂存起来了； </p>
+<p>再运行提交命令 git commit； </p>
+<p>可以在 commit 命令后添加 -m 选项，将提交信息与命令放在同一行; </p>
+<p><strong>如果我们修改文件的add操作，加上commit的操作有点繁琐，那么可以将两个命令结合来使用：</strong> </p>
+<p><strong>文件更新提交 – git commit</strong> </p>
+<h3 id="git-commit-–m-“提交信息”"><a href="#git-commit-–m-“提交信息”" class="headerlink" title="git commit –m “提交信息”"></a>git commit –m “提交信息”</h3><p><img src="https://pic.imgdb.cn/item/63d68475face21e9ef3c9e13.png"></p>
+<p><strong>如果我们修改文件的add操作，加上commit的操作有点繁琐，那么可以将两个命令结合来使用：</strong></p>
+<h3 id="git-commit-a-m-“修改了bbb文件”"><a href="#git-commit-a-m-“修改了bbb文件”" class="headerlink" title="git commit -a -m “修改了bbb文件”"></a>git commit -a -m “修改了bbb文件”</h3><p><img src="https://pic.imgdb.cn/item/63d6847eface21e9ef3cb384.png"></p>
+<h2 id="查看提交的历史-–-git-log"><a href="#查看提交的历史-–-git-log" class="headerlink" title="查看提交的历史 – git log"></a>查看提交的历史 – git log</h2><h3 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h3><p><img src="https://pic.imgdb.cn/item/63d6848dface21e9ef3cd43c.png"></p>
+<h3 id="git-log-–pretty-x3D-oneline-–graph"><a href="#git-log-–pretty-x3D-oneline-–graph" class="headerlink" title="git log –pretty&#x3D;oneline –graph"></a>git log –pretty&#x3D;oneline –graph</h3><p><img src="https://pic.imgdb.cn/item/63d68496face21e9ef3ce899.png"></p>
+<h2 id="版本回退-–-git-reset"><a href="#版本回退-–-git-reset" class="headerlink" title="版本回退 – git reset"></a>版本回退 – git reset</h2><p><strong>如果想要进行版本回退，我们需要先知道目前处于哪一个版本：Git通过HEAD指针记录当前版本。</strong> </p>
+<p>HEAD 是当前分支引用的指针，它总是指向该分支上的最后一次提交； </p>
+<p>理解 HEAD 的最简方式，就是将它看做 <strong>该分支上的最后一次提交</strong> 的快照；</p>
+<p><strong>我们可以通过HEAD来改变Git目前的版本指向：</strong> </p>
+<p>上一个版本就是HEAD^，上上一个版本就是HEAD^^； </p>
+<p>如果是上1000个版本，我们可以使用HEAD~1000； </p>
+<p>我们可以可以指定某一个commit id； </p>
+<p>git reset –hard HEAD^ </p>
+<p>git reset –hard HEAD~1000 </p>
+<p>git reset –hard 2d44982</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a>   （主要使用）</p>
+<p>Gitee：<a target="_blank" rel="noopener" href="https://gitee.com/">https://gitee.com/</a>     （国内）</p>
+<h2 id="管理远程服务器"><a href="#管理远程服务器" class="headerlink" title="管理远程服务器"></a>管理远程服务器</h2><p><strong>查看远程地址：比如我们之前从GitHub上clone下来的代码，它就是有自己的远程仓库的：</strong> </p>
+<p><strong>添加远程地址：我们也可以继续添加远程服务器（让本地的仓库和远程服务器仓库建立连接）：</strong> </p>
+<p><strong>重命名远程地址：</strong> </p>
+<p><strong>移除远程地址：</strong> </p>
+<p>git remote </p>
+<p>git remote –v </p>
+<p>-v是—verbose的缩写(冗长的)</p>
+<p><strong>添加远程地址：我们也可以继续添加远程服务器（让本地的仓库和远程服务器仓库建立连接）：</strong> </p>
+<p>git remote add <shortname> <url> </p>
+<p>git remote add gitlab <a target="_blank" rel="noopener" href="http://152.136.185.210:7888/coderwhy/gitremotedemo.git">http://152.136.185.210:7888/coderwhy/gitremotedemo.git</a></p>
+<h3 id="重命名远程地址："><a href="#重命名远程地址：" class="headerlink" title="重命名远程地址："></a>重命名远程地址：</h3><p>git remote rename gitlab glab</p>
+<h3 id="移除远程地址："><a href="#移除远程地址：" class="headerlink" title="移除远程地址："></a>移除远程地址：</h3><p>git remote remove gitlab</p>
+<h2 id="远程仓库的交互"><a href="#远程仓库的交互" class="headerlink" title="远程仓库的交互"></a>远程仓库的交互</h2><p><strong>将代码push到远程仓库：将本地仓库的代码推送到远程仓库中；</strong></p>
+<h3 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h3><h3 id="git-push-origin-master"><a href="#git-push-origin-master" class="headerlink" title="git push origin master"></a>git push origin master</h3><h3 id="从远程仓库fetch代码：从远程仓库获取最新的代码"><a href="#从远程仓库fetch代码：从远程仓库获取最新的代码" class="headerlink" title="从远程仓库fetch代码：从远程仓库获取最新的代码"></a>从远程仓库fetch代码：从远程仓库获取最新的代码</h3><h3 id="git-fetch"><a href="#git-fetch" class="headerlink" title="git fetch"></a>git fetch</h3><h3 id="git-fetch-origin"><a href="#git-fetch-origin" class="headerlink" title="git fetch origin"></a>git fetch origin</h3><p>获取到代码后默认并没有合并到本地仓库，我们需要通过merge来合并； </p>
+<h3 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h3><p><strong>从远程仓库pull代码：上面的两次操作有点繁琐，我们可以通过一个命令来操作</strong></p>
+<h3 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a>git pull</h3><h3 id="git-fetch-git-merge-rebase"><a href="#git-fetch-git-merge-rebase" class="headerlink" title="git fetch + git merge(rebase)"></a>git fetch + git merge(rebase)</h3><h3 id="Git创建分支：git-branch-testing"><a href="#Git创建分支：git-branch-testing" class="headerlink" title="Git创建分支：git branch testing"></a>Git创建分支：git branch testing</h3><h3 id="查看分支-：git-checkout-testing"><a href="#查看分支-：git-checkout-testing" class="headerlink" title="查看分支 ：git checkout testing"></a>查看分支 ：git checkout testing</h3><h3 id="创建分支同时切换：git-checkout-b"><a href="#创建分支同时切换：git-checkout-b" class="headerlink" title="创建分支同时切换：git checkout -b "></a>创建分支同时切换：git checkout -b <newbranchname></h3><p>查看和删除分支</p>
+<h3 id="git-branch-查看当前所有的分支"><a href="#git-branch-查看当前所有的分支" class="headerlink" title="git branch # 查看当前所有的分支"></a>git branch # 查看当前所有的分支</h3><h3 id="git-branch-–v-同时查看最后一次提交"><a href="#git-branch-–v-同时查看最后一次提交" class="headerlink" title="git branch –v # 同时查看最后一次提交"></a>git branch –v # 同时查看最后一次提交</h3><h3 id="git-branch-–merged-查看所有合并到当前分支的分支"><a href="#git-branch-–merged-查看所有合并到当前分支的分支" class="headerlink" title="git branch –merged # 查看所有合并到当前分支的分支"></a>git branch –merged # 查看所有合并到当前分支的分支</h3><h3 id="git-branch-–no-merged-查看所有没有合并到当前分支的分支"><a href="#git-branch-–no-merged-查看所有没有合并到当前分支的分支" class="headerlink" title="git branch –no-merged # 查看所有没有合并到当前分支的分支"></a>git branch –no-merged # 查看所有没有合并到当前分支的分支</h3><h3 id="git-branch-–d-hotfix-删除当前分支"><a href="#git-branch-–d-hotfix-删除当前分支" class="headerlink" title="git branch –d hotfix # 删除当前分支"></a>git branch –d hotfix # 删除当前分支</h3><h3 id="git-branch-–D-hotfix-强制删除某一个分支"><a href="#git-branch-–D-hotfix-强制删除某一个分支" class="headerlink" title="git branch –D hotfix # 强制删除某一个分支"></a>git branch –D hotfix # 强制删除某一个分支</h3><h3 id="git-remote-set-url-origin-URL-更换远程仓库地址，URL为新地址"><a href="#git-remote-set-url-origin-URL-更换远程仓库地址，URL为新地址" class="headerlink" title="git remote set-url origin URL 更换远程仓库地址，URL为新地址"></a>git remote set-url origin URL 更换远程仓库地址，URL为新地址</h3><h2 id="远程分支的管理"><a href="#远程分支的管理" class="headerlink" title="远程分支的管理"></a>远程分支的管理</h2><h3 id="操作一：推送分支到远程"><a href="#操作一：推送分支到远程" class="headerlink" title="操作一：推送分支到远程"></a>操作一：推送分支到远程</h3><p>当你想要公开分享一个分支时，需要将其推送到有写入权限的远程仓库上； </p>
+<p>运行 git push <remote> <branch>； </p>
+<h3 id="操作二：跟踪远程分支"><a href="#操作二：跟踪远程分支" class="headerlink" title="操作二：跟踪远程分支"></a>操作二：跟踪远程分支</h3><p>当克隆一个仓库时，它通常会自动地创建一个跟踪 origin&#x2F;master 的 master 分支； </p>
+<p>如果你愿意的话可以设置其他的跟踪分支，可以通过运行 git checkout –track <remote>&#x2F;<branch> </p>
+<p>如果你尝试检出的分支 (a) 不存在且 (b) 刚好只有一个名字与之匹配的远程分支，那么 Git 就会为你创建一个跟踪分支； </p>
+<h3 id="操作三：删除远程分支"><a href="#操作三：删除远程分支" class="headerlink" title="操作三：删除远程分支"></a>操作三：删除远程分支</h3><p>如果某一个远程分支不再使用，我们想要删除掉，可以运行带有 –delete 选项的 git push 命令来删除一个远程分支。 </p>
+<p>git checkout –track <remote>&#x2F;<branch> </p>
+<p>git checkout <branch> </p>
+<p>git push origin –delete <branch></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/01/29/Git/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/01/29/Vue3/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Vue3
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/01/29/Echarts/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Echarts</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "WjlkeijDwyD3bdgyYCZIqAC7-gzGzoHsz",
+    app_key: "VyiD3uDttHzzZUvy9xSLLw9h",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2023
+        <i class="ri-heart-fill heart_icon"></i> Jelly Chen
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/mypay_alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/mypay_wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=2017680379&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>

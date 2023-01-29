@@ -2,34 +2,443 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jelly</title>
   
-  
+  <subtitle>前端小白的成长</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-29T12:52:37.401Z</updated>
+  <updated>2023-01-29T15:36:36.713Z</updated>
   <id>http://example.com/</id>
   
   <author>
-    <name>Jelly</name>
+    <name>Jelly Chen</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>基础常见的HTML结构标签</title>
-    <link href="http://example.com/2023/01/29/html/"/>
-    <id>http://example.com/2023/01/29/html/</id>
-    <published>2023-01-29T11:39:56.000Z</published>
-    <updated>2023-01-29T12:52:37.401Z</updated>
+    <title>nest</title>
+    <link href="http://example.com/2023/01/29/nest/"/>
+    <id>http://example.com/2023/01/29/nest/</id>
+    <published>2023-01-29T15:36:24.000Z</published>
+    <updated>2023-01-29T15:36:36.713Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;基础常见的HTML结构标签&lt;/p&gt;
-&lt;h2 id=&quot;一、Web标准的构成&quot;&gt;&lt;a href=&quot;#一、Web标准的构成&quot; class=&quot;headerlink&quot; title=&quot;一、Web标准的构成&quot;&gt;&lt;/a&gt;一、Web标准的构成&lt;/h2&gt;&lt;h3</summary>
+    <summary type="html">&lt;p&gt;待更新。。。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Jelly</title>
+    <link href="http://example.com/2023/01/29/Jelly/"/>
+    <id>http://example.com/2023/01/29/Jelly/</id>
+    <published>2023-01-29T15:34:45.000Z</published>
+    <updated>2023-01-29T15:34:49.616Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;​       </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>react脚手架搭建</title>
+    <link href="http://example.com/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
+    <id>http://example.com/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/</id>
+    <published>2023-01-29T15:33:04.000Z</published>
+    <updated>2023-01-29T15:33:10.299Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;后续更新。。。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vite</title>
+    <link href="http://example.com/2023/01/29/vite/"/>
+    <id>http://example.com/2023/01/29/vite/</id>
+    <published>2023-01-29T15:32:07.000Z</published>
+    <updated>2023-01-29T15:32:07.819Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>web3区块链</title>
+    <link href="http://example.com/2023/01/29/web3/"/>
+    <id>http://example.com/2023/01/29/web3/</id>
+    <published>2023-01-29T15:31:22.000Z</published>
+    <updated>2023-01-29T15:31:42.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;后续更新。。。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>webpack</title>
+    <link href="http://example.com/2023/01/29/webpack/"/>
+    <id>http://example.com/2023/01/29/webpack/</id>
+    <published>2023-01-29T15:31:13.000Z</published>
+    <updated>2023-01-29T15:31:58.375Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;后续更新。。。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端数据埋点上报</title>
+    <link href="http://example.com/2023/01/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8A%E6%8A%A5/"/>
+    <id>http://example.com/2023/01/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8A%E6%8A%A5/</id>
+    <published>2023-01-29T15:30:25.000Z</published>
+    <updated>2023-01-29T15:55:08.747Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>koa2</title>
+    <link href="http://example.com/2023/01/29/koa2/"/>
+    <id>http://example.com/2023/01/29/koa2/</id>
+    <published>2023-01-29T15:29:04.000Z</published>
+    <updated>2023-01-29T15:29:39.109Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;后续更新。。。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>reactRedux</title>
+    <link href="http://example.com/2023/01/29/reactRedux/"/>
+    <id>http://example.com/2023/01/29/reactRedux/</id>
+    <published>2023-01-29T15:28:19.000Z</published>
+    <updated>2023-01-29T15:28:23.572Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;react-redux是对redux的一种扩充，能提高redux在react的性能，并且能够使代码更加的优雅。&lt;/p&gt;
+&lt;p&gt;react-redux依赖于react以及redux，所以使用react-redux之前，是基于你react以及redux已经安装完成。&lt;/p&gt;
+&lt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>router</title>
+    <link href="http://example.com/2023/01/29/router/"/>
+    <id>http://example.com/2023/01/29/router/</id>
+    <published>2023-01-29T15:27:06.000Z</published>
+    <updated>2023-01-29T15:27:15.600Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&amp;#x2F;&amp;#x2F;路由配置&lt;/p&gt;
+&lt;p&gt;import React from ‘react’&lt;br&gt;import { RouteObject } from ‘react-router-dom’&lt;/p&gt;
+&lt;p&gt;&amp;#x2F;&amp;#x2F;懒加载&lt;br&gt;const</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>useRef</title>
+    <link href="http://example.com/2023/01/29/useRef/"/>
+    <id>http://example.com/2023/01/29/useRef/</id>
+    <published>2023-01-29T15:26:01.000Z</published>
+    <updated>2023-01-29T15:26:06.867Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;useRef其实就是函数组件的实例属性，在&lt;strong&gt;函数组件的生命周期内（或者说实例没有被销毁）&lt;/strong&gt;始终存在且保持不变。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;useRef修改时候，并不会引起组件的刷新重渲染&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Re</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>useMemo</title>
+    <link href="http://example.com/2023/01/29/useMemo/"/>
+    <id>http://example.com/2023/01/29/useMemo/</id>
+    <published>2023-01-29T15:25:05.000Z</published>
+    <updated>2023-01-29T15:25:14.867Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;useMemo用于保存&lt;strong&gt;复杂&lt;/strong&gt;计算的结果。&lt;/p&gt;
+&lt;p&gt;useMemo与useCallback使用场景特别相似，都是用于性能优化，不同的是useMemo返回的是一个值，而useCallback返回的是一个函数。&lt;/p&gt;
+&lt;p&gt;假设我们有MyC</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>useCallback</title>
+    <link href="http://example.com/2023/01/29/useCallback/"/>
+    <id>http://example.com/2023/01/29/useCallback/</id>
+    <published>2023-01-29T15:24:17.000Z</published>
+    <updated>2023-01-29T15:24:26.708Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 众所周知（有实际动手实验），React的函数组件再每次渲染的时候，都会执行一遍一整个函数数组，来获取返回的渲染后的VDom，如果我们在函数内部声明了一个函数，那么该函数在每次重渲染的时候都会重新声明。&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>useContext</title>
+    <link href="http://example.com/2023/01/29/useContext/"/>
+    <id>http://example.com/2023/01/29/useContext/</id>
+    <published>2023-01-29T15:23:28.000Z</published>
+    <updated>2023-01-29T15:23:38.183Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;提供给函数组件访问Context的能力。PS：全局跨组件通信，在顶级组件中声明传递，包裹需通信的子组件。&lt;/p&gt;
+&lt;p&gt;Demo&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>useState</title>
+    <link href="http://example.com/2023/01/29/useState/"/>
+    <id>http://example.com/2023/01/29/useState/</id>
+    <published>2023-01-29T15:22:25.000Z</published>
+    <updated>2023-01-29T15:22:30.266Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;useState&quot;&gt;&lt;a href=&quot;#useState&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>useEffect</title>
+    <link href="http://example.com/2023/01/29/useEffect/"/>
+    <id>http://example.com/2023/01/29/useEffect/</id>
+    <published>2023-01-29T15:20:34.000Z</published>
+    <updated>2023-01-29T15:21:16.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;useEffect&quot;&gt;&lt;a href=&quot;#useEffect&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ReactHook全家桶</title>
+    <link href="http://example.com/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/"/>
+    <id>http://example.com/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/</id>
+    <published>2023-01-29T15:16:16.000Z</published>
+    <updated>2023-01-29T15:19:15.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;坐标：深圳   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>uniapp</title>
+    <link href="http://example.com/2023/01/29/uniapp/"/>
+    <id>http://example.com/2023/01/29/uniapp/</id>
+    <published>2023-01-29T15:11:49.000Z</published>
+    <updated>2023-01-29T15:12:23.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;uniapp的开发目的是一套代码多端使用，但是个人兼容性差，实用性不是很强，生态对其它框架来说较弱。但毕竟是国内开发的产品还是希望它可以发展更好更完善。&lt;/p&gt;
+&lt;p&gt;特点：&lt;/p&gt;
+&lt;p&gt;与vue框架的使用基本一致，但又有微信小程序的一些影子。个人觉得是两个东西的结合加工</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信云开发</title>
+    <link href="http://example.com/2023/01/29/%E5%BE%AE%E4%BF%A1%E4%BA%91%E5%BC%80%E5%8F%91/"/>
+    <id>http://example.com/2023/01/29/%E5%BE%AE%E4%BF%A1%E4%BA%91%E5%BC%80%E5%8F%91/</id>
+    <published>2023-01-29T15:10:51.000Z</published>
+    <updated>2023-01-29T15:10:57.278Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一，认识小程序云开发&quot;&gt;&lt;a href=&quot;#一，认识小程序云开发&quot; class=&quot;headerlink&quot; title=&quot;一，认识小程序云开发&quot;&gt;&lt;/a&gt;一，认识小程序云开发&lt;/h1&gt;&lt;h2 id=&quot;1-1，云开发简介&quot;&gt;&lt;a href=&quot;#1-1，云开发简介&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序（零基础版）</title>
+    <link href="http://example.com/2023/01/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://example.com/2023/01/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</id>
+    <published>2023-01-29T14:56:00.000Z</published>
+    <updated>2023-01-29T14:56:31.630Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;说起微信小程序，渊源就长了，毕竟毕设做得就是微信小程序（基于微信小程序的体育馆自助预约与管理平台的设计与开发），前端微信小程序，后端微信云开发，后台CMS。也算是投入了一定的心思与时间叭。&lt;/p&gt;
+&lt;p&gt;微信小程序的开发与web端开发基本一致叭，但是微信小程序有更多封装好的</summary>
         
       
     

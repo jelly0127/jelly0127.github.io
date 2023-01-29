@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>归档: 2023/1 |  Jelly</title>
+      <title>Cookie与Session |  Jelly</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/log.jpg" />
@@ -55,246 +55,221 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
+  <article
+  id="post-Cookie与Session"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">2023/1</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2023" class="archive-year">2023</a>
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Cookie与Session
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/29/Cookie%E4%B8%8ESession/" class="article-date">
+  <time datetime="2023-01-29T13:34:25.000Z" itemprop="datePublished">2023-01-29</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">4 分钟</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/nest/" class="archive-article-date">
-  <time datetime="2023-01-29T15:36:24.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/nest/"
-    >nest</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/Jelly/" class="archive-article-date">
-  <time datetime="2023-01-29T15:34:45.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/Jelly/"
-    >Jelly</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  <time datetime="2023-01-29T15:33:04.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/"
-    >react脚手架搭建</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
   
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/vite/" class="archive-article-date">
-  <time datetime="2023-01-29T15:32:07.000Z" itemprop="datePublished">01/29</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/vite/"
-    >vite</a> 
-</h2>
+  <p>基础概念<br>cookie<br>cookie，翻译过来就是 饼干&#x2F;小甜点 的意思，cookie一种在浏览器用于存储来自不同域的信息，cookie由键值对的形式存储，能够永久存储于浏览器的一种数据形式，因为cookie是存储于浏览器（客户端）的，所以浏览器对cookie做了一些限制确保cookie不会被恶意使用，同时又不会占据太多空间，所以每个域能够在客户端存储的cookie是有限的。<br>文中提到的session和token都是以cookie的形式存储在客户端的浏览器的。<br>session<br>session，会话，用于标记每个不同客户端。<br>首先我们要知道HTTP是一种无状态的协议，这也就意味着，每次客户端访问服务器，服务器收到的都是一个全新的请求，不知道谁是谁，等于说一次访问前后就失去了关联。<br>张三（客户端）：你好，我是张三。					&#x2F;&#x2F;客户端登录<br>李四（服务端）：好的，张三，我知道你，你是我们这儿的会员，请问你需要什么帮助？&#x2F;&#x2F;服务端验证通过<br>张三（客户端）：我想要查询我的个人信息。		&#x2F;&#x2F;客户端操作（新的请求）<br>李四（服务端）：你是谁？你还没告诉我？		&#x2F;&#x2F;服务端提示未登录<br>。。。<br>session的出现，解决了HTTP无状态带来的问题，客户端舒服了，但是服务器就惨了，具体由session引发的问题在下面发展史会讲。</p>
+<p>token<br>token的出现，是为了解决由于session带来的问题，一种升级版的HTTP无状态问题解决方案。<br>首先token是一串通过HMAC-SHA256算法加密过的字符串<br>一次完整的token验证流程为：</p>
+<ol>
+<li>客户端首次发起请求，带上自己的独有信息（例如浏览器信息，ip地址，用户名等等）</li>
+<li>服务端接收到请求，将客户端的带来的信息，和自己一串私有的密钥，通过HMAC-SHA256算法加密生成一串token字符串，响应的时候讲这串token字符串返回，自己不存储这串token。</li>
+<li>客户端将token保存在自己的本地，再次发起请求的时候带上这串token。</li>
+<li>服务端将客户端带来的独有信息，通过和自己私有的密钥，通过HMAC-SHA256算法加密生成一串token字符串，再将这串新生成的token和客户端带来的token进行比较，如果一致，则访问通过。</li>
+</ol>
+<p>发展史<br>早期的上网模式，浏览器访问某个网站都是文档形式浏览，服务端仅仅是将客户端请求的东西返回回去，不需要记录谁再某一段时间内浏览了什么内容，所以每次HTTP请求都是一次全新的请求，服务端也不用管对方是谁，你要啥我给你啥就完事了。<br>随着web的发展，像购物网站，论坛等的发展，最简单的，只要是需要登录的网站，服务器必须管理会话，必须知道谁是谁，而不是你要啥我就给你啥，这时候session出现了。<br>你访问我，我给你一串session id，我自己备份一个，你下次过来，我对比下我自己记录的session id，我就可以知道你是谁了。<br>随机带来的问题也很严重：</p>
+<ol>
+<li>内存开销：因为往往一个网站是有成千上万的人同时来访问，如果每个人我都要存一份session id在我这，那么对于我的服务器的存储是一个巨大的开销。</li>
+<li>拓展限制：服务器A想拓展自己的服务器，多开一个服务器B来做负载均衡，那就是一个棘手的问题：<br>  a. 例如客户端小a访问服务器A，服务器A给了小a一份session id，自己存一份，小a又来发请求，但是这次请求被转发到了服务器B，服务器B并没有存储小a的session id，那么小a这时候又得重新验证。<br>  b. 如果每次服务器创建一个新的session id，就往自己其他的服务器复制粘贴一份，开销代价就会升高。<br>  c. 如果统一集中将session id都存在一个服务器，其他的服务器都来这里做验证，万一这个session服务器挂了，那么全部都挂了。</li>
+<li>安全问题：客户端session id一旦泄露，他人便可带着这个session id来访问我的服务器，我服务器经过验证这个session id是可以通过的（之前存储过），那么便会造成了其他人冒名顶替的问题，这里有个专业名词叫CSRF(跨站请求伪造)<br>于是乎token横空出世，我服务器不保存这个可恶的session id，我给你个token，你下次来访问我带上token，我临时再赶紧算一下这个token对不对，对就让你过了，所以事情目前也就得到了解决方案。<br>小结<br>token的出现解决的大头问题的服务器端的压力，但是本质上换汤不换药（个人理解），新的验证形式罢了。</li>
+</ol>
  
-
-    </header>
-    
-    
-  </div>
-</article>
+      <!-- reward -->
       
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/web3/" class="archive-article-date">
-  <time datetime="2023-01-29T15:31:22.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/web3/"
-    >web3区块链</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/webpack/" class="archive-article-date">
-  <time datetime="2023-01-29T15:31:13.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/webpack/"
-    >webpack</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8A%E6%8A%A5/" class="archive-article-date">
-  <time datetime="2023-01-29T15:30:25.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8A%E6%8A%A5/"
-    >前端数据埋点上报</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/koa2/" class="archive-article-date">
-  <time datetime="2023-01-29T15:29:04.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/koa2/"
-    >koa2</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/reactRedux/" class="archive-article-date">
-  <time datetime="2023-01-29T15:28:19.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/reactRedux/"
-    >reactRedux</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/29/router/" class="archive-article-date">
-  <time datetime="2023-01-29T15:27:06.000Z" itemprop="datePublished">01/29</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/29/router/"
-    >router</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
       
     </div>
-  </div>
-  
-  
-
-  
-  <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2023/01/page/2/">2</a><a class="page-number" href="/archives/2023/01/page/3/">3</a><a class="page-number" href="/archives/2023/01/page/4/">4</a><a class="extend next" rel="next" href="/archives/2023/01/page/2/">下一页</a>
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/01/29/Cookie%E4%B8%8ESession/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/01/29/TypeSrcipt/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            TypeSrcipt
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/01/29/HTTP/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">HTTP</div>
+      </a>
+    
   </nav>
-  
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "WjlkeijDwyD3bdgyYCZIqAC7-gzGzoHsz",
+    app_key: "VyiD3uDttHzzZUvy9xSLLw9h",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -439,6 +414,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
