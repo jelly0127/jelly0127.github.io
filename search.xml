@@ -3785,16 +3785,16 @@ vuex是使用vue中必不可少的一部分，基于父子、兄弟组件，我�
 </ul>
 <p>（点击标签链接即可跳转详情页）</p>
 <h2 id="主要的Hooks"><a href="#主要的Hooks" class="headerlink" title="主要的Hooks"></a>主要的Hooks</h2><ol>
-<li>[useEffect](<a href="https://www.yuque.com/docs/share/43255f81-7cd7-41a1-9ba4-2ae156574561#">https://www.yuque.com/docs/share/43255f81-7cd7-41a1-9ba4-2ae156574561?#</a> 《ReactHook -1 (useEffect)》)</li>
-<li>[useState](<a href="https://www.yuque.com/docs/share/b24d8722-b076-4c0a-bec4-5ba66e72248f#">https://www.yuque.com/docs/share/b24d8722-b076-4c0a-bec4-5ba66e72248f?#</a> 《ReactHooks-2 (useState)》)</li>
-<li>[useContext](<a href="https://www.yuque.com/docs/share/9df3bafb-a95c-48b0-84da-88850185d316#">https://www.yuque.com/docs/share/9df3bafb-a95c-48b0-84da-88850185d316?#</a> 《ReactHooks-3（useContext）》)</li>
-<li>[useCallback](<a href="https://www.yuque.com/docs/share/249af995-df27-405d-96fe-a9cd132cea9d#">https://www.yuque.com/docs/share/249af995-df27-405d-96fe-a9cd132cea9d?#</a> 《ReactHooks-4 (useCallback)》)</li>
-<li>[useMemo](<a href="https://www.yuque.com/docs/share/e97efda4-a3f8-4023-b81a-cfe361777e7f#">https://www.yuque.com/docs/share/e97efda4-a3f8-4023-b81a-cfe361777e7f?#</a> 《ReactHooks-5 (useMemo)》)</li>
-<li>[useref](<a href="https://www.yuque.com/docs/share/145a57a2-007f-490b-93f2-470a6254b30b#">https://www.yuque.com/docs/share/145a57a2-007f-490b-93f2-470a6254b30b?#</a> 《ReactHooks-6 (useRef)》)</li>
-<li>[自定义Hooks](<a href="https://www.yuque.com/docs/share/fa421744-8256-4b78-9266-d4fa4227d26d#">https://www.yuque.com/docs/share/fa421744-8256-4b78-9266-d4fa4227d26d?#</a> 《ReactHooks-自定义Hook》)</li>
+<li><a href="https://jelly0127.github.io/2023/01/29/useEffect/">useEffect</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/useState/">useState</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/useContext/">useContext</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/useCallback/">useCallback</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/useMemo/">useMemo</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/useRef/">useRef</a></li>
+<li>[自定义Hooks]<a href="https://jelly0127.github.io/2023/01/29/%E8%87%AA%E5%AE%9A%E4%B9%89Hooks/">https://jelly0127.github.io/2023/01/29/自定义Hooks/</a>)</li>
 </ol>
-<h2 id="React路由"><a href="#React路由" class="headerlink" title="React路由"></a>React路由</h2><p>[react-router(v6)](<a href="https://www.yuque.com/docs/share/b9e1f021-1692-46f9-a206-23ce5abdbb99#">https://www.yuque.com/docs/share/b9e1f021-1692-46f9-a206-23ce5abdbb99?#</a> 《React-router（V6）》)</p>
-<h2 id="React状态机"><a href="#React状态机" class="headerlink" title="React状态机"></a>React状态机</h2><p>[React-rudex](</p>
+<h2 id="React路由"><a href="#React路由" class="headerlink" title="React路由"></a>React路由</h2><p><a href="https://jelly0127.github.io/2023/01/29/router/">react-router(v6)</a></p>
+<h2 id="React状态机"><a href="#React状态机" class="headerlink" title="React状态机"></a>React状态机</h2><p><a href="https://jelly0127.github.io/2023/01/29/reactRedux/">React-rudex</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -4206,21 +4206,23 @@ vuex是使用vue中必不可少的一部分，基于父子、兄弟组件，我�
 <li><a href="https://jelly0127.github.io/2023/01/29/ES6%E5%90%8E%E7%BB%AD%E8%AF%AD%E6%B3%95/">ES6后续语法</a></li>
 <li><a href="https://jelly0127.github.io/2023/01/29/HTTP/">Http协议</a></li>
 <li><a href="https://jelly0127.github.io/2023/01/29/Cookie%E4%B8%8ESession/">cookie与Session</a></li>
-<li><a href="http://localhost:4000/2023/01/29/TypeScript/">TypeScript</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/TypeScript/">TypeScript</a></li>
 </ol>
 <h2 id="三、进阶："><a href="#三、进阶：" class="headerlink" title="三、进阶："></a>三、进阶：</h2><ol>
-<li>[Vue2（全家桶）](<a href="https://www.yuque.com/docs/share/ad3906fb-fcff-47c0-8760-fb192828f17a#">https://www.yuque.com/docs/share/ad3906fb-fcff-47c0-8760-fb192828f17a?#</a> 《Vue2全家桶》)</li>
-<li>[Echart(数据可视化)](<a href="https://www.yuque.com/docs/share/0b3dd037-870b-42bc-889d-8adf470e7da4#">https://www.yuque.com/docs/share/0b3dd037-870b-42bc-889d-8adf470e7da4?#</a> 《Echarts》)</li>
-<li>[git](<a href="https://www.yuque.com/docs/share/bfeb6eff-2096-498e-abf1-533a60cce7a3#">https://www.yuque.com/docs/share/bfeb6eff-2096-498e-abf1-533a60cce7a3?#</a> 《git的使用》)</li>
-<li>[Vue3](<a href="https://www.yuque.com/docs/share/3acbf49f-6f05-4975-9ee5-d79fa5306328#">https://www.yuque.com/docs/share/3acbf49f-6f05-4975-9ee5-d79fa5306328?#</a> 《Vue3》)</li>
-<li>[微信小程序](<a href="https://www.yuque.com/docs/share/1190cdcd-6ba2-424f-841f-25a5c6e28739#">https://www.yuque.com/docs/share/1190cdcd-6ba2-424f-841f-25a5c6e28739?#</a> 《微信小程序》)</li>
-<li>[微信云开发](<a href="https://www.yuque.com/docs/share/24d48391-4b76-455f-b60b-d4646c2e1548#">https://www.yuque.com/docs/share/24d48391-4b76-455f-b60b-d4646c2e1548?#</a> 《微信云开发》)</li>
-<li>[UniApp](<a href="https://www.yuque.com/docs/share/f0ccbd29-07d4-4d78-90b4-912defc17fbb#">https://www.yuque.com/docs/share/f0ccbd29-07d4-4d78-90b4-912defc17fbb?#</a> 《UniApp》)</li>
-<li>[ReactHooks（全家桶）](<a href="https://www.yuque.com/docs/share/698547c5-a38f-40c5-9ced-4336bf15c471#">https://www.yuque.com/docs/share/698547c5-a38f-40c5-9ced-4336bf15c471?#</a> 《ReactHooks全家桶学习笔记(keep update…)》)</li>
-<li>[Koa2+MySql（NodeJs后端）](<a href="https://www.yuque.com/docs/share/a913329d-32cb-42c9-bfb0-12a2b9dc052b#">https://www.yuque.com/docs/share/a913329d-32cb-42c9-bfb0-12a2b9dc052b?#</a> 《Koa2+MySql（NodeJs后端）》)（待更…）</li>
-<li>[前端数据埋点上报](<a href="https://www.yuque.com/docs/share/4d27fd78-6615-4c89-857b-d0a37b567764#">https://www.yuque.com/docs/share/4d27fd78-6615-4c89-857b-d0a37b567764?#</a> 《前端数据埋点上报》)</li>
-<li>[webpack](<a href="https://www.yuque.com/docs/share/a913329d-32cb-42c9-bfb0-12a2b9dc052b#">https://www.yuque.com/docs/share/a913329d-32cb-42c9-bfb0-12a2b9dc052b?#</a> 《Koa2+MySql（NodeJs后端）》)（待更…）</li>
-<li><a href="a">web3（区块链）</a>（待更…）</li>
+<li><a href="https://jelly0127.github.io/2023/01/29/Vue%E5%85%A8%E5%AE%B6%E6%A1%B6/">Vue2（全家桶）</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/Echarts/">Echart(数据可视化)</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/Git/">git</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/Vue3/">Vue3</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/%E5%BE%AE%E4%BF%A1%E4%BA%91%E5%BC%80%E5%8F%91/">微信云开发</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/uniapp/">UniApp</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/">ReactHooks（全家桶）</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/koa2/">Koa2（NodeJs后端）</a>（待更…）</li>
+<li><a href="https://jelly0127.github.io/2023/01/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8A%E6%8A%A5/">前端数据埋点上报</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/webpack/">webpack</a>（待更…）</li>
+<li><a href="https://jelly0127.github.io/2023/01/29/we3/">web3（区块链）</a>（待更…）</li>
+<li><a href="https://jelly0127.github.io/2023/01/29/vite/">vite</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/">react脚手架搭建</a>（待更…）</li>
 </ol>
 ]]></content>
   </entry>
@@ -4686,6 +4688,22 @@ vuex是使用vue中必不可少的一部分，基于父子、兄弟组件，我�
 <p>优势：减少DOM操作，减少监听器的创建，节约内存。</p>
 <h2 id="十七、深拷贝"><a href="#十七、深拷贝" class="headerlink" title="十七、深拷贝"></a>十七、深拷贝</h2><p>简单例子：没有对正则等一些复杂对象进行特殊处理</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">deepClone</span> = (<span class="params">obj = &#123;&#125;</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> obj !== <span class="string">&#x27;object&#x27;</span> || obj == <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> obj</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> result</span><br><span class="line">  <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> <span class="title class_">Array</span>)&#123;</span><br><span class="line">    result = []</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    result = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    <span class="keyword">if</span>(obj.<span class="title function_">hasOwnProperty</span>(key))&#123;</span><br><span class="line">      result[key] = <span class="title function_">deepClone</span>(obj[key])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>自定义Hook</title>
+    <url>/2023/01/30/%E8%87%AA%E5%AE%9A%E4%B9%89Hook/</url>
+    <content><![CDATA[<p><strong>自定义 Hook 是一个函数，其名称以 “use” 开头，函数内部可以调用其他的 Hook。</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState, useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="comment">//这是一个可以通过friendID去判断是否在线的自定义Hook</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">useFriendStatus</span>(<span class="params">friendID</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [isOnline, setIsOnline] = <span class="title function_">useState</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">handleStatusChange</span>(<span class="params">status</span>) &#123;</span><br><span class="line">      <span class="title function_">setIsOnline</span>(status.<span class="property">isOnline</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title class_">ChatAPI</span>.<span class="title function_">subscribeToFriendStatus</span>(friendID, handleStatusChange);</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="title class_">ChatAPI</span>.<span class="title function_">unsubscribeFromFriendStatus</span>(friendID, handleStatusChange);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">//这里只是返回了isOnline这个属性，当然你连setIsOnline也可以返回出去，可以让组件调用的时候接收这个方法，在必要的时候自行修改Hook的State</span></span><br><span class="line">  <span class="keyword">return</span> isOnline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>自定义Hook看起来特别的像一个函数的使用，传递一个参数，得到一个结果。</p>
+<p>定义Hook和函数不同的是，Hook可以利用起生命周期钩子，以及有Hook内部自己的数据。</p>
+<p><strong>注意：自定义Hook每次调用的时候会创建一个新的State作用域（如果你有使用useState的话），所以不用担心多次调用Hook导致State互相影响</strong></p>
+<p><strong>自定义Hook服用逻辑，但不服用State，作用域还是独立的</strong></p>
+<p>如何在组件中使用这个自定义Hook呢？</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">FriendStatus</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> isOnline = <span class="title function_">useFriendStatus</span>(props.<span class="property">friend</span>.<span class="property">id</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (isOnline === <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;Loading...&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> isOnline ? <span class="string">&#x27;Online&#x27;</span> : <span class="string">&#x27;Offline&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用一个变量保存即可，无需Hook关心内部的逻辑，内部帮你绑定了生命周期，帮你创建State作用域，这些你都不用关心，直接用即可。</p>
 ]]></content>
   </entry>
 </search>
