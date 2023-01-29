@@ -157,6 +157,86 @@
     
     
     <article
+  id="post-reactRedux"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/01/29/reactRedux/"
+    >reactRedux</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/29/reactRedux/" class="article-date">
+  <time datetime="2023-01-29T15:28:19.000Z" itemprop="datePublished">2023-01-29</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>react-redux是对redux的一种扩充，能提高redux在react的性能，并且能够使代码更加的优雅。</p>
+<p>react-redux依赖于react以及redux，所以使用react-redux之前，是基于你react以及redux已经安装完成。</p>
+<h3 id="安装以及使用"><a href="#安装以及使用" class="headerlink" title="安装以及使用"></a>安装以及使用</h3><ol>
+<li>下包 npm install react-redux -S</li>
+<li>创建store文件夹</li>
+<li>创建index.js</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;createStore&#125; <span class="keyword">from</span> <span class="string">&#x27;redux&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> reducer <span class="keyword">from</span> <span class="string">&#x27;./reducer.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> store = <span class="title function_">createStore</span>(reducer)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>创建reducer.js</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> defaultData = &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">reducer</span>(<span class="params">state=defaultData,action</span>)&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> state</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> reducer</span><br></pre></td></tr></table></figure>
+
+<p>使用：</p>
+<ol>
+<li>在main.js使用react的context特性注入store</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./store/store.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//导入react-redux的Provider</span></span><br><span class="line"><span class="keyword">import</span> &#123;<span class="title class_">Provider</span>&#125; <span class="keyword">from</span> <span class="string">&#x27;react-redux&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//注入store</span></span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>(</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Provider</span> <span class="attr">store</span>=<span class="string">&#123;store&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">Provider</span>&gt;</span></span>,</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>在组件中使用connect</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">&#x27;react-redux&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>声明两个注入props的属性和方法</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这里的参数state是个默认参数，这里的参数state指的是store的state，而不是组件自身的state</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">mapStateToProps</span> = state=&gt;&#123;</span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">          <span class="comment">//写属性</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">mapDispatchToProps</span> = dispatch=&gt;&#123;</span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">    <span class="comment">//写方法</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>使用connect修饰组件并导出组件</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//connect接收两个参数，是上面定义的两个方法，connect返回一个方法，方法接收组件本身作为参数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">connect</span>(mapStateToProps,mapDispatchToProps)(<span class="title class_">MyComponent</span>)</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-router"
   class="article article-type-post"
   itemscope
@@ -855,7 +935,7 @@
 <li><a target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/useCallback/">useCallback</a></li>
 <li><a target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/useMemo/">useMemo</a></li>
 <li><a target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/useRef/">useRef</a></li>
-<li><a target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/%E8%87%AA%E5%AE%9A%E4%B9%89Hooks/">自定义Hooks</a></li>
+<li><a target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/30/%E8%87%AA%E5%AE%9A%E4%B9%89Hooks/">自定义Hooks</a></li>
 </ol>
 <h2 id="React路由"><a href="#React路由" class="headerlink" title="React路由"></a>React路由</h2><p><a target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/router/">react-router(v6)</a></p>
 <h2 id="React状态机"><a href="#React状态机" class="headerlink" title="React状态机"></a>React状态机</h2><p><a target="_blank" rel="noopener" href="https://jelly0127.github.io/2023/01/29/reactRedux/">React-rudex</a></p>
@@ -909,615 +989,6 @@
   <p>uniapp的开发目的是一套代码多端使用，但是个人兼容性差，实用性不是很强，生态对其它框架来说较弱。但毕竟是国内开发的产品还是希望它可以发展更好更完善。</p>
 <p>特点：</p>
 <p>与vue框架的使用基本一致，但又有微信小程序的一些影子。个人觉得是两个东西的结合加工品。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-微信云开发"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/%E5%BE%AE%E4%BF%A1%E4%BA%91%E5%BC%80%E5%8F%91/"
-    >微信云开发</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/01/29/%E5%BE%AE%E4%BF%A1%E4%BA%91%E5%BC%80%E5%8F%91/" class="article-date">
-  <time datetime="2023-01-29T15:10:51.000Z" itemprop="datePublished">2023-01-29</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="一，认识小程序云开发"><a href="#一，认识小程序云开发" class="headerlink" title="一，认识小程序云开发"></a>一，认识小程序云开发</h1><h2 id="1-1，云开发简介"><a href="#1-1，云开发简介" class="headerlink" title="1-1，云开发简介"></a>1-1，云开发简介</h2><ul>
-<li>小程序·云开发是微信团队联合腾讯云推出的专业的小程序开发服务。 </li>
-<li>开发者可以使用云开发快速开发小程序、小游戏、公众号网页等，并且原生打通微信开放能力。 </li>
-<li>开发者无需搭建服务器，可免鉴权直接使用平台提供的API进行业务开发<br>  小程序 </li>
-<li>云开发又简称tcb，是微信官方给我们提供的基于腾讯云的云服务器。目前云开发包含：云数据库，云函数，云存储，云调用。后面章节会具体给大家讲解这几个。</li>
-</ul>
-<p>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html</a><br><img src="https://img-blog.csdnimg.cn/20210119094307797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="1-2，云开发和传统服务器对比"><a href="#1-2，云开发和传统服务器对比" class="headerlink" title="1-2，云开发和传统服务器对比"></a>1-2，云开发和传统服务器对比</h2><p>云开发相对于传统服务器的优势如下表<br><img src="https://img-blog.csdnimg.cn/20210118140545909.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>通过上面的对比，我们可以看出，如果你想快速创建一个小程序的后台，用云开发是不错的选择。</p>
-<h2 id="1-3，Serverless开发模式"><a href="#1-3，Serverless开发模式" class="headerlink" title="1-3，Serverless开发模式"></a>1-3，Serverless开发模式</h2><p>要想深入了解小程序云开发，就需要知道什么是Serverless开发模式，因为我们的小程序云开发就是采用的这个模式<br>官方视频有讲到：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/business/doc/000e8697e481208a2e3b31d6a5680d">https://developers.weixin.qq.com/community/business/doc/000e8697e481208a2e3b31d6a5680d</a><br>所以我们接下来要深入了解下Serverless开发模式</p>
-<h3 id="1-3-1，前端开发模式的演进"><a href="#1-3-1，前端开发模式的演进" class="headerlink" title="1-3-1，前端开发模式的演进"></a>1-3-1，前端开发模式的演进</h3><p><img src="https://img-blog.csdnimg.cn/246cc0ea2b13496c8227142068aab3fc.png" alt="img"></p>
-<p>上图说完了这几个阶段，可以看到，每一次前端开发模式的变化，都因某个变革性的技术而起。先是 AJAX，而后是 Node.js。那么下一个变革性的技术是什么？不言而喻，个人觉得下一代前端开发模式就是 Serverless</p>
-<p>其实 Serverless 早已和前端产生了联系，只是我们可能没有感知。<br>1、CDN: 相信大家都使用过 CDN，我们开发完成之后，直接将静态文件部署到 CDN 上，通过 CDN 进行内容分发、网络加速，在这个过程中，前端不需要关心 CDN 有多少个节点、如何做负载均衡，也不需要知道 CDN 的 QPS 是多少。所以从这个角度来说，CDN 是一种 serverless 的实现。<br>2、再比如对象存储，和 CDN 一样，我们只需要将文件上传到对象存储，就可以直接使用了，不需要关心它如何存取文件、如何进行权限控制，所以对象存储对前端来说是 Serverless。<br>3、甚至一些第三方的 API 服务，也是 Serverless，因为我们使用的时候，不需要去关心服务器。</p>
-<h3 id="1-3-2，什么是Serverless"><a href="#1-3-2，什么是Serverless" class="headerlink" title="1-3-2，什么是Serverless"></a>1-3-2，什么是Serverless</h3><p><img src="https://img-blog.csdnimg.cn/1ce8bb2923014ce9bd91cda1337c0244.png" alt="img"><br>从技术角度来说，Serverless 就是 FaaS 和 BaaS 的结合。<br>简单来讲，FaaS（Function as a Service） 就是一些运行函数的平台，比如云开发里的云函数，阿里云的函数计算、AWS 的 Lambda 等。</p>
-<p>BaaS（Backend as a Service）则是一些后端云服务，比如云开发数据库、对象存储、消息队列等。利用 BaaS，可以极大简化我们的应用开发难度。</p>
-<p>Serverless 则可以理解为运行在 FaaS 中，使用了 BaaS 的函数。</p>
-<h3 id="1-3-3，Serverless-的主要特点"><a href="#1-3-3，Serverless-的主要特点" class="headerlink" title="1-3-3，Serverless 的主要特点"></a>1-3-3，Serverless 的主要特点</h3><p>1、事件驱动—-函数在 FaaS 平台中，需要通过一系列的事件来驱动函数执行。<br>2、无状态—-因为每次函数执行，可能使用的都是不同的容器<br>3、无运维—-使用serverless我们不需要关心服务器，也不需要关心运维，这也是serverles思想的核心；<br>4、低成本—-使用 Serverless 成本很低，因为我们只需要为每次函数的运行付费。函数不运行，则不花钱，也不会浪费服务器资源过度</p>
-<h3 id="1-3-4，serverless-开发流程"><a href="#1-3-4，serverless-开发流程" class="headerlink" title="1-3-4，serverless 开发流程"></a>1-3-4，serverless 开发流程</h3><p><img src="https://img-blog.csdnimg.cn/52f3ba4c862b4c42bc82e63799f8f143.png" alt="img"><br>通过上图就可以看出<br>1，传统开发流程。<br>在传统开发流程中，我们需要前端写页面，后端工程师写接口。后端写完接口之后，把接口部署了，再进行前后端联调。联调完毕后再测试、上线。上线之后，还需要运维工程师对系统进行维护。整个过程涉及多个不同角色，链路较长，沟通协调也是一个问题。</p>
-<p>2、而基于 Serverless，后端变得非常简单了，以往的后端应用被拆分为一个个函数，只需要写完函数并部署到 Serverless 服务即可，后续也不用关心任何服务器的运维操作。后端开发的门槛大幅度降低了。因此，只需要一个前端就可以完成所有的开发工作。<br>当然，前端基于 Serverless 去写后端，最好也需要具备一定的后端知识。涉及复杂的后端系统或者 Serverless 不适用的场景，还是需要后端开发</p>
-<h3 id="1-3-5，serverless带来的价值"><a href="#1-3-5，serverless带来的价值" class="headerlink" title="1-3-5，serverless带来的价值"></a>1-3-5，serverless带来的价值</h3><p>1．降低运营复杂度</p>
-<p>Serverless架构使软件应用和服务器实现了解耦，服务器不再是用户开发和运营应用的焦点。在应用上线前，用户无须再提前规划服务器的数量和规格。在运维过程中，用户无须再持续监控和维护具体服务器的状态，只需要关心应用的整体状态。应用运营的整体复杂度下降，用户的关注点可以更多地放在软件应用的体验和改进以及其他能带来更高业务价值的地方。<br>2．降低运营成本<br>服务器不再是用户关注的一个受管资源，运营的复杂度下降，应用运营所需要投入的时间和人力将大大降低。在最好的情况下，可以做到少数几个应用管理员即可管理一个处理海量请求的应用系统。</p>
-<p>3、缩短产品的上市时间<br>在Serverless架构下，应用的功能被解构成若干个细颗粒度的无状态函数，功能与功能之间的边界变得更加清晰，功能模块之间的耦合度大大减小。这使得软件应用的开发效率更高，应用开发的迭代周期更短。</p>
-<h3 id="1-3-6，基于-Serverless-的小程序开发"><a href="#1-3-6，基于-Serverless-的小程序开发" class="headerlink" title="1-3-6，基于 Serverless 的小程序开发"></a>1-3-6，基于 Serverless 的小程序开发</h3><p>1、目前国内使用 Serverless 较多的场景可能就是小程开发了。具体的实现就是小程序云开发，支付宝小程序和微信小程序都提供了云开发功能。<br>2、在传统的小程序开发中，我们需要前端进行小程序端的开发；后端进行服务端的开发。小程序的后端开发和其他的后端应用开发，本质是是一样的，需要关心应用的负载均衡、备份冗灾、监控报警等一些列部署运维操作。如果开发团队人很少，可能还需要前端去实现服务端。<br>但基于云开发，就只需要让开发者关注于业务的实现，由一个前端就能够完成整个应用的前后端开发。因为云开发将后端封装为了 BaaS 服务，并提供了对应的 SDK 给开发者，开发者可以像调用函数一样使用各种后端服务。应用的运维也转移到了提供云开发的服务商。<br>下面分别是使用支付宝云开发的一些例子，函数就是定义在 FaaS 服务中的函数。</p>
-<p>负载均衡（Load Balance）其意思就是分摊到多个操作单元上进行执行，例如Web服务器、FTP服务器、企业关键应用服务器和其它关键任务服务器等，从而共同完成工作任务<br>备份冗灾：就是为了防止出现自然或者社会灭害带来的对存储设备的损害而造成对数据丢失,而采取的备份.</p>
-<h3 id="1-3-7，通用-Serverless-架构"><a href="#1-3-7，通用-Serverless-架构" class="headerlink" title="1-3-7，通用 Serverless 架构"></a>1-3-7，通用 Serverless 架构</h3><p><img src="https://img-blog.csdnimg.cn/2073a7990d3b4f45b61418859111c46b.png" alt="img"><br>其中最底层就是实现复杂业务的后端微服务（Backend）。然后 FaaS 层通过一系列函数实现业务逻辑，并为前端直接提供服务。对于前端开发者来说，前端可以通过编写函数的方式来实现服务端的逻辑。</p>
-<p>同时不管是在后端、FaaS 还是前端，我们都可以去调用云计算平台提供的 BaaS 服务，大大降低开发难度、减少开发成本。小程序云开发，就是直接在前端调用 BaaS 服务的例子。</p>
-<p>一句话总结serverless - less is more<br>使用 Serverless，我们不需要再过多关注服务端的运维，不需要关心我们不熟悉的领域，我们只需要专注于业务的开发、专注于产品的实现。我们需要关心的事情变少了，但我们能做的事情更多了。</p>
-<h1 id="二，云开发环境的创建与初始化"><a href="#二，云开发环境的创建与初始化" class="headerlink" title="二，云开发环境的创建与初始化"></a>二，云开发环境的创建与初始化</h1><p>注意事项</p>
-<ul>
-<li>1,必须注册小程序后才可以开通云开发</li>
-<li>2,一个小程序可以创建两个云开发环境</li>
-</ul>
-<h2 id="2-1-创建一个初始项目"><a href="#2-1-创建一个初始项目" class="headerlink" title="2-1,创建一个初始项目"></a>2-1,创建一个初始项目</h2><p>我们要开通云开发服务，必须先要进入小程序开发者工具才可以。最新版的开发者工具在创建项目时又多了一个模板选择，如果你用的是最新版的开发者工具，模板选择里就选择不使用模板即可。</p>
-<h3 id="最新版的开发工具不使用模板"><a href="#最新版的开发工具不使用模板" class="headerlink" title="最新版的开发工具不使用模板"></a>最新版的开发工具不使用模板</h3><p>如果你用的是最新版的开发者工具，创建项目时会多一个模板选择，这里一定要记得选择不使用模板。</p>
-<p>关于appid</p>
-<p>如果你不使用自己的appid创建项目，就会出现下面的问题，所以一定要先去注册一个小程序，然后用自己的appid。</p>
-<p>由于云开发官方更新的太快，有些同学可能会遇到下面这样的问题<br>没有 不使用云服务 选型。</p>
-<h2 id="2-2，没有“不使用云服务”选型解决方案-选看"><a href="#2-2，没有“不使用云服务”选型解决方案-选看" class="headerlink" title="2-2，没有“不使用云服务”选型解决方案(选看)"></a>2-2，没有“不使用云服务”选型解决方案(选看)</h2><p>如果你出现上面的问题，再看这节，如果没出现这样的问题，直接跳过就行。</p>
-<p>把这个模板下载到桌面，并解压。</p>
-<p>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1UJLAwlvM46_MvpC96FwKPg">https://pan.baidu.com/s/1UJLAwlvM46_MvpC96FwKPg</a> 提取码: 1234 </p>
-<p>–来自百度网盘超级会员v2的分享<br>然后点击导入，把项目导入即可。<br>appid换成自己的。</p>
-<h2 id="2-3-开通云开发"><a href="#2-3-开通云开发" class="headerlink" title="2-3,开通云开发"></a>2-3,开通云开发</h2><ul>
-<li><p>1,点击下图箭头所示,如果你第一步创建项目时,没有使用自己的appid,这里不会有下图箭头所示的云朵.<br><img src="https://pic.imgdb.cn/item/63d68bd6face21e9ef509844.png"></p>
-</li>
-<li><p>2,给云开发环境取名</p>
-<p>等待创建<br><img src="https://img-blog.csdnimg.cn/img_convert/4e0a7c2e116e9bf6d5154140351e7a48.png" alt="img"><br>创建成功<br><img src="https://pic.imgdb.cn/item/63d68be7face21e9ef50c1bc.png"></p>
-</li>
-</ul>
-<h2 id="2-4-初始化云开发环境-重要"><a href="#2-4-初始化云开发环境-重要" class="headerlink" title="2-4,初始化云开发环境(***重要)"></a>2-4,初始化云开发环境(***重要)</h2><p>在app.js里写入环境id,注意这里要用你自己的云开发环境id</p>
-<ul>
-<li>初始化云开发环境前，先去云开发控制台，拿到云开发环境id</li>
-</ul>
-<p>  这里的环境id建议直接复制，不要手写，很容易写错。 </p>
-<ul>
-<li>拿到环境id以后，就去app.js里做云开发环境初始化，</li>
-</ul>
-<p>用时候云开发创建好以后,初始化可能需要一点时间,所以如果这里初始化有报错,记得关闭开发者工具,等几分钟再重新打开即可.</p>
-<h1 id="三，云开发-云数据库"><a href="#三，云开发-云数据库" class="headerlink" title="三，云开发~云数据库"></a>三，云开发~云数据库</h1><p>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/database/init.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/database/init.html</a></p>
-<h2 id="3-1，在数据库里新建集合-数据表"><a href="#3-1，在数据库里新建集合-数据表" class="headerlink" title="3-1，在数据库里新建集合(数据表)"></a>3-1，在数据库里新建集合(数据表)</h2><p>我们这里以新建一个商品列表为例<br><img src="https://img-blog.csdnimg.cn/20210119143131206.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="3-2，数据库权限管理"><a href="#3-2，数据库权限管理" class="headerlink" title="3-2，数据库权限管理"></a>3-2，数据库权限管理</h2><p>要想让用户查询到我们创建的商品数据，需要把权限改为所有用户可读<br><img src="https://img-blog.csdnimg.cn/20210119144339469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="3-3，数据库的增删改查"><a href="#3-3，数据库的增删改查" class="headerlink" title="3-3，数据库的增删改查"></a>3-3，数据库的增删改查</h2><h3 id="3-3-1，查询-get"><a href="#3-3-1，查询-get" class="headerlink" title="3-3-1，查询 get()"></a>3-3-1，查询 get()</h3><ul>
-<li>传统写法<br><img src="https://img-blog.csdnimg.cn/2021011914394249.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-<li>ES6简洁写法<br><img src="https://img-blog.csdnimg.cn/20210119145203891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>推荐第二种写法<br><img src="https://img-blog.csdnimg.cn/20210119150828859.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<h3 id="3-3-2，条件查询-where"><a href="#3-3-2，条件查询-where" class="headerlink" title="3-3-2，条件查询 where()"></a>3-3-2，条件查询 where()</h3><p><img src="https://img-blog.csdnimg.cn/2021011915165530.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="3-3-3，查询单条数据doc"><a href="#3-3-3，查询单条数据doc" class="headerlink" title="3-3-3，查询单条数据doc()"></a>3-3-3，查询单条数据doc()</h3><p>doc是用来查询单条数据的。比如商品详情页。<br>doc里面用到的参数就是我们数据里的_id字段<br><img src="https://img-blog.csdnimg.cn/20210120105842707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="3-3-4，添加数据-add"><a href="#3-3-4，添加数据-add" class="headerlink" title="3-3-4，添加数据 add()"></a>3-3-4，添加数据 add()</h3><p>通过add可以实现数据的添加，<br><img src="https://img-blog.csdnimg.cn/2021012011072216.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="3-3-5，更新数据update"><a href="#3-3-5，更新数据update" class="headerlink" title="3-3-5，更新数据update()"></a>3-3-5，更新数据update()</h3><p>修改数据库里已存在的数据，结合doc进行修改单条数据<br><img src="https://img-blog.csdnimg.cn/20210120111452950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="3-3-6，删除数据remove"><a href="#3-3-6，删除数据remove" class="headerlink" title="3-3-6，删除数据remove()"></a>3-3-6，删除数据remove()</h3><p>删除数据，结合doc删除单条数据<br><img src="https://img-blog.csdnimg.cn/20210120111942981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="4-4，增删改查综合案例"><a href="#4-4，增删改查综合案例" class="headerlink" title="4-4，增删改查综合案例"></a>4-4，增删改查综合案例</h2><ul>
-<li>1，能查看商品列表</li>
-<li>2，更动态添加商品</li>
-<li>3，能进入商品详情页</li>
-<li>4，能删除某个商品</li>
-<li>5，能修改某个商品的价格</li>
-</ul>
-<h3 id="4-4-1-列表跳详情-data"><a href="#4-4-1-列表跳详情-data" class="headerlink" title="4-4-1 列表跳详情 data-"></a>4-4-1 列表跳详情 data-</h3><ul>
-<li>1，在wxml里定义data- 要绑定的数据<br><img src="https://img-blog.csdnimg.cn/20210120115030960.png" alt="img"></li>
-<li>2， 在js页面里的点击方法里拿到绑定的数据<br><img src="https://img-blog.csdnimg.cn/20210120115046577.png" alt="img"></li>
-<li>比如打印结果如下<br><img src="https://img-blog.csdnimg.cn/20210120115105901.png" alt="img"></li>
-</ul>
-<h3 id="4-4-2，列表跳详情并携带商品id"><a href="#4-4-2，列表跳详情并携带商品id" class="headerlink" title="4-4-2，列表跳详情并携带商品id"></a>4-4-2，列表跳详情并携带商品id</h3><ul>
-<li>1，列表跳页到详情页<br><img src="https://img-blog.csdnimg.cn/20210120115627866.png" alt="img"></li>
-<li>2，拿到列表跳页时携带的id数据<br><img src="https://img-blog.csdnimg.cn/20210120115911259.png" alt="img"></li>
-</ul>
-<h3 id="4-4-3，查询商品列表"><a href="#4-4-3，查询商品列表" class="headerlink" title="4-4-3，查询商品列表"></a>4-4-3，查询商品列表</h3><p><img src="https://img-blog.csdnimg.cn/20210121105411410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-4-4，添加商品并刷新商品列表"><a href="#4-4-4，添加商品并刷新商品列表" class="headerlink" title="4-4-4，添加商品并刷新商品列表"></a>4-4-4，添加商品并刷新商品列表</h3><p><img src="https://img-blog.csdnimg.cn/20210121105450835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-4-5，更新商品数据"><a href="#4-4-5，更新商品数据" class="headerlink" title="4-4-5，更新商品数据"></a>4-4-5，更新商品数据</h3><p>用户输入新价格，调用update方法进行更新数据<br><img src="https://img-blog.csdnimg.cn/20210121111158518.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>我们更新成功的时候，会有如下所示的日志打印。<br><img src="https://img-blog.csdnimg.cn/20210122103005208.png" alt="img"><br>只有stats里的updated是1的时候，才代表成功的更新了一条数据。<br>如果这条商品不是你创建的，当你对这条商品做更新操作时，打印的updated就是0。<br><img src="https://img-blog.csdnimg.cn/20210122103355106.png" alt="img"><br>这个时候代表没有更新成功。这是因为操作时的权限问题，要解决这个问题，就要借助云函数了，这里我们先放在这里，在后面云函数章节会做具体讲解。</p>
-<h3 id="4-4-6，弹窗提示确认是否删除"><a href="#4-4-6，弹窗提示确认是否删除" class="headerlink" title="4-4-6，弹窗提示确认是否删除"></a>4-4-6，弹窗提示确认是否删除</h3><p>用户删除数据是一个危险操作，所以操作之前最好给用户一个友好提示。<br>官方弹窗文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showModal.html">https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showModal.html</a></p>
-<p><img src="https://img-blog.csdnimg.cn/20210122165835203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-4-7，删除商品"><a href="#4-4-7，删除商品" class="headerlink" title="4-4-7，删除商品"></a>4-4-7，删除商品</h3><p><img src="https://img-blog.csdnimg.cn/202101221714103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-4-8，更新和删除时的权限问题"><a href="#4-4-8，更新和删除时的权限问题" class="headerlink" title="4-4-8，更新和删除时的权限问题"></a>4-4-8，更新和删除时的权限问题</h3><p>如果这条商品不是你创建的，当你对这条商品做删除或者更新操作时，虽然也会返回成功，但是可以看到我们更新或者删除的条数是0。<br><img src="https://img-blog.csdnimg.cn/20210122103703603.png" alt="img"><br><img src="https://img-blog.csdnimg.cn/202101221715036.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>其实这个时候也意味着没有更新或者删除成功，这里是因为操作权限的问题，因为这条数据不是你创建的。所以你只能对这条数据做查询操作，而不能做修改和删除操作。要想解决这个问题，就要借助云函数了。后面云函数讲解的部分，我会做具体讲解的。</p>
-<p><strong>我们还是先接着学习数据库操作的高级操作</strong></p>
-<h2 id="4-5，常用快捷键"><a href="#4-5，常用快捷键" class="headerlink" title="4-5，常用快捷键"></a>4-5，常用快捷键</h2><p>我们在开发时为了提高代码编写效率，通常会使用一些快捷键。我们小程序开发工具里常用的快捷键。<br>设置—》快捷键设置</p>
-<p>然后点击如下快捷键即可查看所有的快捷键</p>
-<p>如果感觉默认的快捷键不喜欢，可以自己重新设置快捷键。由于自带的快捷比较多，我这里不一一列举了，我把一些常用的快捷键拿出来给大家大致讲一讲，我这里以window电脑为例，如果你mac电脑，可以自己去看下开发者工具默认的快捷键。多看几遍把常用的记住就行了。</p>
-<table>
-<thead>
-<tr>
-<th>快捷键组合</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl+a</td>
-<td>全选</td>
-</tr>
-<tr>
-<td>Ctrl+c</td>
-<td>复制选中内容</td>
-</tr>
-<tr>
-<td>Ctrl+v</td>
-<td>粘贴复制的内容</td>
-</tr>
-<tr>
-<td>Ctrl+z</td>
-<td>撤销当前编辑</td>
-</tr>
-<tr>
-<td>Ctrl+s</td>
-<td>保存并编译项目</td>
-</tr>
-<tr>
-<td>Ctrl+b</td>
-<td>重新编译项目</td>
-</tr>
-<tr>
-<td>Ctrl+x</td>
-<td>截切选中的内容</td>
-</tr>
-<tr>
-<td>Ctrl+&#x2F;</td>
-<td>添加注释</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+k</td>
-<td>删除当前行</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+f</td>
-<td>全局搜索</td>
-</tr>
-<tr>
-<td>Ctrl+f</td>
-<td>当前页面内搜索</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+h</td>
-<td>全局搜索并替换文本</td>
-</tr>
-<tr>
-<td>Ctrl+h</td>
-<td>当前页面内搜索并替换文本</td>
-</tr>
-<tr>
-<td>Shift+Alt+F</td>
-<td>格式化代码</td>
-</tr>
-<tr>
-<td>Shift+Alt+⬆</td>
-<td>向上复制当前行</td>
-</tr>
-<tr>
-<td>Shift+Alt+⬇</td>
-<td>向下复制当前行</td>
-</tr>
-<tr>
-<td>Alt+⬆</td>
-<td>把当前行向上移动一行</td>
-</tr>
-<tr>
-<td>Alt+⬇</td>
-<td>把当前行向下移动一行</td>
-</tr>
-</tbody></table>
-<p>有的电脑上快捷键可能会有细微差距，以开发者工具默认自带的快捷键为准。</p>
-<h2 id="4-6，数据库排序orderBy"><a href="#4-6，数据库排序orderBy" class="headerlink" title="4-6，数据库排序orderBy"></a>4-6，数据库排序orderBy</h2><p>orderBy方法在做排序的时候，接受两个参数</p>
-<ul>
-<li>1，根据那个字段排序</li>
-<li>2，排序规则（升序或者降序）。升序用asc，降序用desc</li>
-</ul>
-<p>如我们根据商品价格从低到高升序排列<br><img src="https://img-blog.csdnimg.cn/20210125110343465.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>如我们根据商品价格从高到低降序排列<br><img src="https://img-blog.csdnimg.cn/20210125110402219.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="4-7，返回指定条数的数据limit"><a href="#4-7，返回指定条数的数据limit" class="headerlink" title="4-7，返回指定条数的数据limit"></a>4-7，返回指定条数的数据limit</h2><p>limit用来指定查询结果集数量上限，比如我们有100条数据，只想返回前20条，我们可以通过limit(20)来指定只返回20条数据。</p>
-<p>例如，只返回3条数据的写法如下<br><img src="https://img-blog.csdnimg.cn/20210125111539268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<ul>
-<li>注意：limit 在小程序端默认及最大上限为 20，在云函数端默认及最大上限为 1000</li>
-</ul>
-<h2 id="4-8，分页方法skip"><a href="#4-8，分页方法skip" class="headerlink" title="4-8，分页方法skip"></a>4-8，分页方法skip</h2><p>skip指定查询返回结果时从指定序列后的结果开始返回，常用于分页。比如我们有100条数据，想从第10条开始返回数据，可以通过skip(10)来实现</p>
-<ul>
-<li>skip结合我们上面学的limit方法可以实现分页效果<br><img src="https://img-blog.csdnimg.cn/20210125112437110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<p>比如我们有100条数据，每次返回20条数据。那么就可以分5页返回。</p>
-<ul>
-<li>第1页 limit(20).skip(0)</li>
-<li>第2页 limit(20).skip(20)</li>
-<li>第3页 limit(20).skip(40)</li>
-<li>第4页 limit(20).skip(60)</li>
-<li>第5页 limit(20).skip(80)</li>
-</ul>
-<h2 id="4-9，Command数据库操作符"><a href="#4-9，Command数据库操作符" class="headerlink" title="4-9，Command数据库操作符"></a>4-9，Command数据库操作符</h2><p>我门上面学完了数据库的增删改查，但是这些都是最基础最简单的操作，如果我们想实现复杂的数据查询操作，该怎么办呢<br>比如</p>
-<ul>
-<li>查询价格大于100的商品？</li>
-<li>查询年龄小于18岁的学生？</li>
-<li>如何同时修改多条数据？</li>
-<li>如何同时删除多条数据？</li>
-</ul>
-<p>我们如果想实现上面这些复杂的操作，就需要用到数据库里的 Command数据库操作符，就是下面这位<br><img src="https://img-blog.csdnimg.cn/2021012009455233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/database/Command.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/database/Command.html</a></p>
-<h3 id="4-9-1，gt查询大于指定值的数据"><a href="#4-9-1，gt查询大于指定值的数据" class="headerlink" title="4-9-1，gt查询大于指定值的数据"></a>4-9-1，gt查询大于指定值的数据</h3><p>比如查询价格大于5的所有商品<br><img src="https://img-blog.csdnimg.cn/20210127165116544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-9-2，gte查询大于等于指定值的数据"><a href="#4-9-2，gte查询大于等于指定值的数据" class="headerlink" title="4-9-2，gte查询大于等于指定值的数据"></a>4-9-2，gte查询大于等于指定值的数据</h3><p>比如查询大于等于5元的商品<br><img src="https://img-blog.csdnimg.cn/20210127165315512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-9-3，lt查询小于指定数值的数据"><a href="#4-9-3，lt查询小于指定数值的数据" class="headerlink" title="4-9-3，lt查询小于指定数值的数据"></a>4-9-3，lt查询小于指定数值的数据</h3><p>比如查询价格小于5的所有商品<br><img src="https://img-blog.csdnimg.cn/20210127165629116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-9-4，lte查询小于等于指定数值的数据"><a href="#4-9-4，lte查询小于等于指定数值的数据" class="headerlink" title="4-9-4，lte查询小于等于指定数值的数据"></a>4-9-4，lte查询小于等于指定数值的数据</h3><p>比如查询价格小于等于5元的所有商品<br><img src="https://img-blog.csdnimg.cn/20210127165656903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-9-5，and同时满足多个条件的查询"><a href="#4-9-5，and同时满足多个条件的查询" class="headerlink" title="4-9-5，and同时满足多个条件的查询"></a>4-9-5，and同时满足多个条件的查询</h3><p>比如查询价格大于5小于10元的所有商品<br><img src="https://img-blog.csdnimg.cn/20210127171011932.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h1 id="四，云开发-云函数"><a href="#四，云开发-云函数" class="headerlink" title="四，云开发~云函数"></a>四，云开发~云函数</h1><h2 id="4-1，认识云函数"><a href="#4-1，认识云函数" class="headerlink" title="4-1，认识云函数"></a>4-1，认识云函数</h2><p>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html</a></p>
-<p>我们先来看下官方给出的云函数简介<br><img src="https://img-blog.csdnimg.cn/20210128101348674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>其实通俗来讲，云函数也是运行在服务器上的，只不过和我们传统开发语言相比。微信官方为我们提供的傻瓜式的一键部署。也就是说你只需要把心思花在业务逻辑代码的编写上即可。无需关心写好如何部署，无需关心安全问题，无需关心鉴权问题。</p>
-<h3 id="4-1-1，云函数获取openid"><a href="#4-1-1，云函数获取openid" class="headerlink" title="4-1-1，云函数获取openid"></a>4-1-1，云函数获取openid</h3><p>用云函数的话，只需要3步</p>
-<ul>
-<li>1，编写云函数</li>
-<li>2，一键部署云函数</li>
-<li>3，调用云函数</li>
-</ul>
-<p>来看下云函数代码，只需要10行代码，即可轻松搞定<br><img src="https://img-blog.csdnimg.cn/20210128103312772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="4-2，云函数的优势"><a href="#4-2，云函数的优势" class="headerlink" title="4-2，云函数的优势"></a>4-2，云函数的优势</h2><p>我们用云函数和上一章的云数据库进行下对比</p>
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>云函数</th>
-<th>云数据库</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>返回数据上限</td>
-<td>100条</td>
-<td>20条</td>
-</tr>
-<tr>
-<td>更新数据</td>
-<td>都可以更新</td>
-<td>只有自己创建的才可以更新</td>
-</tr>
-<tr>
-<td>删除数据</td>
-<td>都可以删除</td>
-<td>只有自己创建的才可以删除</td>
-</tr>
-<tr>
-<td>运行环境</td>
-<td>运行在云端Node.js环境</td>
-<td>运行在小程序本地</td>
-</tr>
-<tr>
-<td>实现功能丰富度</td>
-<td>非常丰富</td>
-<td>只能实现数据库增删改查</td>
-</tr>
-</tbody></table>
-<ul>
-<li>来看下官方文档是如何描述云函数的<br>云函数属于管理端，在云函数中运行的代码拥有不受限的数据库读写权限和云文件读写权限。需特别注意，云函数运行环境即是管理端，与云函数中的传入的 openId 对应的微信用户是否是小程序的管理员 &#x2F; 开发者无关。</li>
-</ul>
-<h2 id="4-3，云函数调用演示"><a href="#4-3，云函数调用演示" class="headerlink" title="4-3，云函数调用演示"></a>4-3，云函数调用演示</h2><p>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/functions/Cloud.callFunction.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/functions/Cloud.callFunction.html</a></p>
-<h3 id="4-3-0-初始化云函数的环境"><a href="#4-3-0-初始化云函数的环境" class="headerlink" title="4-3-0,初始化云函数的环境"></a>4-3-0,初始化云函数的环境</h3><ul>
-<li>1，创建一个文件夹cloud和pages平行<br><img src="https://img-blog.csdnimg.cn/20210128112140139.png" alt="img"></li>
-<li>2，在project.config.json里面配置云函数所在目录为cloud<br>在project.config.json里面添加如下配置<img src="https://img-blog.csdnimg.cn/20210128112324919.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后点击保存，我们的cloud文件夹前面就有一个云朵<br><img src="https://img-blog.csdnimg.cn/20210128112426173.png" alt="img"><br>就代表我们云函数初始化成功啦。</li>
-<li>新一个云函数<br><img src="https://img-blog.csdnimg.cn/20210128113128483.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-<li>如果只创建一个云函数的时候，会出现下面的问题。<br><img src="https://img-blog.csdnimg.cn/20210128113247938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>解决方案：只需要在cloud文件夹下新建一个空白文件即可。</li>
-</ul>
-<h3 id="4-3-1，云函数获取openid"><a href="#4-3-1，云函数获取openid" class="headerlink" title="4-3-1，云函数获取openid"></a>4-3-1，云函数获取openid</h3><p>调用云函数有两种写法</p>
-<ul>
-<li>1，传统的success和fail<br><img src="https://img-blog.csdnimg.cn/20210128114458871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-<li>2，用promise写法then和catch<br><img src="https://img-blog.csdnimg.cn/20210128114704240.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<h3 id="4-3-2，数据的导入和导出"><a href="#4-3-2，数据的导入和导出" class="headerlink" title="4-3-2，数据的导入和导出"></a>4-3-2，数据的导入和导出</h3><ul>
-<li><p>数据导出，做数据备份<br><img src="https://img-blog.csdnimg.cn/20210128121013973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>比如导入为json数据如下<br><img src="https://img-blog.csdnimg.cn/20210128121110249.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-</li>
-<li><p>数据导入，为了快速的大量的创建一些数据。</p>
-<p>把这108条数据的json文件，导入到数据库如下<br><img src="https://img-blog.csdnimg.cn/202101281236396.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-</li>
-</ul>
-<h3 id="4-3-3，云函数获取数据"><a href="#4-3-3，云函数获取数据" class="headerlink" title="4-3-3，云函数获取数据"></a>4-3-3，云函数获取数据</h3><p>注意：云函数只要有变动，就要重新部署，否则云函数不生效。</p>
-<p>遇到了一个问题，如下<br><img src="https://img-blog.csdnimg.cn/20210128115406470.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>出现原因：如果你有两个云开发环境，偶尔会出现上图所示的问题。<br>解决问题：有两种</p>
-<ul>
-<li>1，在云函数里指定你要使用那个云开发环境<br><img src="https://img-blog.csdnimg.cn/20210128115654705.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-<li>2，使用DYNAMIC_CURRENT_ENV常量 （提倡使用这个）<br><img src="https://img-blog.csdnimg.cn/20210128115926399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>我们这里会和小程序里直接调用数据库的查询进行下对比<br><img src="https://img-blog.csdnimg.cn/20210128120452944.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20210128124103359.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-3-4，云函数修改数据"><a href="#4-3-4，云函数修改数据" class="headerlink" title="4-3-4，云函数修改数据"></a>4-3-4，云函数修改数据</h3><p>本地小程序直接调用数据库修改会有问题</p>
-<ul>
-<li>只能修改自己创建的数据，别人创建的数据，就没有办法修改了。<br>  <img src="https://img-blog.csdnimg.cn/20210129164121371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"> </li>
-<li>如何解决呢？ 用云函数来修改就可以解决这个问题啦。 </li>
-<li>1，先创建云函数update0129<br>  <img src="https://img-blog.csdnimg.cn/20210129164236714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"> </li>
-<li>2,调用云函数就行修改<br>  <img src="https://img-blog.csdnimg.cn/20210129164221501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<h3 id="4-3-5，云函数删除数据"><a href="#4-3-5，云函数删除数据" class="headerlink" title="4-3-5，云函数删除数据"></a>4-3-5，云函数删除数据</h3><ul>
-<li>1,创建一个删除商品的云函数remove0129<br><img src="https://img-blog.csdnimg.cn/20210129165537372.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-<li>2,调用这个云函数进行删除操作<br><img src="https://img-blog.csdnimg.cn/20210129165609854.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<h3 id="4-3-6，提交数据到云函数"><a href="#4-3-6，提交数据到云函数" class="headerlink" title="4-3-6，提交数据到云函数"></a>4-3-6，提交数据到云函数</h3><ul>
-<li>1，创建云函数，并部署<br><img src="https://img-blog.csdnimg.cn/20210129170423649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-<li>2，调用云函数<br><img src="https://img-blog.csdnimg.cn/20210129170445839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<h2 id="4-4-使用云函数常见问题"><a href="#4-4-使用云函数常见问题" class="headerlink" title="4-4,使用云函数常见问题"></a>4-4,使用云函数常见问题</h2><h3 id="4-4-1，云函数里面没有初始化环境变量"><a href="#4-4-1，云函数里面没有初始化环境变量" class="headerlink" title="4-4-1，云函数里面没有初始化环境变量"></a>4-4-1，云函数里面没有初始化环境变量</h3><p><img src="https://img-blog.csdnimg.cn/20210129165211243.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>解决方案如下：<br>使用DYNAMIC_CURRENT_ENV<br><img src="https://img-blog.csdnimg.cn/20210129165244946.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>代码片段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cloud.init(&#123;</span><br><span class="line">  env: cloud.DYNAMIC_CURRENT_ENV </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="五，云开发-云存储"><a href="#五，云开发-云存储" class="headerlink" title="五，云开发~云存储"></a>五，云开发~云存储</h1><p>首先来看下官方对云存储的介绍：<br>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/storage.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/storage.html</a><br><img src="https://img-blog.csdnimg.cn/20210201161044364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>说白了，云存储就是可以用来存储视频，音频，图片，文件的一个云存储空间。如果你的小程序需要用到视频播放，音频播放，图片展示，文件上传与下载功能，就可以用到我们的云存储了。</p>
-<ul>
-<li>使用云存储来存储文件时，文件名的命名有一些规则，建议看一下。<br><img src="https://img-blog.csdnimg.cn/20210201162210831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<h2 id="5-1，云开发控制台管理文件"><a href="#5-1，云开发控制台管理文件" class="headerlink" title="5-1，云开发控制台管理文件"></a>5-1，云开发控制台管理文件</h2><p>控制台也可以很方便的管理文件。<br><img src="https://img-blog.csdnimg.cn/20210202111303938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="5-2，上传图片到云存储"><a href="#5-2，上传图片到云存储" class="headerlink" title="5-2，上传图片到云存储"></a>5-2，上传图片到云存储</h2><p>我们上传图片之前需要先选择图片，所以这里用到一个图片选择的功能<br><img src="https://img-blog.csdnimg.cn/20210201162803725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>对应的官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.chooseImage.html">https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.chooseImage.html</a><br><img src="https://img-blog.csdnimg.cn/20210201162833775.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后调用文件上传的api接口即可<br><img src="https://img-blog.csdnimg.cn/20210201163026521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/storage/uploadFile/client.uploadFile.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/storage/uploadFile/client.uploadFile.html</a></p>
-<h2 id="5-3，给商品列表加商品图片"><a href="#5-3，给商品列表加商品图片" class="headerlink" title="5-3，给商品列表加商品图片"></a>5-3，给商品列表加商品图片</h2><p>我们既然已经学完图片上传功能了，那么我们就可以改造下我们之前的商品列表了，给我们的商品列表添加商品图片。<br><img src="https://img-blog.csdnimg.cn/20210202172602566.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="5-4，上传视频到云存储"><a href="#5-4，上传视频到云存储" class="headerlink" title="5-4，上传视频到云存储"></a>5-4，上传视频到云存储</h2><p>上传视频之前同样需要先选择视频，选择视频的代码如下<br><img src="https://img-blog.csdnimg.cn/20210201163512755.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>对应的官方文档如下：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.chooseVideo.html">https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.chooseVideo.html</a><br><img src="https://img-blog.csdnimg.cn/20210201163541479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>选择好视频以后，同样是调用文件上传api，因为视频也是一个文件。<br><img src="https://img-blog.csdnimg.cn/2021020116363179.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="5-5，上传word，excel文件到云存储"><a href="#5-5，上传word，excel文件到云存储" class="headerlink" title="5-5，上传word，excel文件到云存储"></a>5-5，上传word，excel文件到云存储</h2><h3 id="5-5-1，上传之前先选择文件"><a href="#5-5-1，上传之前先选择文件" class="headerlink" title="5-5-1，上传之前先选择文件"></a>5-5-1，上传之前先选择文件</h3><p>选择文件的时候记得把type设置为file<br><img src="https://img-blog.csdnimg.cn/20210201163838790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>对应的官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.chooseMessageFile.html">https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.chooseMessageFile.html</a></p>
-<ul>
-<li>这里有一点需要注意<br>在电脑模拟器上是选择电脑上的文件，在手机上运行小程序进行选择文件时是选择你聊天记录里的文件。</li>
-</ul>
-<h3 id="5-5-2，上传文件"><a href="#5-5-2，上传文件" class="headerlink" title="5-5-2，上传文件"></a>5-5-2，上传文件</h3><p>在上面选择好文件以后，我们还是要调用uploadFile进行文件上传<br><img src="https://img-blog.csdnimg.cn/20210201164637337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="5-6，下载文件"><a href="#5-6，下载文件" class="headerlink" title="5-6，下载文件"></a>5-6，下载文件</h2><p>使用wx.cloud.downloadFile下载文件<br><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-client-api/storage/downloadFile.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-client-api/storage/downloadFile.html</a><br><img src="https://img-blog.csdnimg.cn/20210205163358308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="5-7，下载并打开word，excel，pdf"><a href="#5-7，下载并打开word，excel，pdf" class="headerlink" title="5-7，下载并打开word，excel，pdf"></a>5-7，下载并打开word，excel，pdf</h2><p>使用wx.openDocument打开文件<br><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.openDocument.html">https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.openDocument.html</a><br><img src="https://img-blog.csdnimg.cn/20210205163603197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h1 id="六，列表的下拉刷新"><a href="#六，列表的下拉刷新" class="headerlink" title="六，列表的下拉刷新"></a>六，列表的下拉刷新</h1><h2 id="6-1，开启页面下拉刷新"><a href="#6-1，开启页面下拉刷新" class="headerlink" title="6-1，开启页面下拉刷新"></a>6-1，开启页面下拉刷新</h2><p>我们需要在app.json获取页面对应的json里设置enablePullDownRefresh属性为true来开启下拉刷新。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210205170856209.png" alt="img"><br><img src="https://img-blog.csdnimg.cn/20210205171621417.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>由于我们的刷新动画默认是白色圆点，所以还要在json里设置页面背景色才可以看到动画。<br><img src="https://img-blog.csdnimg.cn/20210205174537120.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="6-2，在Page的onPullDownRefresh里监听刷新"><a href="#6-2，在Page的onPullDownRefresh里监听刷新" class="headerlink" title="6-2，在Page的onPullDownRefresh里监听刷新"></a>6-2，在Page的onPullDownRefresh里监听刷新</h2><p><img src="https://img-blog.csdnimg.cn/20210205171045580.png" alt="img"><br>在page里的onPullDownRefresh方法里监听下拉刷新<br><img src="https://img-blog.csdnimg.cn/20210205171941928.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="6-3，用户下拉刷新时请求最新数据"><a href="#6-3，用户下拉刷新时请求最新数据" class="headerlink" title="6-3，用户下拉刷新时请求最新数据"></a>6-3，用户下拉刷新时请求最新数据</h2><p><img src="https://img-blog.csdnimg.cn/2021020517250836.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="6-4，数据请求成功后停止刷新"><a href="#6-4，数据请求成功后停止刷新" class="headerlink" title="6-4，数据请求成功后停止刷新"></a>6-4，数据请求成功后停止刷新</h2><p>我们在下拉刷新时，刷新动画一般很久才结束，正常情况下应该是数据请求成功后就结束刷新动画。所以我们通过wx.stopPullDownRefresh()方法来结束刷新动画。<br>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.startPullDownRefresh.html">https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.startPullDownRefresh.html</a><br><img src="https://img-blog.csdnimg.cn/20210205174805866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>代码示例如下<br><img src="https://img-blog.csdnimg.cn/20210205175925121.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h1 id="七，列表的分页加载"><a href="#七，列表的分页加载" class="headerlink" title="七，列表的分页加载"></a>七，列表的分页加载</h1><h2 id="7-1，小程序数据库每次最多20条"><a href="#7-1，小程序数据库每次最多20条" class="headerlink" title="7-1，小程序数据库每次最多20条"></a>7-1，小程序数据库每次最多20条</h2><p>小程序数据库api和云函数调用数据的限制<br>小程序端直接调用云数据库时，每次最多可以获取20条，云函数里调用云数据库时每次最多获取100条。所以我们数据多的时候要做分页加载。</p>
-<h2 id="7-2，分页加载的核心方法"><a href="#7-2，分页加载的核心方法" class="headerlink" title="7-2，分页加载的核心方法"></a>7-2，分页加载的核心方法</h2><p>我们做分页加载时，主要用到了skip和limit方法，对应的官方文档如下</p>
-<ul>
-<li>skip：每页加载多少条<br><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/database/collection/Collection.skip.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/database/collection/Collection.skip.html</a></li>
-<li>limit: 加载第几页的数据<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/database/collection/Collection.limit.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/database/collection/Collection.limit.html</a></li>
-</ul>
-<p>其实这个skip和limit我在数据库的那一节有做初步讲解，这一节我们就借助具体分页加载的案例来做综合讲解</p>
-<h2 id="7-3，导入108条数据"><a href="#7-3，导入108条数据" class="headerlink" title="7-3，导入108条数据"></a>7-3，导入108条数据</h2><h3 id="7-3-1，下载数据源"><a href="#7-3-1，下载数据源" class="headerlink" title="7-3-1，下载数据源"></a>7-3-1，下载数据源</h3><p>去数据库里创建108条数据即可。</p>
-<h3 id="7-3-2，导入到数据表"><a href="#7-3-2，导入到数据表" class="headerlink" title="7-3-2，导入到数据表"></a>7-3-2，导入到数据表</h3><p>我这里导入到num数据表，导入成功如下：<br><img src="https://img-blog.csdnimg.cn/2021022010395576.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="7-3-3，别忘记修改表权限"><a href="#7-3-3，别忘记修改表权限" class="headerlink" title="7-3-3，别忘记修改表权限"></a>7-3-3，别忘记修改表权限</h3><p>把数据表(集合)的权限改为所有用户可读，仅创建者可读写。<br><img src="https://img-blog.csdnimg.cn/20210220104538397.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="7-4，上拉加载更多监听"><a href="#7-4，上拉加载更多监听" class="headerlink" title="7-4，上拉加载更多监听"></a>7-4，上拉加载更多监听</h2><p>我们的列表滑动到最后一个数据时，会执行下面的方法<br><img src="https://img-blog.csdnimg.cn/20210222160533139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>所以我们的分页加载要在onReachBottom里做。</p>
-<h2 id="7-5，数据库分页加载代码实现"><a href="#7-5，数据库分页加载代码实现" class="headerlink" title="7-5，数据库分页加载代码实现"></a>7-5，数据库分页加载代码实现</h2><p>直接调用数据库每次最多只能加载20条数据<br><img src="https://img-blog.csdnimg.cn/20210222161602873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>wxml里只做简单的列表数据显示就行了<br><img src="https://img-blog.csdnimg.cn/20210222161633284.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>wxss做个简单的样式<br><img src="https://img-blog.csdnimg.cn/2021022216165113.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>对应的效果如下<br><img src="https://img-blog.csdnimg.cn/2021022216171223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="7-5-1，没有更多数据时的友好提示"><a href="#7-5-1，没有更多数据时的友好提示" class="headerlink" title="7-5-1，没有更多数据时的友好提示"></a>7-5-1，没有更多数据时的友好提示</h3><p><img src="https://img-blog.csdnimg.cn/20210224163137345.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210224162947430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="7-5-2，加载中和加载完成的友好提示"><a href="#7-5-2，加载中和加载完成的友好提示" class="headerlink" title="7-5-2，加载中和加载完成的友好提示"></a>7-5-2，加载中和加载完成的友好提示</h3><ul>
-<li>加载中</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.showLoading(&#123;</span><br><span class="line">   title: &#x27;加载中...&#x27;,</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>隐藏加载中</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wx.hideLoading()</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://img-blog.csdnimg.cn/20210224163236298.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="7-6-通过云函数实现分页加载"><a href="#7-6-通过云函数实现分页加载" class="headerlink" title="7-6,通过云函数实现分页加载"></a>7-6,通过云函数实现分页加载</h2><p>通过云函数调用数据库，每次最多可以加载100条数据.</p>
-<ul>
-<li>如果每页20条以内，不建议用云函数</li>
-<li>如果分页的时候，每页大于20条，就用云函数。<br><img src="https://img-blog.csdnimg.cn/20210224164952168.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
-</ul>
-<h1 id="八，搜索功能"><a href="#八，搜索功能" class="headerlink" title="八，搜索功能"></a>八，搜索功能</h1><p>今天来给大家讲讲小程序的搜索功能。我这里后台数据库用的是小程序云开发的云数据库。所以我们搜索的时候就要借助云开发来实现。</p>
-<p>注意：我们存数据的数据表(集合)要把权限改成如下所示。<br><img src="https://img-blog.csdnimg.cn/4e3ba9d1854f4b569cb2ebacf71ca29b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA57yW56iL5bCP55-z5aS0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
-<h2 id="8-1，需求"><a href="#8-1，需求" class="headerlink" title="8-1，需求"></a>8-1，需求</h2><p>比如我这里有如下的一些数据<br>可以自己一个个添加数据</p>
-<p>{</p>
-<p>“_id”:”xxxxxxxxxxs1212131321”,</p>
-<p>“title”:’石头’,</p>
-<p>“desc”:’ghd1d’</p>
-<p>}，</p>
-<p>{</p>
-<p>“_id”:”xxxxxxxxxxs121aAASs1321”,</p>
-<p>“title”:’黑石头’,</p>
-<p>“desc”:’ghd1d’</p>
-<p>}………</p>
-<p>我们想实现如下搜索需求</p>
-<ul>
-<li>1，搜索标题(title)包含‘小石头’的数据</li>
-<li>2，搜索标题(title)或者描述(desc)包含‘小石头’的数据</li>
-<li>3，搜索标题(title)描述(desc)都包含‘小石头’的数据</li>
-</ul>
-<p>我们知道数据库查询的时候有个where语句，但是where语句是查询某个字段全部包含你输入的内容时才可以，所以单纯用where语句来做搜索的话，结果太单一。所以我们今天就来学习下模糊搜索功能的实现。我们以上面三个需求为例，来一个个讲解。</p>
-<h2 id="8-2，实现原理"><a href="#8-2，实现原理" class="headerlink" title="8-2，实现原理"></a>8-2，实现原理</h2><p>我们做模糊搜索的时候，其实就是查询某个字段里是否包含我们的搜索词。而模糊搜索需要借助RegExp，来看看RegExp是什么。<br><img src="https://img-blog.csdnimg.cn/20210207214411585.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>官方文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/database/Database.RegExp.html">https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/database/Database.RegExp.html</a></p>
-<ul>
-<li>再来看看官方示例<br><img src="https://img-blog.csdnimg.cn/2021020721445170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>可能看官方示例会有点糊涂，那么我们接下来就结合具体代码来给大家做下讲解。</li>
-</ul>
-<h2 id="8-3，模糊搜索的代码实现"><a href="#8-3，模糊搜索的代码实现" class="headerlink" title="8-3，模糊搜索的代码实现"></a>8-3，模糊搜索的代码实现</h2><h3 id="8-3-1，模糊搜索单个字段"><a href="#8-3-1，模糊搜索单个字段" class="headerlink" title="8-3-1，模糊搜索单个字段"></a>8-3-1，模糊搜索单个字段</h3><ul>
-<li>需求：搜索标题(title)包含‘小石头’的数据</li>
-</ul>
-<p>代码如下<br><img src="https://img-blog.csdnimg.cn/20210207215202954.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>可以看到我们成功的查询到了标题里包含‘小石头的数据’</p>
-<h3 id="8-3-2，模糊搜索多个字段（满足一个即可）"><a href="#8-3-2，模糊搜索多个字段（满足一个即可）" class="headerlink" title="8-3-2，模糊搜索多个字段（满足一个即可）"></a>8-3-2，模糊搜索多个字段（满足一个即可）</h3><ul>
-<li>需求：搜索标题(title)或者描述(desc)包含‘小石头’的数据</li>
-</ul>
-<p>由于我们要查询多个字段，所以我们这里用到了command高级操作符里的or<br><img src="https://img-blog.csdnimg.cn/20210207215716587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>代码如下：<br><img src="https://img-blog.csdnimg.cn/20210207220123112.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="8-3-3，模糊搜索多个字段（要同时满足）"><a href="#8-3-3，模糊搜索多个字段（要同时满足）" class="headerlink" title="8-3-3，模糊搜索多个字段（要同时满足）"></a>8-3-3，模糊搜索多个字段（要同时满足）</h3><ul>
-<li>需求：搜索标题(title)描述(desc)都包含‘小石头’的数据</li>
-</ul>
-<p>由于我们要查询多个字段，所以我们这里用到了command高级操作符里的and<br><img src="https://img-blog.csdnimg.cn/20210207221006673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>代码如下：<br><img src="https://img-blog.csdnimg.cn/20210207220906802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="8-4，源码"><a href="#8-4，源码" class="headerlink" title="8-4，源码"></a>8-4，源码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//简单起见就把搜索词写死，正常应该用户输入的</span><br><span class="line">let searchKey = &#x27;小石头&#x27;</span><br><span class="line">let db = wx.cloud.database()</span><br><span class="line">let _ = db.command</span><br><span class="line"></span><br><span class="line">db.collection(&#x27;news&#x27;)</span><br><span class="line">  .where(_.or([</span><br><span class="line">    &#123;//标题</span><br><span class="line">      title: db.RegExp(&#123; //使用正则查询，实现对搜索的模糊查询</span><br><span class="line">        regexp: searchKey,</span><br><span class="line">        options: &#x27;i&#x27;, //大小写不区分</span><br><span class="line">      &#125;),</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;//描述</span><br><span class="line">      desc: db.RegExp(&#123;</span><br><span class="line">        regexp: searchKey,</span><br><span class="line">        options: &#x27;i&#x27;,</span><br><span class="line">      &#125;),</span><br><span class="line">    &#125;</span><br><span class="line">  ])).get()</span><br><span class="line">  .then(res =&gt; &#123;</span><br><span class="line">    console.log(&#x27;查询成功&#x27;, res)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(res =&gt; &#123;</span><br><span class="line">    console.log(&#x27;查询失败&#x27;, res)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="九，云开发实现登陆注册功能"><a href="#九，云开发实现登陆注册功能" class="headerlink" title="九，云开发实现登陆注册功能"></a>九，云开发实现登陆注册功能</h1><h2 id="9-1，注册页"><a href="#9-1，注册页" class="headerlink" title="9-1，	注册页"></a>9-1，	注册页</h2><p>注册页主要用到了input组件获取用户输入，button组件实现注册功能，注册主要是把账号名和密码添加到云开发数据库</p>
-<h2 id="9-2，登陆页"><a href="#9-2，登陆页" class="headerlink" title="9-2，	登陆页"></a>9-2，	登陆页</h2><p>登陆主要是获取用户输入的账号和密码，然后从数据库里读取相应的数据，做账号和密码的比对，如果账号和密码都一样，就可以直接登陆成功</p>
-<h2 id="9-3，登陆成功跳转到首页"><a href="#9-3，登陆成功跳转到首页" class="headerlink" title="9-3，	登陆成功跳转到首页"></a>9-3，	登陆成功跳转到首页</h2><p>登陆成功以后，会调整到首页</p>
-<h2 id="9-4，保存登陆状态"><a href="#9-4，保存登陆状态" class="headerlink" title="9-4，	保存登陆状态"></a>9-4，	保存登陆状态</h2><p>我们通常做登陆时，用户登陆成功后我们需要帮用户保存登陆状态，要不然用户下次再进入应用时还要重新登陆。所以我们要做下用户登陆状态的保存</p>
-<h1 id="十，云开发实现点赞收藏评论功能"><a href="#十，云开发实现点赞收藏评论功能" class="headerlink" title="十，云开发实现点赞收藏评论功能"></a>十，云开发实现点赞收藏评论功能</h1><h2 id="10-1，常用图标获取网站"><a href="#10-1，常用图标获取网站" class="headerlink" title="10-1，	常用图标获取网站"></a>10-1，	常用图标获取网站</h2><p>这里用了一个阿里巴巴矢量图库：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/">https://www.iconfont.cn</a></p>
-<h2 id="10-2，云函数里初始化云开发环境"><a href="#10-2，云函数里初始化云开发环境" class="headerlink" title="10-2，	云函数里初始化云开发环境"></a>10-2，	云函数里初始化云开发环境</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cloud.init(&#123;</span><br><span class="line">env: cloud.DYNAMIC_CURRENT_ENV</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="十一，评论功能的简单实现"><a href="#十一，评论功能的简单实现" class="headerlink" title="十一，评论功能的简单实现"></a>十一，评论功能的简单实现</h1><h1 id="十二，CMS网页版管理后台"><a href="#十二，CMS网页版管理后台" class="headerlink" title="十二，CMS网页版管理后台"></a>十二，CMS网页版管理后台</h1><h2 id="12-1，开通cms的准备工作"><a href="#12-1，开通cms的准备工作" class="headerlink" title="12-1，开通cms的准备工作"></a>12-1，开通cms的准备工作</h2><p>如下图所示，直接点击开通内容管理(CMS)即可<br><img src="https://img-blog.csdnimg.cn/20210210113912477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>开通cms需要你云开发里使用按量付费，如果你是第一次开通云开发，记得做如下选择。<br><img src="https://img-blog.csdnimg.cn/20210310190751658.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>如果你已经开通过云开发，记得把付费模式改为按量付费。如果你一开始云开发不是按量付费的模式。</p>
-<p>点击完开通以后，会有如下弹窗，直接点击确定即可。不要被付费吓着，官方每月会送我们一定的免费额度的。学习得话基本上够用了。<br><img src="https://img-blog.csdnimg.cn/20210210114114135.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>上面点完确定后，我们只是开启了按量付费功能，因为cms得使用必须要开通按量付费才可以得。所以还要再点一次开通。如下图<br><img src="https://img-blog.csdnimg.cn/20210210114330998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>点完开通后，会有如下弹窗，直接点击下一步即可。<br><img src="https://img-blog.csdnimg.cn/20210210114443541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后我们需要设置登录内容管理后台得账号和密码，然后点击确定即可<br><img src="https://img-blog.csdnimg.cn/20210210114541730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后我们就等待内容管理功能得开通了，需要等几分钟。<br><img src="https://img-blog.csdnimg.cn/20210210114640668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>开通成功以后，我们就可以通过下面这个地址进入管理后台了。<br><img src="https://img-blog.csdnimg.cn/20210210133616295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>后面我们统一称内容管理为cms</p>
-<h2 id="12-2，注意事项"><a href="#12-2，注意事项" class="headerlink" title="12-2，注意事项"></a>12-2，注意事项</h2><ul>
-<li>一个云开发环境对应一个内容管理(cms)</li>
-<li>cms开通会存在开通失败的情况，如果开通失败了，就用新的云开发环境去开通，如果新的云开发环境还是不行的话，那就只能重新去注册一个新的小程序了。一个小程序是可以开通两个云开发环境的。</li>
-</ul>
-<h2 id="12-3，登录Cms可视化管理后台"><a href="#12-3，登录Cms可视化管理后台" class="headerlink" title="12-3，登录Cms可视化管理后台"></a>12-3，登录Cms可视化管理后台</h2><p>上面开通好以后，就可以通过后台地址登录管理后台了。如下<br><img src="https://img-blog.csdnimg.cn/20210210133522942.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="12-4，在cms里创建后台项目"><a href="#12-4，在cms里创建后台项目" class="headerlink" title="12-4，在cms里创建后台项目"></a>12-4，在cms里创建后台项目</h2><p>第一次登录，我们还需要创建一个项目<br><img src="https://img-blog.csdnimg.cn/20210210133725671.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>自己输入项目名和项目id即可<br><img src="https://img-blog.csdnimg.cn/20210210133904722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后点击进入刚刚创建的项目<br><img src="https://img-blog.csdnimg.cn/9f7b0fb259104355954fa44c817029c7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA57yW56iL5bCP55-z5aS0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
-<p>到这里我们的cmd可视化网页管理后台就创建好了</p>
-<h2 id="12-5，内容模型"><a href="#12-5，内容模型" class="headerlink" title="12-5，内容模型"></a>12-5，内容模型</h2><p><img src="https://img-blog.csdnimg.cn/8382630149d541af89e4512c57914ce9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA57yW56iL5bCP55-z5aS0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
-<h2 id="12-6，数据类型"><a href="#12-6，数据类型" class="headerlink" title="12-6，数据类型"></a>12-6，数据类型</h2><p>我们往内容模型里添加数据类型的时候可以选择如下一些类型<br><img src="https://img-blog.csdnimg.cn/711bfdbb8474433ab0be987afe683f5c.png" alt="img"></p>
-<h2 id="12-7，数据表-集合-管理"><a href="#12-7，数据表-集合-管理" class="headerlink" title="12-7，数据表(集合)管理"></a>12-7，数据表(集合)管理</h2><p>我们可以对上面创建好的内容模型(集合)进行可视化的管理，这也是cms的优点，可以让我们对数据库进行可视化的管理。<br><img src="https://img-blog.csdnimg.cn/2493b0597b2843929b0b89ece373f445.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA57yW56iL5bCP55-z5aS0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
-<h2 id="12-8，综合案例"><a href="#12-8，综合案例" class="headerlink" title="12-8，综合案例"></a>12-8，综合案例</h2><p>结合cms和云开发数据库，实现一个简单的新闻小程序，有如下功能点</p>
-<ul>
-<li>1，新闻列表</li>
-<li>2，新闻详情</li>
-<li>3，图文混排</li>
-<li>4，富文本编辑</li>
-<li>5，rich-text的学习</li>
-</ul>
-<p>rich-text官方文档：<br><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/rich-text.html">https://developers.weixin.qq.com/miniprogram/dev/component/rich-text.html</a></p>
-<h1 id="云开发实战案例···》"><a href="#云开发实战案例···》" class="headerlink" title="云开发实战案例···》"></a>云开发实战案例···》</h1><h1 id="实战一，云开发实现订阅消息推送"><a href="#实战一，云开发实现订阅消息推送" class="headerlink" title="实战一，云开发实现订阅消息推送"></a>实战一，云开发实现订阅消息推送</h1><p>之前的通过formid发送模板消息推送，将在2020年1月10日下线，所以我们不得不使用订阅消息了。</p>
-<p>我们先来看下订阅消息的官方简介。<br><img src="https://img-blog.csdnimg.cn/img_convert/b7db371aea0e724e54f6d94c279171ba.png" alt="img"><br>接下来我们就来借助云开发，来快速实现小程序消息推送的功能。</p>
-<h2 id="1-获取模板-ID"><a href="#1-获取模板-ID" class="headerlink" title="1,获取模板 ID"></a>1,获取模板 ID</h2><p>这一步和我们之前的模板消息推送是一样的，也是先添加模板，然后拿到模板id<br><img src="https://img-blog.csdnimg.cn/img_convert/3a3cb57812e875bc3b70c3425a5a900a.png" alt="img"><br>首先是开通订阅消息功能，很简单，如下图<br><img src="https://img-blog.csdnimg.cn/img_convert/b271655c0edb6ca4751da3d2c891bde0.png" alt="img"><br>由于长期性订阅消息，目前仅向政务民生、医疗、交通、金融、教育等线下公共服务开放，后期将逐步支持到其他线下公共服务业务。仅就线下公共服务这一点，长期性订阅消息就和大部分开发者无缘了。<br>所以我们这里只能以使用一次性订阅消息为例。<br><img src="https://img-blog.csdnimg.cn/img_convert/421d178fcfee1bfccd5ae0839d76a7c6.png" alt="img"><br>如上图，我们从公共模板库里选择一个一次性订阅的模板。然后编辑模板如下图<br><img src="https://img-blog.csdnimg.cn/img_convert/a0f65d36b5d27fd329c14d2df34cde00.png" alt="img"><br>下图就是我们添加好的模板，下图的模板id就是我们需要的。<br><img src="https://img-blog.csdnimg.cn/img_convert/8bd49bd2ddc542f0c4484aa7db73b6f7.png" alt="img"></p>
-<h2 id="2-请求用户授权"><a href="#2-请求用户授权" class="headerlink" title="2,请求用户授权"></a>2,请求用户授权</h2><p>我们做订阅消息授权时，只能是用户点击或者支付完成后才可以调起来授权弹窗，官方是这么要求的：<br><img src="https://img-blog.csdnimg.cn/img_convert/20dca555457350c4c5d959e5d96e6c53.png" alt="img"><br>我们这里用到了wx.requestSubscribeMessage这个方法，来获取用户的授权。</p>
-<ul>
-<li>1，编写index.wxml代码<br><img src="https://img-blog.csdnimg.cn/img_convert/05dade190a567e04dd9c37315a685697.png" alt="img"></li>
-<li>2，编写index.js代码,实现点击获取授权<br><img src="https://img-blog.csdnimg.cn/img_convert/41ce63de1a026e53ab47208cc39f2134.png" alt="img"><br>这一步tmplIds里的一串字符，就是我们自己添加的模板id</li>
-<li>3，点击按钮运行效果如下<br>开发者工具模拟器上点击授权弹窗是这样的：<br><img src="https://img-blog.csdnimg.cn/img_convert/7a8f3304b2ff6971069831bb2524cca1.png" alt="img"><br>手机上的授权弹窗是这样的：<br><img src="https://img-blog.csdnimg.cn/img_convert/67407a9080f668313efb41eac09cdc33.png" alt="img"><br>可以看到，这里显示的就是我们添加的 ‘上课提醒’的模板。<br>细心的同学可以看到， 真机上多了一个 ‘总是保持以上选择，不再询问’<br>其实，你自己仔细多品一些。也能明天，我们正常订阅消息授权时，用户允许的话，你只能推送一次消息。也就是用户允许一次，我们就可以推送一条消息给用户，并且这个允许不存在过期。所以我们可以让用户尽量多的点击允许，这样我们就可以尽量多的给用户发送消息了。</li>
-</ul>
-<p>这里用户允许后，我们就可以给用户推送消息了，接下来我们来借助云开发的云函数来实现消息推送功能。</p>
-<h2 id="3-获取用户的opneid"><a href="#3-获取用户的opneid" class="headerlink" title="3,获取用户的opneid"></a>3,获取用户的opneid</h2><p>先来看官方爸爸是怎么说的。<br><img src="https://img-blog.csdnimg.cn/img_convert/482348d3ed75f4073d52a2a19725d022.png" alt="img"><br>可以看出官方提供了两种方式，我们这里使用云调用。说白了就是在云函数里调用推送功能。</p>
-<ul>
-<li>推送所需参数<br><img src="https://img-blog.csdnimg.cn/img_convert/b618346a4b113511dc583b2a223fc0de.png" alt="img"><br>可以看到我这里用来openapi功能，并且需要用到用户的opneid，关于openid的获取，我之前有写过文章，也录过视频的。文章的话，大家去翻下我历史的文章，视频的话，点击这个即可：<a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/26572/336253">《借助云函数获取用户openid》</a><br>这里的openid的获取我就不再详细讲解了，把对应云函数的代码给大家贴出来。<br><img src="https://img-blog.csdnimg.cn/img_convert/ea953e4aedb5e5290741cfe9341bc308.png" alt="img"><br>在使用云开发时，有几点需要注意的</li>
-<li>1，需要在project.config.json里创建云函数目录如下图<br><img src="https://img-blog.csdnimg.cn/img_convert/c57726436bc359a7f0b451fed2134541.png" alt="img"></li>
-<li>2，需要在app.js里初始化云开发环境<br><img src="https://img-blog.csdnimg.cn/img_convert/ffbc71638437f0ac2071d03040533069.png" alt="img"><br>至于云开发的环境id从哪里拿，我视频里也讲过很多遍了，直接去看我视频或者翻看我历史文章即可。</li>
-</ul>
-<h2 id="4-用云函数实现消息推送"><a href="#4-用云函数实现消息推送" class="headerlink" title="4,用云函数实现消息推送"></a>4,用云函数实现消息推送</h2><p>我们只需要创建一个云函数如下，然后填入用户的openid，要跳转的小程序页面链接，模板内容，模板id即可。通常这些数据都应该传进来，简单起见，我就把这里的模板内容写成固定的。<br><img src="https://img-blog.csdnimg.cn/img_convert/6ea360fbc3e9a0ac1c2e8c984383168b.png" alt="img"></p>
-<p><strong>注意</strong>：我在编写上面的代码时，推送内容的key必须和小程序模板里的key保持一致，否则就会报如下错误。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/7744febaaa1b6995afb5142965868cca.png" alt="img"></p>
-<ul>
-<li>然后看下调用这个云函数的地方<br><img src="https://img-blog.csdnimg.cn/img_convert/e2f325a86fb00c41f0f2ffe8c9c7f837.png" alt="img"><br>如果用户没有授权，我们推送会报如下错误<br><img src="https://img-blog.csdnimg.cn/img_convert/83e90947b16a013ffcab009e135f4397.png" alt="img"><br>如果用户授权过，我们就可以成功推送了，推送后的打印日志如下<br><img src="https://img-blog.csdnimg.cn/img_convert/fd154f7403927c3ef6ccb24b5ab82c76.png" alt="img"><br>还记得我们真机上的授权吗，如果用户只是点击了允许，没有选择一直允许，那我我们在推送成功一次后，如果再次推送，就需要用户重新授权。否则，还是会报这个错误的<br><img src="https://img-blog.csdnimg.cn/img_convert/7e05bc2ef9423835273e59a435c6ca34.png" alt="img"><br>所以我们用户点击一次允许，我们就可以推送一次消息，比如，我点击了4次允许那么我就可以成功的推送4次<br><img src="https://img-blog.csdnimg.cn/img_convert/48161ca1040adf3b859009c6c65a304a.png" alt="img"></li>
-</ul>
-<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="https://img-blog.csdnimg.cn/img_convert/a3110cee08ea827cdd438fb164050d41.png" alt="img"></p>
-<ul>
-<li>index.wxml</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button bindtap=&quot;shouquan&quot; type=&#x27;primary&#x27;&gt;获取订阅消息授权&lt;/button&gt;</span><br><span class="line">&lt;button bindtap=&quot;getOpenid&quot;&gt;获取用户的openid并推送消息&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>index.js</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  //获取授权的点击事件</span><br><span class="line">  shouquan() &#123;</span><br><span class="line">    wx.requestSubscribeMessage(&#123;</span><br><span class="line">      tmplIds: [&#x27;CFeSWarQLMPyPjwmiy6AV4eB-IZcipu48V8bFLkBzTU&#x27;], //这里填入我们生成的模板id</span><br><span class="line">      success(res) &#123;</span><br><span class="line">        console.log(&#x27;授权成功&#x27;, res)</span><br><span class="line">      &#125;,</span><br><span class="line">      fail(res) &#123;</span><br><span class="line">        console.log(&#x27;授权失败&#x27;, res)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  //获取用户的openid</span><br><span class="line">  getOpenid() &#123;</span><br><span class="line">    wx.cloud.callFunction(&#123;</span><br><span class="line">      name: &quot;getopenid&quot;</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line">      let openid = res.result.openid</span><br><span class="line">      console.log(&quot;获取openid成功&quot;, openid)</span><br><span class="line">      this.send(openid)</span><br><span class="line">    &#125;).catch(res =&gt; &#123;</span><br><span class="line">      console.log(&quot;获取openid失败&quot;, res)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  //发送模板消息到指定用户,推送之前要先获取用户的openid</span><br><span class="line">  send(openid) &#123;</span><br><span class="line">    wx.cloud.callFunction(&#123;</span><br><span class="line">      name: &quot;sendMsg&quot;,</span><br><span class="line">      data: &#123;</span><br><span class="line">        openid: openid</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line">      console.log(&quot;推送消息成功&quot;, res)</span><br><span class="line">    &#125;).catch(res =&gt; &#123;</span><br><span class="line">      console.log(&quot;推送消息失败&quot;, res)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>推送对应的云函数</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">cloud.init()</span><br><span class="line">exports.main = async(event, context) =&gt; &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    const result = await cloud.openapi.subscribeMessage.send(&#123;</span><br><span class="line">      touser: event.openid, //要推送给那个用户</span><br><span class="line">      page: &#x27;pages/index/index&#x27;, //要跳转到那个小程序页面</span><br><span class="line">      data: &#123;//推送的内容</span><br><span class="line">        thing1: &#123;</span><br><span class="line">          value: &#x27;小程序入门课程&#x27;</span><br><span class="line">        &#125;,</span><br><span class="line">        thing6: &#123;</span><br><span class="line">          value: &#x27;杭州浙江大学&#x27;</span><br><span class="line">        &#125;,</span><br><span class="line">        thing7: &#123;</span><br><span class="line">          value: &#x27;第一章第一节&#x27;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      templateId: &#x27;CFeSWarQLMPyPjwmiy6AV4eB-IZcipu48V8bFLkBzTU&#x27; //模板id</span><br><span class="line">    &#125;)</span><br><span class="line">    console.log(result)</span><br><span class="line">    return result</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">    return err</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>注意</strong>：授权一次，只能发送一条消息。</p>
-<h2 id="5-发送订阅消息给多个用户"><a href="#5-发送订阅消息给多个用户" class="headerlink" title="5,发送订阅消息给多个用户"></a>5,发送订阅消息给多个用户</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//发送订阅消息给多个用户</span><br><span class="line">  sendAll() &#123;</span><br><span class="line">    if (name == null || name == &#x27;&#x27;) &#123;</span><br><span class="line">      wx.showToast(&#123;</span><br><span class="line">        icon: &quot;none&quot;,</span><br><span class="line">        title: &#x27;请输入课程名&#x27;,</span><br><span class="line">      &#125;)</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line">    let users = [</span><br><span class="line">      &quot;oc4sa0Vp_s65LEItm4JSWT5WFQds&quot;,</span><br><span class="line">      &quot;oc4sa0dZ-pSCu95djiLCt7jo97bY&quot;</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    users.forEach(item =&gt; &#123;</span><br><span class="line">      console.log(&quot;for循环&quot;, item)</span><br><span class="line">      this.sendFun(item, name)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  //封装的方式方法</span><br><span class="line">  sendFun(openid, name) &#123;</span><br><span class="line">    wx.cloud.callFunction(&#123;</span><br><span class="line">      name: &quot;fasong&quot;,</span><br><span class="line">      data: &#123;</span><br><span class="line">        openid: openid,</span><br><span class="line">        name: name</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line">      console.log(&quot;发送单条成功&quot;, res)</span><br><span class="line">    &#125;).catch(res =&gt; &#123;</span><br><span class="line">      console.log(&quot;发送单条失败&quot;, res)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="实战二，短信验证码"><a href="#实战二，短信验证码" class="headerlink" title="实战二，短信验证码"></a>实战二，短信验证码</h1><p>官方文档：<br><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/cloudbase/cloudbase.sendSms.html">https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/cloudbase/cloudbase.sendSms.html</a></p>
-<p>进入官方文档一看，云开发给咱们开发者的福利还真不小。<br>不仅仅可以很方便的使用短信功能，还送了免费短信。</p>
-<h2 id="1，使用云开发短信的条件"><a href="#1，使用云开发短信的条件" class="headerlink" title="1，使用云开发短信的条件"></a>1，使用云开发短信的条件</h2><p>这个前置条件很重要，条件不满足，你就没法使用云开发短信功能。</p>
-<p>使用条件</p>
-<ul>
-<li>1，必须是企业小程序，目前个人小程序无法使用短信发送</li>
-<li>2，必须开通静态网站功能（后面应该会逐步放开）</li>
-<li>3，必须开通云开发（这个没得说，不开通云开发你还用啥云开发功能)</li>
-</ul>
-<h2 id="2，开通静态网站功能"><a href="#2，开通静态网站功能" class="headerlink" title="2，开通静态网站功能"></a>2，开通静态网站功能</h2><p>如果你不开通静态网站，直接调用短信发送，会报如下错误。<br><img src="https://img-blog.csdnimg.cn/20210109121558880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>其实官方文档里也有给出这个错误。<br><img src="https://img-blog.csdnimg.cn/20210109121621602.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>那么我们就来开通静态网站功能。开通静态网站功能之前，必须开通云开发，配置好云开发的环境。</p>
-<p>这里开通云开发我们借助小程序开发者工具来实现快速开通。</p>
-<h3 id="2-1，注册小程序"><a href="#2-1，注册小程序" class="headerlink" title="2-1，注册小程序"></a>2-1，注册小程序</h3><h3 id="2-2，创建一个小程序项目"><a href="#2-2，创建一个小程序项目" class="headerlink" title="2-2，创建一个小程序项目"></a>2-2，创建一个小程序项目</h3><h3 id="2-3，开通云开发"><a href="#2-3，开通云开发" class="headerlink" title="2-3，开通云开发"></a>2-3，开通云开发</h3><h3 id="2-4，开通静态网站功能"><a href="#2-4，开通静态网站功能" class="headerlink" title="2-4，开通静态网站功能"></a>2-4，开通静态网站功能</h3><p><img src="https://img-blog.csdnimg.cn/20201211120905504.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>我们上面云开发开通好以后，就可以在这里快速开通静态网站了。<br><img src="https://img-blog.csdnimg.cn/20201211120927392.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>点击以后，直接点击开通即可<br><img src="https://img-blog.csdnimg.cn/20201211120948749.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>这时候开通有个条件<br><img src="https://img-blog.csdnimg.cn/20201211121007349.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>我们必须按照要求改变自己小程序的付费方式，把我们的付费方式改成按量付费即可。<br><img src="https://img-blog.csdnimg.cn/20201211121058390.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>这里不用担心，这里的按量付费，每月都有免费额度。这些额度我们开发学习基本上够用了<br><img src="https://img-blog.csdnimg.cn/20201211121137132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br><img src="https://img-blog.csdnimg.cn/20201211121144821.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>这个时候我们的静态网站功能就开通成功了。<br><img src="https://img-blog.csdnimg.cn/20201211121157987.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>开通成功以后如下图。<br><img src="https://img-blog.csdnimg.cn/20201211121233312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br><img src="https://img-blog.csdnimg.cn/20210109123050201.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="3，编写发送短信的云函数"><a href="#3，编写发送短信的云函数" class="headerlink" title="3，编写发送短信的云函数"></a>3，编写发送短信的云函数</h2><p>其实上面静态网站功能开通以后，我们不用上传网站资源，就可以直接来使用短信功能了。<br>下面我们就来使用云开发的云函数功能来做短信发送功能。<br>代码编写也很简单<br><img src="https://img-blog.csdnimg.cn/20210109123624813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>其实发送短信的代码很简单，就上面这几行。下面就来教大家如何编写这个云函数。</p>
-<h3 id="3-1，初始化云开发环境id"><a href="#3-1，初始化云开发环境id" class="headerlink" title="3-1，初始化云开发环境id"></a>3-1，初始化云开发环境id</h3><p>新建一个和pages平级的目录cloud，用于存放云函数<br><img src="https://img-blog.csdnimg.cn/2021010912401458.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后在project.config.json里添加cloudfunctionRoot选项。<br><img src="https://img-blog.csdnimg.cn/20210109123846528.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后对cloud选择当前环境<br><img src="https://img-blog.csdnimg.cn/20210109130001146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>在app.js里配置环境变量<br><img src="https://img-blog.csdnimg.cn/20210109130043444.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>这个env环境id需要你去云开发控制台获取<br><img src="https://img-blog.csdnimg.cn/20210109130130467.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="3-2，创建云函数"><a href="#3-2，创建云函数" class="headerlink" title="3-2，创建云函数"></a>3-2，创建云函数</h3><p>右键cloud目录，新建Node.js云函数<br><img src="https://img-blog.csdnimg.cn/20210109130223400.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后新建一个云函数，名字你可以自定随便定。我这里用sendSms<br><img src="https://img-blog.csdnimg.cn/20210109130321182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="3-3，编写云函数"><a href="#3-3，编写云函数" class="headerlink" title="3-3，编写云函数"></a>3-3，编写云函数</h3><p><img src="https://img-blog.csdnimg.cn/20210109130405597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>记得把env和接收短信的手机号换成自己的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">cloud.init(&#123;</span><br><span class="line">  env: cloud.DYNAMIC_CURRENT_ENV</span><br><span class="line">&#125;)</span><br><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    const result = await cloud.openapi.cloudbase.sendSms(&#123;</span><br><span class="line">      env: &#x27;xiaoshitou-zfl2q&#x27;,</span><br><span class="line">      content: &#x27;编程小石头发布了新的能力&#x27;,</span><br><span class="line">      phoneNumberList: [</span><br><span class="line">        &quot;+86123123124121&quot;</span><br><span class="line">      ]</span><br><span class="line">    &#125;)</span><br><span class="line">    return result</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    return err</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-4，部署云函数"><a href="#3-4，部署云函数" class="headerlink" title="3-4，部署云函数"></a>3-4，部署云函数</h3><p>上面云函数编写好了，一定要记得部署下云函数。右键sendSms然后点击下面箭头所示的即可。<br><img src="https://img-blog.csdnimg.cn/20210109130811107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>上传部署成功后，会有下面这样的提示<br><img src="https://img-blog.csdnimg.cn/20210109130925613.png" alt="img"></p>
-<h2 id="4，调用云函数发送短信"><a href="#4，调用云函数发送短信" class="headerlink" title="4，调用云函数发送短信"></a>4，调用云函数发送短信</h2><p>我们上面云函数编写并部署成功以后，就可以来调用这个云函数，发送短信了。</p>
-<h3 id="4-1，编写wxml文件"><a href="#4-1，编写wxml文件" class="headerlink" title="4-1，编写wxml文件"></a>4-1，编写wxml文件</h3><p>在wxml文件里写一个button按钮，编写一个bindtap点击事件<br><img src="https://img-blog.csdnimg.cn/20210109131049800.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="4-2，编写js文件"><a href="#4-2，编写js文件" class="headerlink" title="4-2，编写js文件"></a>4-2，编写js文件</h3><p>在js文件里实现上面button的点击事件，然后调用云函数<br><img src="https://img-blog.csdnimg.cn/2021010913122362.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>调用云函数时，一定要记得这里的name必须和你的云函数名一模一样。</p>
-<h3 id="4-3，点击发送短信"><a href="#4-3，点击发送短信" class="headerlink" title="4-3，点击发送短信"></a>4-3，点击发送短信</h3><p>点击发送短信<br><img src="https://img-blog.csdnimg.cn/2021010913133224.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>点击发送 短信以后，可以看到日志里打印openapi.cloudbase.sendSms:ok<br>这就代表发送成功了。</p>
-<h2 id="5，发送验证码短信"><a href="#5，发送验证码短信" class="headerlink" title="5，发送验证码短信"></a>5，发送验证码短信</h2><p>我们只需要获取用户输入的手机号，然后点击获取验证码，最后输入短信里接收到的验证码，进行验证即可。</p>
-<h3 id="5-1，编写wxml"><a href="#5-1，编写wxml" class="headerlink" title="5-1，编写wxml"></a>5-1，编写wxml</h3><p>页面比较简单，就两个输入框和两个按钮<br><img src="https://img-blog.csdnimg.cn/20210109135120664.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="5-2，编写js"><a href="#5-2，编写js" class="headerlink" title="5-2，编写js"></a>5-2，编写js</h3><p>js里主要是获取用户输入的手机号，然后发送验证码，发送验证码调用云函数实现短信验证码发送功能。用户输入验证码以后进行校验即可。<br><img src="https://img-blog.csdnimg.cn/20210109135258919.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="5-3，发送短信验证码"><a href="#5-3，发送短信验证码" class="headerlink" title="5-3，发送短信验证码"></a>5-3，发送短信验证码</h3><p>用户输入手机号以后，点击发送，可以看到我们手机上收到了短信。</p>
-<p>然后用户输入获取到的验证码，点击验证。</p>
-<p>可以看到验证成功，验证成功以后后面的操作就可以自己定了，比如验证成功以后跳转到登录成功页。</p>
-<p>到这里我们就实现了验证码发送功能了。</p>
-<h3 id="5-4-生成随机验证码的方法"><a href="#5-4-生成随机验证码的方法" class="headerlink" title="5-4,生成随机验证码的方法"></a>5-4,生成随机验证码的方法</h3><h4 id="字母和数字混合"><a href="#字母和数字混合" class="headerlink" title="字母和数字混合"></a>字母和数字混合</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//获取随机验证码，n代表几位</span><br><span class="line">generateMixed(n) &#123;</span><br><span class="line">  let chars = [&#x27;0&#x27;, &#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;, &#x27;D&#x27;, &#x27;E&#x27;, &#x27;F&#x27;, &#x27;G&#x27;, &#x27;H&#x27;, &#x27;I&#x27;, &#x27;J&#x27;, &#x27;K&#x27;, &#x27;L&#x27;, &#x27;M&#x27;, &#x27;N&#x27;, &#x27;O&#x27;, &#x27;P&#x27;, &#x27;Q&#x27;, &#x27;R&#x27;, &#x27;S&#x27;, &#x27;T&#x27;, &#x27;U&#x27;, &#x27;V&#x27;, &#x27;W&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;];</span><br><span class="line">  let res = &quot;&quot;;</span><br><span class="line">  for (var i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    var id = Math.ceil(Math.random() * 35);</span><br><span class="line">    res += chars[id];</span><br><span class="line">  &#125;</span><br><span class="line">  return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="数字混合"><a href="#数字混合" class="headerlink" title="数字混合"></a>数字混合</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//获取随机验证码，n代表几位</span><br><span class="line">generateMixed(n) &#123;</span><br><span class="line">  let chars = [&#x27;0&#x27;, &#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;];</span><br><span class="line">  let res = &quot;&quot;;</span><br><span class="line">  for (var i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    var id = Math.ceil(Math.random() * 9);</span><br><span class="line">    res += chars[id];</span><br><span class="line">  &#125;</span><br><span class="line">  return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="实战三，群发短信"><a href="#实战三，群发短信" class="headerlink" title="实战三，群发短信"></a>实战三，群发短信</h1><p>我们上面给单个手机发送验证码的功能实现了，接下来就教大家如何群发短信。</p>
-<p>官方文档：<br><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/cloudbase/cloudbase.sendSms.html">https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/cloudbase/cloudbase.sendSms.html</a></p>
-<h4 id="使用云开发短信的条件"><a href="#使用云开发短信的条件" class="headerlink" title="使用云开发短信的条件"></a>使用云开发短信的条件</h4><p>这个前置条件很重要，条件不满足，你就没法使用云开发短信功能。</p>
-<ul>
-<li>1，必须是企业小程序，目前个人小程序无法使用短信发送</li>
-<li>2，必须开通静态网站功能（后面应该会逐步放开）</li>
-<li>3，必须开通云开发（这个没得说，不开通云开发你还用啥云开发功能啊）</li>
-</ul>
-<p>上面条件都满足以后，我们就可以来愉快的撸代码了。</p>
-<h2 id="1，编写wxml页面"><a href="#1，编写wxml页面" class="headerlink" title="1，编写wxml页面"></a>1，编写wxml页面</h2><p>简单起见，我这里只定义一个输入手机号的输入框和一个button按钮<br><img src="https://img-blog.csdnimg.cn/20210110214701978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>对应的代码如下<br><img src="https://img-blog.csdnimg.cn/20210110214556726.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="2，获取用户输入的手机号"><a href="#2，获取用户输入的手机号" class="headerlink" title="2，获取用户输入的手机号"></a>2，获取用户输入的手机号</h2><p>我这里以*来分割手机号，如下图所示。<br><img src="https://img-blog.csdnimg.cn/20210110215200429.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>然后我们定义一个bindinput事件来获取用户输入的内容。<br><img src="https://img-blog.csdnimg.cn/20210110215350402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>可以看到，我们成功的获取到了用户输入的手机号了。<br><img src="https://img-blog.csdnimg.cn/20210110215721299.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>但是官方文档里已经说明，我们群发短信的时候需要用到的是一组手机号，也就是说需要用数组来存放数据。但是我们这里是一个字符串。那么我们就要分割字符串成数组了。</p>
-<h2 id="3，分割字符串成数组"><a href="#3，分割字符串成数组" class="headerlink" title="3，分割字符串成数组"></a>3，分割字符串成数组</h2><p>我们分割字符串用到的是字符串的split()方法<br><img src="https://img-blog.csdnimg.cn/20210110215844128.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>当然触发的时机，应该是在用户点击群发按钮的时候。那么我们就为群发按钮定义bindtap点击事件send<br><img src="https://img-blog.csdnimg.cn/20210110220111787.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>可以看到我们成功的把字符串分割成了数组。<br><img src="https://img-blog.csdnimg.cn/20210110220243381.png" alt="img"><br>但是我们数组里的手机号前面有个回车键，所以安全起见，我们在分割字符串之前，需要先把这回车键给剔除掉。</p>
-<h2 id="4，去除字符串里的回车键"><a href="#4，去除字符串里的回车键" class="headerlink" title="4，去除字符串里的回车键"></a>4，去除字符串里的回车键</h2><p>去除字符串里的回车键语法如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字符串.replace(/[\r\n]/g, &quot;&quot;)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>可以看到我们只需要调用字符串.replace方法即可，后面括号里跟的是回车键对应的正则表达式。这里不需要记住，后面用的时候来我笔记这里复制就行了。<br><img src="https://img-blog.csdnimg.cn/20210110220615764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>可以看到我们剔除回车键以后，再分割的字符串里就没有回车键了。</p>
-<h2 id="5，遍历数组给手机号前面-86"><a href="#5，遍历数组给手机号前面-86" class="headerlink" title="5，遍历数组给手机号前面+86"></a>5，遍历数组给手机号前面+86</h2><p>如果你有仔细阅读官方文档，可以看到我们群发的手机号前面必须以+86开头。并且每次群发的手机号不能超过1000条。<br><img src="https://img-blog.csdnimg.cn/2021011022085622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>那么我们接下来就要遍历数组，给每个手机号前面都添加‘+86’了。<br>当然了这里有很多种方法来实现这一目的，我这里用一个for循环和一个map方法来分别实现下。<br><img src="https://img-blog.csdnimg.cn/20210110222029946.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>可以看出用map方法更简介一点。但是对于新手来说第二种方法可能不是很好理解。所以这里你用那种方法都可以，不做强制要求。</p>
-<h3 id="5-1，通过for循环来实现"><a href="#5-1，通过for循环来实现" class="headerlink" title="5-1，通过for循环来实现"></a>5-1，通过for循环来实现</h3><p><img src="https://img-blog.csdnimg.cn/20210110222243469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="5-2，通过map方法来实现"><a href="#5-2，通过map方法来实现" class="headerlink" title="5-2，通过map方法来实现"></a>5-2，通过map方法来实现</h3><p><img src="https://img-blog.csdnimg.cn/20210110221534846.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="6，编写群发短信的内容"><a href="#6，编写群发短信的内容" class="headerlink" title="6，编写群发短信的内容"></a>6，编写群发短信的内容</h2><p>那么我们接下来要做的就是实现群发功能了。我们这里要想成功的实现群发，需要两个元素</p>
-<ul>
-<li>要群发的短信内容</li>
-<li>要群发的手机号</li>
-</ul>
-<p>关于手机号和群发内容都有要求<br><img src="https://img-blog.csdnimg.cn/20210110222505278.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>我们群发手机号这里已经符合要求了，接下来就是群发的内容了。群发内容最长不能超过60个字节，一个汉字通常2~3个字节。也就是说我们短信内容不能超过20个字，所以群发的短信一定要精细。用最少的字来吸引用户。</p>
-<p>这里其实就是一个input来获取用户输入的内容就行了。我不再多讲，直接把代码贴出来。<br><img src="https://img-blog.csdnimg.cn/20210110223424454.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>在js里获取用户输入的短信内容<br><img src="https://img-blog.csdnimg.cn/2021011022370271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>现在完事具备，只欠一个云函数了</p>
-<h2 id="7，编写群发短信的云函数"><a href="#7，编写群发短信的云函数" class="headerlink" title="7，编写群发短信的云函数"></a>7，编写群发短信的云函数</h2><p>短信内容和群发的手机号都已经成功拿到了，我们接下来就要来编写群发的云函数了。<br><img src="https://img-blog.csdnimg.cn/20210110224043670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>云函数其实我们短信验证码那一节基本上一样，区别就是</p>
-<ul>
-<li>短信验证传入的是：验证码+单个手机号</li>
-<li>群发传入的是：短信内容+多个手机号</li>
-</ul>
-<p>云函数编辑好，记得重新部署下。</p>
-<h2 id="8，调用云函数实现群发"><a href="#8，调用云函数实现群发" class="headerlink" title="8，调用云函数实现群发"></a>8，调用云函数实现群发</h2><p>上面云函数编辑好了，也部署好了，接下来就是要调用云函数实现短信群发了。<br><img src="https://img-blog.csdnimg.cn/20210110224541938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>调用其实很简单。</p>
-<h2 id="9，群发演示失败"><a href="#9，群发演示失败" class="headerlink" title="9，群发演示失败"></a>9，群发演示失败</h2><p>接下来我们就要验证自己的劳动成果了。如下，我发这样的内容给两个手机号。为什么是两个呢，我这里是学习，要节省短信条数。官方只送我们1000条。所以要省着点用。</p>
-<p>其实群发两个手机号，和群发1000个没区别，只要群发两个成果，那么群发1000个也一样的。<br><img src="https://img-blog.csdnimg.cn/20210110224906123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>辛辛苦苦编写好了，测试了下，居然报错<br><img src="https://img-blog.csdnimg.cn/20210110230354339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>什么鬼，代码明明没有错误啊，程序员有时候就是莫名的自信。<br>官方给的发送成果返回字段如下<br><img src="https://img-blog.csdnimg.cn/20210110230510989.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br>发送返回结果如下<br><img src="https://img-blog.csdnimg.cn/20210110230547798.png" alt="img"><br>百思不得其解啊。不会真是代码写错了吧。。。。<br>翻译了一下报错信息。<br><img src="https://img-blog.csdnimg.cn/2021011023071456.png" alt="img"><br>发送时间限制，也没看到官方文档有说时间限制啊。后来又去官方文档翻来覆去，终于在一个角落里看到了这句话。</p>
-<h2 id="10，群发演示成功"><a href="#10，群发演示成功" class="headerlink" title="10，群发演示成功"></a>10，群发演示成功</h2><p>终于等到了第二天8点47，下面我们把昨天的群发短信再演示一遍，看这次能不能成功。<br>先来看我们的日志<br><img src="https://img-blog.csdnimg.cn/20210111084934161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
  
       <!-- reward -->
       
@@ -1637,7 +1108,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2019/about">关于我</a>
+      <a class="nav-item-link" href="/2023/01/30/about/">关于我</a>
     </li>
     
   </ul>

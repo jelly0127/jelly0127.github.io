@@ -3791,7 +3791,7 @@ vuex是使用vue中必不可少的一部分，基于父子、兄弟组件，我�
 <li><a href="https://jelly0127.github.io/2023/01/29/useCallback/">useCallback</a></li>
 <li><a href="https://jelly0127.github.io/2023/01/29/useMemo/">useMemo</a></li>
 <li><a href="https://jelly0127.github.io/2023/01/29/useRef/">useRef</a></li>
-<li><a href="https://jelly0127.github.io/2023/01/29/%E8%87%AA%E5%AE%9A%E4%B9%89Hooks/">自定义Hooks</a></li>
+<li><a href="https://jelly0127.github.io/2023/01/30/%E8%87%AA%E5%AE%9A%E4%B9%89Hooks/">自定义Hooks</a></li>
 </ol>
 <h2 id="React路由"><a href="#React路由" class="headerlink" title="React路由"></a>React路由</h2><p><a href="https://jelly0127.github.io/2023/01/29/router/">react-router(v6)</a></p>
 <h2 id="React状态机"><a href="#React状态机" class="headerlink" title="React状态机"></a>React状态机</h2><p><a href="https://jelly0127.github.io/2023/01/29/reactRedux/">React-rudex</a></p>
@@ -4705,5 +4705,10 @@ vuex是使用vue中必不可少的一部分，基于父子、兄弟组件，我�
 
 <p>用一个变量保存即可，无需Hook关心内部的逻辑，内部帮你绑定了生命周期，帮你创建State作用域，这些你都不用关心，直接用即可。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>about</title>
+    <url>/2023/01/30/about/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
