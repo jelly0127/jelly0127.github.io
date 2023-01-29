@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>基础常见的HTML结构标签</title>
+    <url>/2023/01/29/html/</url>
+    <content><![CDATA[<p>基础常见的HTML结构标签</p>
+<h2 id="一、Web标准的构成"><a href="#一、Web标准的构成" class="headerlink" title="一、Web标准的构成"></a>一、Web标准的构成</h2><h3 id="结构：HTML-→-页面元素"><a href="#结构：HTML-→-页面元素" class="headerlink" title="结构：HTML → 页面元素"></a>结构：HTML → 页面元素</h3><h3 id="表现：CSS-→-页面样式"><a href="#表现：CSS-→-页面样式" class="headerlink" title="表现：CSS → 页面样式"></a>表现：CSS → 页面样式</h3><h3 id="行为：JavaScript-→-页面交互的动态效果"><a href="#行为：JavaScript-→-页面交互的动态效果" class="headerlink" title="行为：JavaScript → 页面交互的动态效果"></a>行为：JavaScript → 页面交互的动态效果</h3><h2 id="二、标题标签"><a href="#二、标题标签" class="headerlink" title="二、标题标签"></a>二、标题标签</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span>//一级标题 </span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span>//二级标题 </span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span>//三级标题 </span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span>//四级标题 </span><br><span class="line"><span class="tag">&lt;<span class="name">h5</span>&gt;</span><span class="tag">&lt;/<span class="name">h5</span>&gt;</span>//五级标题 </span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span><span class="tag">&lt;/<span class="name">h6</span>&gt;</span>//六级标题 </span><br></pre></td></tr></table></figure>
+
+<h3 id="标题标签有哪些特点？"><a href="#标题标签有哪些特点？" class="headerlink" title="标题标签有哪些特点？"></a>标题标签有哪些特点？</h3><ol>
+<li>文字都有加粗 </li>
+<li>文字都有变大，但是从h1 → h6文字逐渐减小 </li>
+<li>独占一行</li>
+</ol>
+<h2 id="三、段落标签"><a href="#三、段落标签" class="headerlink" title="三、段落标签"></a>三、段落标签</h2><ol>
+<li>p标签</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="段落标签有哪些特点？"><a href="#段落标签有哪些特点？" class="headerlink" title="段落标签有哪些特点？"></a>段落标签有哪些特点？</h3><ol>
+<li>段落之间存在间隙 </li>
+<li>独占一行</li>
+</ol>
+<h2 id="四、换行标签"><a href="#四、换行标签" class="headerlink" title="四、换行标签"></a>四、换行标签</h2><ol>
+<li>br标签</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="五、水平标签"><a href="#五、水平标签" class="headerlink" title="五、水平标签"></a>五、水平标签</h2><ol>
+<li>hr标签</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://pic.imgdb.cn/item/63d66bd0face21e9ef048ba2.png"></p>
+<h2 id="六、img标签"><a href="#六、img标签" class="headerlink" title="六、img标签"></a>六、img标签</h2><p><img src="https://pic.imgdb.cn/item/63d66a94face21e9ef0208b0.png"></p>
+<h2 id="七、audio标签"><a href="#七、audio标签" class="headerlink" title="七、audio标签"></a>七、audio标签</h2><p><img src="https://pic.imgdb.cn/item/63d66abfface21e9ef02621b.png"></p>
+<h2 id="八、video标签"><a href="#八、video标签" class="headerlink" title="八、video标签"></a>八、video标签</h2><p><img src="https://pic.imgdb.cn/item/63d66ad6face21e9ef029209.png"></p>
+<h2 id="九、a标签"><a href="#九、a标签" class="headerlink" title="九、a标签"></a>九、a标签</h2><p><img src="https://pic.imgdb.cn/item/63d66aeaface21e9ef02bb43.png"></p>
+<p><img src="https://pic.imgdb.cn/item/63d66aeaface21e9ef02bb43.png"></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span> //空跳转</span><br></pre></td></tr></table></figure>
+
+<h2 id="十、div标签"><a href="#十、div标签" class="headerlink" title="十、div标签"></a>十、div标签</h2><p>盒子标签，自定义组件经常用到</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="十一、span标签"><a href="#十一、span标签" class="headerlink" title="十一、span标签"></a>十一、span标签</h2><h3 id="1、div标签会独占一行，span标签不会"><a href="#1、div标签会独占一行，span标签不会" class="headerlink" title="1、div标签会独占一行，span标签不会"></a>1、div标签会独占一行，span标签不会</h3><h3 id="2-div是一个容器级别的标签，span是一个文本级别的标签-一般包裹在div中使用"><a href="#2-div是一个容器级别的标签，span是一个文本级别的标签-一般包裹在div中使用" class="headerlink" title="2.div是一个容器级别的标签，span是一个文本级别的标签,一般包裹在div中使用"></a>2.div是一个容器级别的标签，span是一个文本级别的标签,一般包裹在div中使用</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="十二、input标签"><a href="#十二、input标签" class="headerlink" title="十二、input标签"></a>十二、input标签</h2><h3 id="1、输入文本框标签"><a href="#1、输入文本框标签" class="headerlink" title="1、输入文本框标签"></a>1、输入文本框标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="十三、select标签"><a href="#十三、select标签" class="headerlink" title="十三、select标签"></a>十三、select标签</h2><p>配合option使用</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">option</span>&gt;</span>大师<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">option</span>&gt;</span>王者<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">option</span>&gt;</span>青铜<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">option</span>&gt;</span>黑铁<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果图：</p>
+<p><img src="https://pic.imgdb.cn/item/63d66affface21e9ef02eb4f.png"></p>
+<h2 id="十四、列表标签"><a href="#十四、列表标签" class="headerlink" title="十四、列表标签"></a>十四、列表标签</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>标签组成： </p>
+<p><img src="https://pic.imgdb.cn/item/63d66b0dface21e9ef0309d9.png"></p>
+<p>显示特点： </p>
+<p>列表的每一项前默认显示圆点标识 </p>
+<p><img src="https://pic.imgdb.cn/item/63d66b19face21e9ef0320e3.png"></p>
+<p>注意点： </p>
+<p>ul标签中只允许包含li标签 </p>
+<p>li标签可以包含任意内容 </p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>标签组成： </p>
+<p><img src="https://pic.imgdb.cn/item/63d66b26face21e9ef03344e.png"></p>
+<p>显示特点： </p>
+<p><img src="https://pic.imgdb.cn/item/63d66b33face21e9ef0349fe.png"></p>
+<p>列表的每一项前默认显示序号标识 </p>
+<p>注意点： </p>
+<p>ol标签中只允许包含li标签 </p>
+<p>li标签可以包含任意内容 </p>
+<h3 id="自定义列表"><a href="#自定义列表" class="headerlink" title="自定义列表"></a>自定义列表</h3><p>标签组成： </p>
+<p><img src="https://pic.imgdb.cn/item/63d66b3eface21e9ef036d1c.png"></p>
+<p>显示特点： </p>
+<p><img src="https://pic.imgdb.cn/item/63d66b49face21e9ef03830b.png"></p>
+<p>dd前会默认显示缩进效果 </p>
+<p>注意点： </p>
+<p>dl标签中只允许包含dt&#x2F;dd标签 </p>
+<p>dt&#x2F;dd标签可以包含任意内容 </p>
+<h2 id="十五、table标签"><a href="#十五、table标签" class="headerlink" title="十五、table标签"></a>十五、table标签</h2><p>HTML表格由table标签以及多个tr、th和td标签组成</p>
+<p>table表示表格，整个表格要包含在<table></table>标签中</p>
+<ol>
+<li>tr表示表格中的行，是单元格的容器，一行可以包括多个单元格</li>
+<li>th表示表格中的单元格，我理解为列,th放在tr内表示这一行为标题行，其中的字体会默认粗体居中显示</li>
+<li>td表示表格中的单元格，我理解为列，td也要放在tr内，可以理解为内容行</li>
+<li>tfoot表示表格最后一行</li>
+</ol>
+<table>是<tr>的上层标签
+
+<tr>必须在一个<table></table>里面,它不能单独使用,相当于<table的属性标签.
+
+<table>标示一个表格,<tr>标示这个表格中间的一个行，<td>、<th>标示行中的一个列,需要嵌套在<tr></tr>或<tfoot><tfoot>中间。
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border-collapse: collapse;text-align: center;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>学号<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>性别<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>lily<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>418<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>女<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>rose<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>36<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>男<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tfoot</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>tom<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>479<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>男<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tfoot</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果图：</p>
+<p><img src="https://pic.imgdb.cn/item/63d66b5aface21e9ef03a340.png"></p>
+]]></content>
+  </entry>
+</search>

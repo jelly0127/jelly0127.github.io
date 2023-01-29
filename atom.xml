@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jelly</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-01-29T12:52:37.401Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Jelly</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基础常见的HTML结构标签</title>
+    <link href="http://example.com/2023/01/29/html/"/>
+    <id>http://example.com/2023/01/29/html/</id>
+    <published>2023-01-29T11:39:56.000Z</published>
+    <updated>2023-01-29T12:52:37.401Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;基础常见的HTML结构标签&lt;/p&gt;
+&lt;h2 id=&quot;一、Web标准的构成&quot;&gt;&lt;a href=&quot;#一、Web标准的构成&quot; class=&quot;headerlink&quot; title=&quot;一、Web标准的构成&quot;&gt;&lt;/a&gt;一、Web标准的构成&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
