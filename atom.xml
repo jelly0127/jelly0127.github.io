@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-29T17:52:02.856Z</updated>
+  <updated>2023-01-29T19:39:50.642Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,15 +17,55 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>about</title>
+    <title>About me</title>
     <link href="http://example.com/2023/01/30/about/"/>
     <id>http://example.com/2023/01/30/about/</id>
-    <published>2023-01-29T17:52:02.000Z</published>
-    <updated>2023-01-29T17:52:02.856Z</updated>
+    <published>2023-01-29T18:42:02.000Z</published>
+    <updated>2023-01-29T19:39:50.642Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;- &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;blockquote&gt;
+&lt;p&gt;A developer, live in Shenzhen, China.&lt;/p&gt;
+&lt;/blockquote&gt;
+姓名：Jelly&lt;br&gt;常驻：深圳&lt;br&gt;GitHub: &lt;a</summary>
+        
+      
     
     
     
     
+    <category term="Im" scheme="http://example.com/tags/Im/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jelly</title>
+    <link href="http://example.com/2023/01/30/Jelly/"/>
+    <id>http://example.com/2023/01/30/Jelly/</id>
+    <published>2023-01-29T18:20:57.000Z</published>
+    <updated>2023-01-29T19:32:45.583Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;​       </summary>
+        
+      
+    
+    
+    
+    <category term="简介" scheme="http://example.com/categories/%E7%AE%80%E4%BB%8B/"/>
+    
+    
+    <category term="Im" scheme="http://example.com/tags/Im/"/>
     
   </entry>
   
@@ -34,20 +74,23 @@
     <link href="http://example.com/2023/01/30/%E8%87%AA%E5%AE%9A%E4%B9%89Hook/"/>
     <id>http://example.com/2023/01/30/%E8%87%AA%E5%AE%9A%E4%B9%89Hook/</id>
     <published>2023-01-29T17:45:33.000Z</published>
-    <updated>2023-01-29T17:46:47.456Z</updated>
+    <updated>2023-01-29T19:15:46.035Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;&lt;strong&gt;自定义 Hook 是一个函数，其名称以 “use” 开头，函数内部可以调用其他的 Hook。&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;React&lt;/span&gt;, &amp;#123; useState, useEffect &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;react&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//这是一个可以通过friendID去判断是否在线的自定义Hook&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;useFriendStatus&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;friendID&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; [isOnline, setIsOnline] = &lt;span class=&quot;title function_&quot;&gt;useState&lt;/span&gt;(&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;title function_&quot;&gt;useEffect&lt;/span&gt;(&lt;span class=&quot;function&quot;&gt;() =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;handleStatusChange&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;status&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;title function_&quot;&gt;setIsOnline&lt;/span&gt;(status.&lt;span class=&quot;property&quot;&gt;isOnline&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;title class_&quot;&gt;ChatAPI&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;subscribeToFriendStatus&lt;/span&gt;(friendID, handleStatusChange);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;() =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;title class_&quot;&gt;ChatAPI&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;unsubscribeFromFriendStatus&lt;/span&gt;(friendID, handleStatusChange);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//这里只是返回了isOnline这个属性，当然你连setIsOnline也可以返回出去，可以让组件调用的时候接收这个方法，在必要的时候自行修改Hook的State&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; isOnline;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;自定义Hook看起来特别的像一个函数的使用，传递一个参数，得到一个结果。&lt;/p&gt;
+&lt;p&gt;定义Hook和函数不同的是，Hook可以利用起生命周期钩子，以及有Hook内部自己的数据。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：自定义Hook每次调用的时候会创建一个新的State作用域（如果你有使用useState的话），所以不用担心多次调用Hook导致State互相影响&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自定义Hook服用逻辑，但不服用State，作用域还是独立的&lt;/strong&gt;&lt;/p&gt;</summary>
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="react Hook" scheme="http://example.com/tags/react-Hook/"/>
     
   </entry>
   
@@ -56,7 +99,7 @@
     <link href="http://example.com/2023/01/29/nest/"/>
     <id>http://example.com/2023/01/29/nest/</id>
     <published>2023-01-29T15:36:24.000Z</published>
-    <updated>2023-01-29T15:36:36.713Z</updated>
+    <updated>2023-01-29T18:57:32.628Z</updated>
     
     
       
@@ -71,26 +114,7 @@
     
     
     
-  </entry>
-  
-  <entry>
-    <title>Jelly</title>
-    <link href="http://example.com/2023/01/29/Jelly/"/>
-    <id>http://example.com/2023/01/29/Jelly/</id>
-    <published>2023-01-29T15:34:45.000Z</published>
-    <updated>2023-01-29T17:40:56.557Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;​       </summary>
-        
-      
-    
-    
-    
+    <category term="Node" scheme="http://example.com/tags/Node/"/>
     
   </entry>
   
@@ -99,7 +123,7 @@
     <link href="http://example.com/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
     <id>http://example.com/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/</id>
     <published>2023-01-29T15:33:04.000Z</published>
-    <updated>2023-01-29T15:33:10.299Z</updated>
+    <updated>2023-01-29T19:18:25.351Z</updated>
     
     
       
@@ -113,6 +137,10 @@
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -121,11 +149,15 @@
     <link href="http://example.com/2023/01/29/vite/"/>
     <id>http://example.com/2023/01/29/vite/</id>
     <published>2023-01-29T15:32:07.000Z</published>
-    <updated>2023-01-29T15:32:07.819Z</updated>
+    <updated>2023-01-29T19:17:05.812Z</updated>
     
     
     
     
+    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -134,7 +166,7 @@
     <link href="http://example.com/2023/01/29/web3/"/>
     <id>http://example.com/2023/01/29/web3/</id>
     <published>2023-01-29T15:31:22.000Z</published>
-    <updated>2023-01-29T15:31:42.719Z</updated>
+    <updated>2023-01-29T18:56:21.635Z</updated>
     
     
       
@@ -148,6 +180,8 @@
     
     
     
+    
+    <category term="区块链" scheme="http://example.com/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
   </entry>
   
@@ -156,7 +190,7 @@
     <link href="http://example.com/2023/01/29/webpack/"/>
     <id>http://example.com/2023/01/29/webpack/</id>
     <published>2023-01-29T15:31:13.000Z</published>
-    <updated>2023-01-29T15:31:58.375Z</updated>
+    <updated>2023-01-29T19:13:56.385Z</updated>
     
     
       
@@ -170,6 +204,10 @@
     
     
     
+    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -178,19 +216,16 @@
     <link href="http://example.com/2023/01/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8A%E6%8A%A5/"/>
     <id>http://example.com/2023/01/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8A%E6%8A%A5/</id>
     <published>2023-01-29T15:30:25.000Z</published>
-    <updated>2023-01-29T15:55:08.747Z</updated>
+    <updated>2023-01-29T18:58:49.668Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;上个月在公司接收组长派发的一个任务，做一个web3项目的数据监控上报，从没接触过这方面的东西，开始我的内心是惊慌的，但随着去了解相关知识后，好像也不是那么难。&lt;/p&gt;
+&lt;h2 id=&quot;知识点：&quot;&gt;&lt;a href=&quot;#知识点：&quot; class=&quot;headerlink&quot; title=&quot;知识点：&quot;&gt;&lt;/a&gt;知识点：&lt;/h2&gt;&lt;h3 id=&quot;浏览器API：navigator-userAgent&quot;&gt;&lt;a href=&quot;#浏览器API：navigator-userAgent&quot; class=&quot;headerlink&quot; title=&quot;浏览器API：navigator.userAgent&quot;&gt;&lt;/a&gt;浏览器API：navigator.userAgent&lt;/h3&gt;&lt;h3 id=&quot;uv（用户浏览量）&quot;&gt;&lt;a href=&quot;#uv（用户浏览量）&quot; class=&quot;headerlink&quot; title=&quot;uv（用户浏览量）&quot;&gt;&lt;/a&gt;uv（用户浏览量）&lt;/h3&gt;&lt;h3 id=&quot;pv（页面浏览量）&quot;&gt;&lt;a href=&quot;#pv（页面浏览量）&quot; class=&quot;headerlink&quot; title=&quot;pv（页面浏览量）&quot;&gt;&lt;/a&gt;pv（页面浏览量）&lt;/h3&gt;&lt;h3 id=&quot;sendBeacon方法&quot;&gt;&lt;a href=&quot;#sendBeacon方法&quot; class=&quot;headerlink&quot; title=&quot;sendBeacon方法&quot;&gt;&lt;/a&gt;sendBeacon方法&lt;/h3&gt;&lt;h3 id=&quot;visibilitychange&quot;&gt;&lt;a href=&quot;#visibilitychange&quot; class=&quot;headerlink&quot; title=&quot;visibilitychange&quot;&gt;&lt;/a&gt;visibilitychange&lt;/h3&gt;&lt;h2 id=&quot;实现代码：&quot;&gt;&lt;a href=&quot;#实现代码：&quot; class=&quot;headerlink&quot; title=&quot;实现代码：&quot;&gt;&lt;/a&gt;实现代码：&lt;/h2&gt;</summary>
     
     
     
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -199,7 +234,7 @@
     <link href="http://example.com/2023/01/29/koa2/"/>
     <id>http://example.com/2023/01/29/koa2/</id>
     <published>2023-01-29T15:29:04.000Z</published>
-    <updated>2023-01-29T15:29:39.109Z</updated>
+    <updated>2023-01-29T18:57:29.637Z</updated>
     
     
       
@@ -214,6 +249,8 @@
     
     
     
+    <category term="Node" scheme="http://example.com/tags/Node/"/>
+    
   </entry>
   
   <entry>
@@ -221,21 +258,18 @@
     <link href="http://example.com/2023/01/29/reactRedux/"/>
     <id>http://example.com/2023/01/29/reactRedux/</id>
     <published>2023-01-29T15:28:19.000Z</published>
-    <updated>2023-01-29T15:28:23.572Z</updated>
+    <updated>2023-01-29T19:18:36.582Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;react-redux是对redux的一种扩充，能提高redux在react的性能，并且能够使代码更加的优雅。&lt;/p&gt;
-&lt;p&gt;react-redux依赖于react以及redux，所以使用react-redux之前，是基于你react以及redux已经安装完成。&lt;/p&gt;
-&lt;</summary>
-        
-      
+&lt;p&gt;react-redux依赖于react以及redux，所以使用react-redux之前，是基于你react以及redux已经安装完成。&lt;/p&gt;</summary>
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -244,19 +278,24 @@
     <link href="http://example.com/2023/01/29/router/"/>
     <id>http://example.com/2023/01/29/router/</id>
     <published>2023-01-29T15:27:06.000Z</published>
-    <updated>2023-01-29T15:58:34.690Z</updated>
+    <updated>2023-01-29T19:18:40.591Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1、路由创建&quot;&gt;&lt;a href=&quot;#1、路由创建&quot; class=&quot;headerlink&quot; title=&quot;1、路由创建&quot;&gt;&lt;/a&gt;1、路由创建&lt;/h2&gt;&lt;p&gt;在 src 下创建</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;1、路由创建&quot;&gt;&lt;a href=&quot;#1、路由创建&quot; class=&quot;headerlink&quot; title=&quot;1、路由创建&quot;&gt;&lt;/a&gt;1、路由创建&lt;/h2&gt;&lt;p&gt;在 src 下创建 router&amp;gt;index.tsx。以首页与登录页切换为例：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;App6&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;Home&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;Home&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;List&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;List&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;Detail&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;Detail&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;About&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;About&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;Login&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;Login&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; &lt;span class=&quot;title class_&quot;&gt;BrowserRouter&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;Router&lt;/span&gt;, &lt;span class=&quot;title class_&quot;&gt;Routes&lt;/span&gt;, &lt;span class=&quot;title class_&quot;&gt;Route&lt;/span&gt; &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;react-router-dom&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;MyRouter&lt;/span&gt; = (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) =&amp;gt; (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;language-xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Router&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Routes&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;element&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;#123;&lt;/span&gt;&amp;lt;&lt;span class=&quot;attr&quot;&gt;App&lt;/span&gt; /&amp;gt;&lt;/span&gt;&amp;#125;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;element&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;#123;&lt;/span&gt;&amp;lt;&lt;span class=&quot;attr&quot;&gt;Home&lt;/span&gt; /&amp;gt;&lt;/span&gt;&amp;#125;&amp;gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;/list&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;element&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;#123;&lt;/span&gt;&amp;lt;&lt;span class=&quot;attr&quot;&gt;List&lt;/span&gt; /&amp;gt;&lt;/span&gt;&amp;#125;&amp;gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;/detail&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;element&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;#123;&lt;/span&gt;&amp;lt;&lt;span class=&quot;attr&quot;&gt;Detail&lt;/span&gt; /&amp;gt;&lt;/span&gt;&amp;#125;&amp;gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;/about&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;element&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;#123;&lt;/span&gt;&amp;lt;&lt;span class=&quot;attr&quot;&gt;About&lt;/span&gt; /&amp;gt;&lt;/span&gt;&amp;#125;&amp;gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;/login&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;element&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;#123;&lt;/span&gt;&amp;lt;&lt;span class=&quot;attr&quot;&gt;Login&lt;/span&gt; /&amp;gt;&lt;/span&gt;&amp;#125;&amp;gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Route&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Routes&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Router&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;MyRouter&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;关键词解析：&lt;/p&gt;
+&lt;p&gt;1、BrowserRouter重命名为Router&lt;/p&gt;
+&lt;p&gt;2、所有的Route组件必须放在Routes组件中&lt;/p&gt;
+&lt;p&gt;3、Route标签上的element属性必须填写标签结构的组件，如：，而不是 Home&lt;/p&gt;
+&lt;p&gt;4、加了index属性的路由不需要写path，因为&amp;#x2F;路径就指向该组件&lt;/p&gt;</summary>
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -265,21 +304,23 @@
     <link href="http://example.com/2023/01/29/useRef/"/>
     <id>http://example.com/2023/01/29/useRef/</id>
     <published>2023-01-29T15:26:01.000Z</published>
-    <updated>2023-01-29T15:26:06.867Z</updated>
+    <updated>2023-01-29T19:19:06.333Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;useRef其实就是函数组件的实例属性，在&lt;strong&gt;函数组件的生命周期内（或者说实例没有被销毁）&lt;/strong&gt;始终存在且保持不变。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;useRef修改时候，并不会引起组件的刷新重渲染&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Re</summary>
-        
-      
+&lt;p&gt;&lt;strong&gt;Ref也可用作DOM节点的引用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Demo1&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;MyComponent&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; count = &lt;span class=&quot;title function_&quot;&gt;useRef&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;language-xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;onClick&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;#123;()&lt;/span&gt;=&amp;gt;&lt;/span&gt;&amp;#123;count.current = count.current +1&amp;#125; &amp;#125;&amp;gt;count加1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;当前的count &amp;#123;count.current&amp;#125; &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;language-xml&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;可以看到，我们修改count的时候，p标签始终显示为0&lt;/p&gt;</summary>
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -288,7 +329,7 @@
     <link href="http://example.com/2023/01/29/useMemo/"/>
     <id>http://example.com/2023/01/29/useMemo/</id>
     <published>2023-01-29T15:25:05.000Z</published>
-    <updated>2023-01-29T15:25:14.867Z</updated>
+    <updated>2023-01-29T19:19:02.333Z</updated>
     
     
       
@@ -303,6 +344,10 @@
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -311,20 +356,20 @@
     <link href="http://example.com/2023/01/29/useCallback/"/>
     <id>http://example.com/2023/01/29/useCallback/</id>
     <published>2023-01-29T15:24:17.000Z</published>
-    <updated>2023-01-29T15:24:26.708Z</updated>
+    <updated>2023-01-29T19:18:45.937Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt; 众所周知（有实际动手实验），React的函数组件再每次渲染的时候，都会执行一遍一整个函数数组，来获取返回的渲染后的VDom，如果我们在函数内部声明了一个函数，那么该函数在每次重渲染的时候都会重新声明。&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
-        
-      
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;MyComponent&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;getData&lt;/span&gt; = (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;variable language_&quot;&gt;console&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;log&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;...&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;language-xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;Component&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;可以观察到，每次刷新渲染的时候getData函数都会重新声明。&lt;/p&gt;</summary>
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -333,7 +378,7 @@
     <link href="http://example.com/2023/01/29/useContext/"/>
     <id>http://example.com/2023/01/29/useContext/</id>
     <published>2023-01-29T15:23:28.000Z</published>
-    <updated>2023-01-29T15:23:38.183Z</updated>
+    <updated>2023-01-29T19:18:49.766Z</updated>
     
     
       
@@ -348,6 +393,10 @@
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -356,19 +405,30 @@
     <link href="http://example.com/2023/01/29/useState/"/>
     <id>http://example.com/2023/01/29/useState/</id>
     <published>2023-01-29T15:22:25.000Z</published>
-    <updated>2023-01-29T15:22:30.266Z</updated>
+    <updated>2023-01-29T19:19:10.203Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;useState&quot;&gt;&lt;a href=&quot;#useState&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;useState&quot;&gt;&lt;a href=&quot;#useState&quot; class=&quot;headerlink&quot; title=&quot;useState&quot;&gt;&lt;/a&gt;useState&lt;/h2&gt;&lt;p&gt;用于给函数组件添加状态，状态一旦发生改变，会触发组件的重渲染（销毁-&amp;gt;获取最新的props-&amp;gt;渲染）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意，这里的props是重新获取的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;useState返回数组，数组第一项为&lt;code&gt;state&lt;/code&gt;， 第二项为&lt;code&gt;useState&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;useState告诉React，什么数据需要React帮助我们去记录，只有这些被记录的数据发生改变的时候， 才帮助我们需重新渲染组件，组件的重渲染会引发&lt;strong&gt;所有&lt;/strong&gt;子组件的重渲染。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;状态以及变量&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;只有影响程序的最终输出结果的，才属于状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;普通变量不会影响程序最终输出结果，称为普通变量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;状态应该最小化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;大量数据&lt;/strong&gt;&lt;/p&gt;</summary>
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -377,19 +437,24 @@
     <link href="http://example.com/2023/01/29/useEffect/"/>
     <id>http://example.com/2023/01/29/useEffect/</id>
     <published>2023-01-29T15:20:34.000Z</published>
-    <updated>2023-01-29T15:21:16.243Z</updated>
+    <updated>2023-01-29T19:18:54.065Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;useEffect&quot;&gt;&lt;a href=&quot;#useEffect&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;useEffect&quot;&gt;&lt;a href=&quot;#useEffect&quot; class=&quot;headerlink&quot; title=&quot;useEffect&quot;&gt;&lt;/a&gt;useEffect&lt;/h2&gt;&lt;p&gt;表面当前组件&lt;strong&gt;渲染完成包括DOM挂载&lt;/strong&gt;，需要执行的&lt;strong&gt;副作用操作&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要尝试用生命周期的方式去理解useEffect，这会使得事情变得十分复杂&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;接收两个参数，一个是回调函数，一个是依赖数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;回调函数effect，表明需要执行的函数操作&lt;/li&gt;
+&lt;li&gt;依赖数据，数组，表明所依赖的数据变化，只有当数组中的数据发生了改变，才会执行effect函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;React 将按照 effect 声明的顺序依次调用组件中的每一个 effect&lt;/p&gt;</summary>
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -398,19 +463,33 @@
     <link href="http://example.com/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/"/>
     <id>http://example.com/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/</id>
     <published>2023-01-29T15:16:16.000Z</published>
-    <updated>2023-01-29T17:52:15.183Z</updated>
+    <updated>2023-01-29T19:18:32.214Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;坐标：深圳   </summary>
-        
-      
+    <summary type="html">&lt;p&gt;坐标：深圳    职位：前端开发&lt;/p&gt;
+&lt;p&gt;只要有时间就持续更新叭，记录前端成长路线…&lt;/p&gt;
+&lt;p&gt;经过大概三个月的ReactHooks学习与实践，发现其实Hooks在项目中的开发过程并不是那么流畅，项目质量不佳，很多认为是细小的事实在Hooks上不断打脸，留步总结其实是主要问题在于&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vue思想带到了React上，试图模拟 watch, filter，emit 等一系列React不存在的概念。&lt;/li&gt;
+&lt;li&gt;想通过Hooks完整还原类组件实例的效果，但其实函数组件的思想与类组件思想是不同的。&lt;/li&gt;
+&lt;li&gt;想通过Hooks还原类实例生命周期的概念。&lt;/li&gt;
+&lt;li&gt;小白起步边学边开发，忽略过多细节导致回头补救太多，代码质量差。&lt;/li&gt;
+&lt;li&gt;单个Hooks组件设计过于单一束缚，兼容性差。&lt;/li&gt;
+&lt;li&gt;单个Hooks组件过于复杂化，导致复用性差。&lt;/li&gt;
+&lt;li&gt;没有很好的发挥自定义Hooks带来的逻辑抽离的便利性。&lt;/li&gt;
+&lt;li&gt;没有深入理解纯函数开发概念。&lt;/li&gt;
+&lt;li&gt;并没有很深入的去理解ReactAPP的设计哲学，未磨刀先砍柴。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这次深入Hooks细节，从头学习一次ReactHooks。&lt;/p&gt;
+&lt;p&gt;要学的东西没有很多，花费我们大量学习时间的是在用一件事上反反复复的学习回归。&lt;/p&gt;
+&lt;p&gt;在此之前，仔细阅读并消化：&lt;a href=&quot;https://react-1251415695.cos-website.ap-chengdu.myqcloud.com/docs/thinking-in-react.html&quot;&gt;React哲学&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
+    <category term="React" scheme="http://example.com/categories/React/"/>
+    
+    
+    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -419,7 +498,7 @@
     <link href="http://example.com/2023/01/29/uniapp/"/>
     <id>http://example.com/2023/01/29/uniapp/</id>
     <published>2023-01-29T15:11:49.000Z</published>
-    <updated>2023-01-29T15:12:23.603Z</updated>
+    <updated>2023-01-29T19:13:33.599Z</updated>
     
     
       
@@ -434,6 +513,10 @@
     
     
     
+    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
