@@ -209,16 +209,14 @@
     <link href="http://example.com/2023/01/29/router/"/>
     <id>http://example.com/2023/01/29/router/</id>
     <published>2023-01-29T15:27:06.000Z</published>
-    <updated>2023-01-29T15:27:15.600Z</updated>
+    <updated>2023-01-29T15:58:34.690Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&amp;#x2F;&amp;#x2F;路由配置&lt;/p&gt;
-&lt;p&gt;import React from ‘react’&lt;br&gt;import { RouteObject } from ‘react-router-dom’&lt;/p&gt;
-&lt;p&gt;&amp;#x2F;&amp;#x2F;懒加载&lt;br&gt;const</summary>
+    <summary type="html">&lt;h2 id=&quot;1、路由创建&quot;&gt;&lt;a href=&quot;#1、路由创建&quot; class=&quot;headerlink&quot; title=&quot;1、路由创建&quot;&gt;&lt;/a&gt;1、路由创建&lt;/h2&gt;&lt;p&gt;在 src 下创建</summary>
         
       
     
