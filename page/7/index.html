@@ -157,7 +157,7 @@
     
     
     <article
-  id="post-JavaScript"
+  id="post-useRef"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -168,8 +168,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/JavaScript/"
-    >JavaScript</a> 
+  <a class="article-title" href="/2023/01/29/useRef/"
+    >useRef</a> 
 </h2>
  
 
@@ -177,19 +177,25 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/29/JavaScript/" class="article-date">
-  <time datetime="2023-01-29T13:23:15.000Z" itemprop="datePublished">2023-01-29</time>
+      <a href="/2023/01/29/useRef/" class="article-date">
+  <time datetime="2023-01-29T15:26:01.000Z" itemprop="datePublished">2023-01-29</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+    <a class="article-category-link" href="/categories/React/">React</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="一、JavaScript的组成"><a href="#一、JavaScript的组成" class="headerlink" title="一、JavaScript的组成"></a>一、JavaScript的组成</h2><p><img src="https://pic.imgdb.cn/item/63d67236face21e9ef119c8b.png"></p> 
-      <a class="article-more-link" href="/2023/01/29/JavaScript/"
+  <p>useRef其实就是函数组件的实例属性，在<strong>函数组件的生命周期内（或者说实例没有被销毁）</strong>始终存在且保持不变。</p>
+<p><strong>useRef修改时候，并不会引起组件的刷新重渲染</strong></p>
+<p><strong>Ref也可用作DOM节点的引用</strong></p>
+<p><strong>Demo1</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> count = <span class="title function_">useRef</span>(<span class="number">0</span>)</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span>=&gt;</span>&#123;count.current = count.current +1&#125; &#125;&gt;count加1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>当前的count &#123;count.current&#125; <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，我们修改count的时候，p标签始终显示为0</p> 
+      <a class="article-more-link" href="/2023/01/29/useRef/"
         >阅读更多...</a
       >
        
@@ -202,7 +208,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Hook/" rel="tag">React Hook</a></li></ul>
 
     </footer>
   </div>
@@ -214,7 +220,7 @@
 
     
     <article
-  id="post-css"
+  id="post-useMemo"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -225,8 +231,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/css/"
-    >基础常用的CSS</a> 
+  <a class="article-title" href="/2023/01/29/useMemo/"
+    >useMemo</a> 
 </h2>
  
 
@@ -234,24 +240,40 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/29/css/" class="article-date">
-  <time datetime="2023-01-29T13:06:28.000Z" itemprop="datePublished">2023-01-29</time>
+      <a href="/2023/01/29/useMemo/" class="article-date">
+  <time datetime="2023-01-29T15:25:05.000Z" itemprop="datePublished">2023-01-29</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">前端基础</a>
+    <a class="article-category-link" href="/categories/React/">React</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>基础css样式，此部分就我感觉后期比js还难掌握，毕竟写出炫酷的样式还是需要对css的深度了解去学习，可以说是学无止境了这一门。</p>
-<h2 id="一、CSS：层叠样式表（Cascading-style-sheets）"><a href="#一、CSS：层叠样式表（Cascading-style-sheets）" class="headerlink" title="一、CSS：层叠样式表（Cascading style sheets）"></a>一、CSS：层叠样式表（Cascading style sheets）</h2><h3 id="CSS作用是什么？？"><a href="#CSS作用是什么？？" class="headerlink" title="CSS作用是什么？？"></a>CSS作用是什么？？</h3><p>给页面中的HTML标签设置样式，配合HTML使用。</p>
-<p><img src="https://pic.imgdb.cn/item/63d66feaface21e9ef0ceee7.png"></p> 
-      <a class="article-more-link" href="/2023/01/29/css/"
-        >阅读更多...</a
-      >
-       
+  <p>useMemo用于保存<strong>复杂</strong>计算的结果。</p>
+<p>useMemo与useCallback使用场景特别相似，都是用于性能优化，不同的是useMemo返回的是一个值，而useCallback返回的是一个函数。</p>
+<p>假设我们有MyComponent以及Counter两个组件，以及一个复杂计算函数Fibonacci</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> [step, setStep] = <span class="title function_">useState</span>(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> [data, setData] = <span class="title function_">useState</span>(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span>=&gt;</span>setStep(step+3)&#125;&gt;step加3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span>=&gt;</span>setData(data+1)&#125;&gt;data加1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Counter</span> <span class="attr">step</span>=<span class="string">&#123;step&#125;</span> <span class="attr">data</span>=<span class="string">&#123;data&#125;/</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params">&#123;step,data&#125;</span>)&#123;</span><br><span class="line">  <span class="comment">// 使用useMemo保存计算结果</span></span><br><span class="line">  <span class="comment">// const result = useMemo(() =&gt; Fibonacci(step), [step])</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 不使用useMemo保存计算结果</span></span><br><span class="line">  <span class="keyword">const</span> result = <span class="title class_">Fibonacci</span>(step)</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;data&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;result&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Fibonacci</span>(<span class="params">step</span>)&#123;</span><br><span class="line">  <span class="keyword">if</span>(step==<span class="number">1</span>)&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(step==<span class="number">2</span>)&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Fibonacci</span>(step-<span class="number">1</span>) + <span class="title class_">Fibonacci</span>(step-<span class="number">2</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序运行情况分两种情况：</p>
+<ul>
+<li><p>不使用useMemo保存计算结果</p>
+</li>
+<li><ul>
+<li>在step值加到40以上的时候，明显感受到result变量计算缓慢</li>
+<li>只修改data状态，Couter组件重新渲染，已经发生卡顿，原因在于Couter重新计算了result变量，但其实在不改变step的情况下，result不应该重新计算。</li>
+</ul>
+</li>
+<li><p>使用useMemo保存计算结果</p>
+</li>
+<li><ul>
+<li>在step值加到40以上的时候，明显感受到result变量计算缓慢</li>
+<li>只修改data状态，组件渲染依旧流畅，原因是result依赖项没有发生改变，result没有重新计算。</li>
+</ul>
+</li>
+</ul>
+ 
       <!-- reward -->
       
     </div>
@@ -261,64 +283,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-html"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/html/"
-    >基础常见的HTML结构标签</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/01/29/html/" class="article-date">
-  <time datetime="2023-01-29T11:39:56.000Z" itemprop="datePublished">2023-01-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">前端基础</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、Web标准的构成"><a href="#一、Web标准的构成" class="headerlink" title="一、Web标准的构成"></a>一、Web标准的构成</h2><h3 id="结构：HTML-→-页面元素"><a href="#结构：HTML-→-页面元素" class="headerlink" title="结构：HTML → 页面元素"></a>结构：HTML → 页面元素</h3><h3 id="表现：CSS-→-页面样式"><a href="#表现：CSS-→-页面样式" class="headerlink" title="表现：CSS → 页面样式"></a>表现：CSS → 页面样式</h3><h3 id="行为：JavaScript-→-页面交互的动态效果"><a href="#行为：JavaScript-→-页面交互的动态效果" class="headerlink" title="行为：JavaScript → 页面交互的动态效果"></a>行为：JavaScript → 页面交互的动态效果</h3> 
-      <a class="article-more-link" href="/2023/01/29/html/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Hook/" rel="tag">React Hook</a></li></ul>
 
     </footer>
   </div>
@@ -335,7 +300,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/6/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
+    <a class="extend prev" rel="prev" href="/page/6/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/8/">下一页</a>
   </nav>
   
 </section>
@@ -712,7 +677,7 @@
     
     
     <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
-        src="//music.163.com/outchain/player?type=2&id=2017680379&auto=1&height=32"></iframe>
+        src="//music.163.com/outchain/player?type=2&id=1948650097&auto=1&height=32"></iframe>
 </div>
 
 <style>
