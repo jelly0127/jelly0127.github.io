@@ -157,66 +157,6 @@
     
     
     <article
-  id="post-useCallback"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/useCallback/"
-    >useCallback</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/01/29/useCallback/" class="article-date">
-  <time datetime="2023-01-29T15:24:17.000Z" itemprop="datePublished">2023-01-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/React/">React</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p> 众所周知（有实际动手实验），React的函数组件再每次渲染的时候，都会执行一遍一整个函数数组，来获取返回的渲染后的VDom，如果我们在函数内部声明了一个函数，那么该函数在每次重渲染的时候都会重新声明。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">getData</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;...&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">    	<span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Component<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>可以观察到，每次刷新渲染的时候getData函数都会重新声明。</p> 
-      <a class="article-more-link" href="/2023/01/29/useCallback/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Hook/" rel="tag">React Hook</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
   id="post-useContext"
   class="article article-type-post"
   itemscope
@@ -277,13 +217,83 @@
 </article>
 
     
+    <article
+  id="post-useState"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/01/29/useState/"
+    >useState</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/29/useState/" class="article-date">
+  <time datetime="2023-01-29T15:22:25.000Z" itemprop="datePublished">2023-01-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/React/">React</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h2><p>用于给函数组件添加状态，状态一旦发生改变，会触发组件的重渲染（销毁-&gt;获取最新的props-&gt;渲染）。</p>
+<p><strong>注意，这里的props是重新获取的。</strong></p>
+<p>useState返回数组，数组第一项为<code>state</code>， 第二项为<code>useState</code></p>
+<p>useState告诉React，什么数据需要React帮助我们去记录，只有这些被记录的数据发生改变的时候， 才帮助我们需重新渲染组件，组件的重渲染会引发<strong>所有</strong>子组件的重渲染。</p>
+<p><strong>状态以及变量</strong></p>
+<ul>
+<li><p>只有影响程序的最终输出结果的，才属于状态。</p>
+</li>
+<li><p>普通变量不会影响程序最终输出结果，称为普通变量。</p>
+</li>
+<li><p>状态应该最小化。</p>
+</li>
+</ul>
+<p><strong>大量数据</strong></p> 
+      <a class="article-more-link" href="/2023/01/29/useState/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Hook/" rel="tag">React Hook</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/7/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/9/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/7/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/9/">下一页</a>
   </nav>
   
 </section>

@@ -157,76 +157,6 @@
     
     
     <article
-  id="post-useState"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/01/29/useState/"
-    >useState</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/01/29/useState/" class="article-date">
-  <time datetime="2023-01-29T15:22:25.000Z" itemprop="datePublished">2023-01-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/React/">React</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h2><p>用于给函数组件添加状态，状态一旦发生改变，会触发组件的重渲染（销毁-&gt;获取最新的props-&gt;渲染）。</p>
-<p><strong>注意，这里的props是重新获取的。</strong></p>
-<p>useState返回数组，数组第一项为<code>state</code>， 第二项为<code>useState</code></p>
-<p>useState告诉React，什么数据需要React帮助我们去记录，只有这些被记录的数据发生改变的时候， 才帮助我们需重新渲染组件，组件的重渲染会引发<strong>所有</strong>子组件的重渲染。</p>
-<p><strong>状态以及变量</strong></p>
-<ul>
-<li><p>只有影响程序的最终输出结果的，才属于状态。</p>
-</li>
-<li><p>普通变量不会影响程序最终输出结果，称为普通变量。</p>
-</li>
-<li><p>状态应该最小化。</p>
-</li>
-</ul>
-<p><strong>大量数据</strong></p> 
-      <a class="article-more-link" href="/2023/01/29/useState/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Hook/" rel="tag">React Hook</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
   id="post-useEffect"
   class="article article-type-post"
   itemscope
@@ -290,13 +220,86 @@
 </article>
 
     
+    <article
+  id="post-ReactHook全家桶"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/"
+    >ReactHook全家桶</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/" class="article-date">
+  <time datetime="2023-01-29T15:16:16.000Z" itemprop="datePublished">2023-01-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/React/">React</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>坐标：深圳    职位：前端开发</p>
+<p>只要有时间就持续更新叭，记录前端成长路线…</p>
+<p>经过大概三个月的ReactHooks学习与实践，发现其实Hooks在项目中的开发过程并不是那么流畅，项目质量不佳，很多认为是细小的事实在Hooks上不断打脸，留步总结其实是主要问题在于</p>
+<ul>
+<li>Vue思想带到了React上，试图模拟 watch, filter，emit 等一系列React不存在的概念。</li>
+<li>想通过Hooks完整还原类组件实例的效果，但其实函数组件的思想与类组件思想是不同的。</li>
+<li>想通过Hooks还原类实例生命周期的概念。</li>
+<li>小白起步边学边开发，忽略过多细节导致回头补救太多，代码质量差。</li>
+<li>单个Hooks组件设计过于单一束缚，兼容性差。</li>
+<li>单个Hooks组件过于复杂化，导致复用性差。</li>
+<li>没有很好的发挥自定义Hooks带来的逻辑抽离的便利性。</li>
+<li>没有深入理解纯函数开发概念。</li>
+<li>并没有很深入的去理解ReactAPP的设计哲学，未磨刀先砍柴。</li>
+</ul>
+<p>这次深入Hooks细节，从头学习一次ReactHooks。</p>
+<p>要学的东西没有很多，花费我们大量学习时间的是在用一件事上反反复复的学习回归。</p>
+<p>在此之前，仔细阅读并消化：<a target="_blank" rel="noopener" href="https://react-1251415695.cos-website.ap-chengdu.myqcloud.com/docs/thinking-in-react.html">React哲学</a></p> 
+      <a class="article-more-link" href="/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Hook/" rel="tag">React Hook</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/10/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/10/">下一页</a>
   </nav>
   
 </section>

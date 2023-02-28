@@ -49,7 +49,7 @@
     <link href="http://example.com/2023/01/30/Jelly/"/>
     <id>http://example.com/2023/01/30/Jelly/</id>
     <published>2023-01-29T18:20:57.000Z</published>
-    <updated>2023-02-28T04:04:23.856Z</updated>
+    <updated>2023-02-28T04:12:41.897Z</updated>
     
     
       
@@ -115,32 +115,6 @@
     
     
     <category term="Node" scheme="http://example.com/tags/Node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react脚手架搭建</title>
-    <link href="http://example.com/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
-    <id>http://example.com/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/</id>
-    <published>2023-01-29T15:33:04.000Z</published>
-    <updated>2023-01-29T19:18:25.351Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;后续更新。。。&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="React" scheme="http://example.com/categories/React/"/>
-    
-    
-    <category term="React Hook" scheme="http://example.com/tags/React-Hook/"/>
     
   </entry>
   
@@ -516,6 +490,30 @@
     
     
     <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信云开发</title>
+    <link href="http://example.com/2023/01/29/%E5%BE%AE%E4%BF%A1%E4%BA%91%E5%BC%80%E5%8F%91/"/>
+    <id>http://example.com/2023/01/29/%E5%BE%AE%E4%BF%A1%E4%BA%91%E5%BC%80%E5%8F%91/</id>
+    <published>2023-01-29T15:10:51.000Z</published>
+    <updated>2023-01-29T19:11:47.963Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;一，认识小程序云开发&quot;&gt;&lt;a href=&quot;#一，认识小程序云开发&quot; class=&quot;headerlink&quot; title=&quot;一，认识小程序云开发&quot;&gt;&lt;/a&gt;一，认识小程序云开发&lt;/h1&gt;&lt;h2 id=&quot;1-1，云开发简介&quot;&gt;&lt;a href=&quot;#1-1，云开发简介&quot; class=&quot;headerlink&quot; title=&quot;1-1，云开发简介&quot;&gt;&lt;/a&gt;1-1，云开发简介&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;小程序·云开发是微信团队联合腾讯云推出的专业的小程序开发服务。 &lt;/li&gt;
+&lt;li&gt;开发者可以使用云开发快速开发小程序、小游戏、公众号网页等，并且原生打通微信开放能力。 &lt;/li&gt;
+&lt;li&gt;开发者无需搭建服务器，可免鉴权直接使用平台提供的API进行业务开发&lt;br&gt;  小程序 &lt;/li&gt;
+&lt;li&gt;云开发又简称tcb，是微信官方给我们提供的基于腾讯云的云服务器。目前云开发包含：云数据库，云函数，云存储，云调用。后面章节会具体给大家讲解这几个。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="微信小程序" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="微信小程序" scheme="http://example.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
