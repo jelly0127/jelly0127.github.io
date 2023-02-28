@@ -27,11 +27,12 @@
 <li><a href="https://jelly0127.github.io/2023/01/29/ReactHook%E5%85%A8%E5%AE%B6%E6%A1%B6/">ReactHooks（全家桶）</a></li>
 <li><a href="https://jelly0127.github.io/2023/01/29/koa2/">Koa2（NodeJs后端）</a>（待更…）</li>
 <li><a href="https://jelly0127.github.io/2023/01/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8A%E6%8A%A5/">前端数据埋点上报</a></li>
-<li><a href="https://jelly0127.github.io/2023/01/29/webpack/">webpack</a>（待更…）</li>
+<li><a href="https://jelly0127.github.io/2023/01/29/webpack5/">webpack5</a></li>
 <li><a href="https://jelly0127.github.io/2023/01/29/we3/">web3（区块链）</a>（待更…）</li>
 <li><a href="https://jelly0127.github.io/2023/01/29/vite/">vite</a>（待更…）</li>
 <li><a href="https://jelly0127.github.io/2023/01/29/react%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/">react脚手架搭建</a>（待更…）</li>
 </ol>
+<h2 id="四、My-something："><a href="#四、My-something：" class="headerlink" title="四、My something："></a>四、My something：</h2><p><a href="https://github.com/jelly0127/Cra-Dogsbody.git">Webpack5 + React + Ts（Cra-Dogsbody）</a><br><a href="https://github.com/jelly0127/Vite-Dogsbody.git">Vite4 + React + Ts（Vite-Dogsbody）</a></p>
 ]]></content>
       <categories>
         <category>简介</category>
@@ -124,8 +125,8 @@
       </tags>
   </entry>
   <entry>
-    <title>webpack</title>
-    <url>/2023/01/29/webpack/</url>
+    <title>webpack5</title>
+    <url>/2023/01/29/webpack5/</url>
     <content><![CDATA[<h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><p><strong><code>Webpack</code> 是一个静态资源打包工具。</strong></p>
 <p>它会以一个或多个文件作为打包的入口，将我们整个项目所有文件编译组合成一个或多个文件输出出去。</p>
 <p>输出的文件就是编译好的文件，就可以在浏览器段运行了。</p>
